@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.training"
+    android:padding="18dp"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/training_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Training"
+        app:titleTextAppearance="@style/Title"/>
+
+    <FrameLayout
+        android:id="@+id/training_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/training_toolbar"
+        android:padding="15dp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--                    random workout-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Random Workout"
+                    style="@style/text"
+                    android:textStyle="bold"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="320dp"
+                            android:layout_height="200dp"
+                            android:elevation="20dp"
+                            app:cardCornerRadius="15dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@drawable/card_back_blue">
+                                <TextView
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="LAZY BED WORKOUT"
+                                    style="@style/cardview_text"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="25dp"/>
+                                <ImageView
+                                    android:layout_width="350dp"
+                                    android:layout_height="190dp"
+                                    android:src="@drawable/bed_exercise"
+                                    android:layout_marginTop="-75dp"
+                                    android:layout_marginStart="20dp"/>
+                                <Button
+                                    android:id="@+id/training_random1"
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="START"
+                                    android:textSize="22sp"
+                                    android:backgroundTint="@color/white"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:layout_marginTop="-70dp"
+                                    android:layout_marginStart="10dp"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="320dp"
+                            android:layout_height="200dp"
+                            android:elevation="20dp"
+                            app:cardCornerRadius="15dp"
+                            android:layout_marginStart="20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@drawable/card_back_green">
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="OFFICE WORKOUT"
+                                    style="@style/cardview_text"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="25dp"/>
+                                <ImageView
+                                    android:layout_width="400dp"
+                                    android:layout_height="230dp"
+                                    android:layout_marginStart="-5dp"
+                                    android:layout_marginTop="-100dp"
+                                    android:src="@drawable/office_workout" />
+                                <Button
+                                    android:id="@+id/training_random2"
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="START"
+                                    android:textSize="22sp"
+                                    android:backgroundTint="@color/white"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:layout_marginTop="-80dp"
+                                    android:layout_marginStart="10dp"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="320dp"
+                            android:layout_height="200dp"
+                            android:elevation="20dp"
+                            app:cardCornerRadius="15dp"
+                            android:layout_marginStart="20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@drawable/card_back_purple">
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="INDOOR WALKING"
+                                    style="@style/cardview_text"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="25dp"/>
+                                <ImageView
+                                    android:layout_width="320dp"
+                                    android:layout_height="250dp"
+                                    android:layout_marginStart="70dp"
+                                    android:layout_marginTop="-100dp"
+                                    android:src="@drawable/indoor_walking" />
+                                <Button
+                                    android:id="@+id/training_random3"
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="START"
+                                    android:textSize="22sp"
+                                    android:backgroundTint="@color/white"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:layout_marginTop="-100dp"
+                                    android:layout_marginStart="10dp"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:scaleX="15"
+                    android:scaleY="3"
+                    android:src="@drawable/project_line"
+                    android:layout_marginTop="10dp"/>
+
+
+                <!--                    training goal-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Training Goal"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    style="@style/text"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_goal1"
+                                android:layout_width="330dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="15dp"
+                                android:backgroundTint="@color/white">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/goal_img1"
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/flat_belly"
+                                        android:scaleType="centerCrop"/>
+                                </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="FLAT BELLY"
+                                    style="@style/cardview_text"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img1"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8 workouts"
+                                    style="@style/text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="45dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img1"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_goal2"
+                                android:layout_width="330dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="15dp"
+                                android:layout_below="@id/training_goal1"
+                                android:layout_marginTop="10dp"
+                                android:backgroundTint="@color/white">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/goal_img2"
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/angle_booty"
+                                        android:scaleType="centerCrop"/>
+                                </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ANGLE BOOTY"
+                                    style="@style/cardview_text"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8 workouts"
+                                    style="@style/text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="45dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img1"/>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_goal3"
+                                android:layout_width="330dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="15dp"
+                                android:backgroundTint="@color/white">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/goal_img3"
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/toned_arms"
+                                        android:scaleType="centerCrop"/>
+                                </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TONED ARMS"
+                                    style="@style/cardview_text"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img3"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8 workouts"
+                                    style="@style/text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="45dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img3"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_goal4"
+                                android:layout_width="330dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="15dp"
+                                android:layout_below="@id/training_goal3"
+                                android:layout_marginTop="10dp"
+                                android:backgroundTint="@color/white">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/goal_img4"
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/slim_leg"
+                                        android:scaleType="centerCrop"/>
+                                </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SLIM LEGS"
+                                    style="@style/cardview_text"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="sans-serif"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img1"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8 workouts"
+                                    style="@style/text"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="45dp"
+                                    android:layout_marginStart="135dp"
+                                    android:layout_toEndOf="@id/goal_img1"/>
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:scaleX="15"
+                    android:scaleY="3"
+                    android:src="@drawable/project_line"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_routin1"
+                    android:layout_marginTop="20dp"
+                    style="@style/text" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_routin2"
+                    android:layout_marginTop="3dp"
+                    style="@style/text" />
+
+                <!--                    routines-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Routines"
+                    style="@style/text"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_routine1"
+                                android:layout_width="200dp"
+                                android:layout_height="140dp"
+                                app:cardCornerRadius="13dp">
+                                <ImageView
+                                    android:id="@+id/routine1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_morning"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Morning Warm-Up"
+                                android:layout_below="@id/training_routine1"
+                                style="@style/text"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_routine2"
+                                android:layout_width="200dp"
+                                android:layout_height="140dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:id="@+id/routine2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_prerun"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pre run Warm-Up"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_routine2"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_routine3"
+                                android:layout_width="200dp"
+                                android:layout_height="140dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_postrun"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Post run Warm-Up"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_routine3"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="25dp"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_routine4"
+                                android:layout_width="200dp"
+                                android:layout_height="140dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_sleepy"
+                                    android:scaleType="centerCrop"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sleepy Time Stretch"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_routine4"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="25dp"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:scaleX="15"
+                    android:scaleY="3"
+                    android:src="@drawable/project_line"
+                    android:layout_marginTop="10dp"/>
+
+
+                <!--                    yoga-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_yoga1"
+                    android:layout_marginTop="20dp"
+                    style="@style/text" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_yoga2"
+                    android:layout_marginTop="3dp"
+                    style="@style/text" />
+
+                <!--                    yoga-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yoga"
+                    style="@style/text"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_yoga1"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_easeyoga"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ease Yoga Beginners"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_yoga1"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="25dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_yoga2"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_sunsalutation"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sun Salutations Flow"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_yoga2"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="35dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_yoga3"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_sittingyoga"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" Simple Seated Yoga"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_yoga3"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="35dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_yoga4"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/training_standingyoga"
+                                    android:scaleType="centerCrop"/>
+
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" Simple Standing Yoga"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_yoga4"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="35dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:scaleX="15"
+                    android:scaleY="3"
+                    android:src="@drawable/project_line"
+                    android:layout_marginTop="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_health"
+                    android:layout_marginTop="20dp"
+                    style="@style/text" />
+
+                <!--                    health-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Health "
+                    style="@style/text"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_health1"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/lose_weight"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Weight Lose"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_health1"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="25dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_health2"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/weight_gain"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Weight Gain"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_health2"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="25dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_health3"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/mind_sleep"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mind and Sleep"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_health3"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="35dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_health4"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/balance"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Improve Balance"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_health4"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="35dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_health5"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/neck_tension"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Neck and Shoulder Tension"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_health5"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="33dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_health6"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/lower_back_pain"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lower Back Pain"
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_health6"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="35dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/training_health7"
+                                android:layout_width="250dp"
+                                android:layout_height="160dp"
+                                app:cardCornerRadius="13dp"
+                                android:layout_marginStart="15dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/period_pain"
+                                    android:scaleType="centerCrop"/>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Period Pain "
+                                android:textStyle="bold"
+                                android:layout_below="@id/training_health7"
+                                style="@style/text"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="35dp"
+                                android:textSize="18sp"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</RelativeLayout>

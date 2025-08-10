@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitLife_FitCare"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".flatbelly_8"
+            android:exported="false" />
+        <activity
+            android:name=".flatbelly_7"
+            android:exported="false" />
+        <activity
+            android:name=".flatbelly_6"
+            android:exported="false" />
+        <activity
+            android:name=".flatbelly_5"
+            android:exported="false" />
+        <activity
+            android:name=".flatbelly_4"
+            android:exported="false" />
+        <activity
+            android:name=".flatbelly_3"
+            android:exported="false" />
+        <activity
+            android:name=".flatbelly_2"
+            android:exported="false" />
+        <activity
+            android:name=".flatbelly_1"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_9"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_8"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_7"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_6"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_5"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_4"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_3"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_2"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_1"
+            android:exported="false" />
+        <activity
+            android:name=".office_9"
+            android:exported="false" />
+        <activity
+            android:name=".office_8"
+            android:exported="false" />
+        <activity
+            android:name=".office_7"
+            android:exported="false" />
+        <activity
+            android:name=".office_6"
+            android:exported="false" />
+        <activity
+            android:name=".office_5"
+            android:exported="false" />
+        <activity
+            android:name=".office_4"
+            android:exported="false" />
+        <activity
+            android:name=".office_3"
+            android:exported="false" />
+        <activity
+            android:name=".office_2"
+            android:exported="false" />
+        <activity
+            android:name=".office_1"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_9"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_8"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_7"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_6"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_5"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_4"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_3"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_2"
+            android:exported="false" />
+        <activity
+            android:name=".standing_yoga"
+            android:exported="false" />
+        <activity
+            android:name=".sitted_yoga"
+            android:exported="false" />
+        <activity
+            android:name=".sun_salutation"
+            android:exported="false" />
+        <activity
+            android:name=".ease_yoga"
+            android:exported="false" />
+        <activity
+            android:name=".sleepy_time_stretch"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_warmup"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_warmup"
+            android:exported="false" />
+        <activity
+            android:name=".morning_warmup"
+            android:exported="false" />
+        <activity
+            android:name=".slim_legss"
+            android:exported="false" />
+        <activity
+            android:name=".toned_arms"
+            android:exported="false" />
+        <activity
+            android:name=".angle_booty"
+            android:exported="false" />
+        <activity
+            android:name=".office_workout"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_walking"
+            android:exported="false" />
+        <activity
+            android:name=".lazybed_1"
+            android:exported="false" />
+        <activity
+            android:name=".lazy_bed"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".workout_5"
+            android:exported="false" />
+        <activity
+            android:name=".enjoy_4"
+            android:exported="false" />
+        <activity
+            android:name=".goal_2"
+            android:exported="false" />
+        <activity
+            android:name=".Forget_Password"
+            android:exported="false" />
+        <activity
+            android:name=".day_spend7"
+            android:exported="false" />
+        <activity
+            android:name=".exercise_time_6"
+            android:exported="false" />
+        <activity
+            android:name=".problems_3"
+            android:exported="false" />
+        <activity
+            android:name=".motivate_1"
+            android:exported="false" />
+        <activity
+            android:name=".Goal"
+            android:exported="false" />
+        <activity
+            android:name=".Welcome"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".flat_belly"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

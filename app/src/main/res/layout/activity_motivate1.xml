@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".motivate_1"
+    android:padding="18dp"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/motivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What motivates you the most?"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:padding="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_1"
+        android:layout_width="300dp"
+        android:layout_height="13dp"
+        android:scaleY="0.5"
+        android:progressDrawable="@drawable/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="0"
+        android:max="100"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <RadioGroup
+        android:layout_below="@id/motivate"
+        android:id="@+id/radiogroup_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/motivate1_l1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/look"/>
+            <TextView
+                android:id="@+id/motivate1_t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Look Better"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/motivate1_l2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:id="@+id/confident"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/confident"/>
+            <TextView
+                android:id="@+id/motivate1_t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feel more confident"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/motivate1_l3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/selflove"/>
+            <TextView
+                android:id="@+id/motivate1_t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Self Love"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/motivate1_l4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/stress"/>
+            <TextView
+                android:id="@+id/motivate1_t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stress Relief"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+    </RadioGroup>
+
+</RelativeLayout>

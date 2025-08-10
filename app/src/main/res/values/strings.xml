@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">FitLife_FitCare</string>
+    <string name="main1">Life Has No Remote.</string>
+    <string name="main2">Get Up And Change Yourself.</string>
+
+    <string name="training_routin1">Stretch your arm, shoulder, chest and back.</string>
+    <string name="training_routin2">Loosen muscles and improve flexibility.</string>
+
+    <string name="welcome">Here are some questions regarding to yourself.Tell me about yourself.</string>
+
+    <string name="training_yoga1">Activate your body with basic yoga asanas.</string>
+    <string name="training_yoga2">Improve your flexibility and reduce chronic pain and stress.</string>
+
+    <string name="lazybed">A lazy bed workout is a simple, low-effort fitness routine you can do without getting out of bed. It’s perfect for mornings when you want to gently wake up your body</string>
+    <string name="office">An office workout is a short, discreet, and equipment-free exercise routine designed to be done at your desk or in a small office space. </string>
+    <string name="indoor">Indoor walking is a simple, low-impact cardio activity done inside your home, office, or gym. It mimics the motion and benefits of regular walking but is adapted to indoor spaces.</string>
+    <string name="flatbelly">A flat belly refers to a toned, slim abdominal area with minimal visible bloating or excess fat. While genetics play a role in how fat is distributed in the body.</string>
+    <string name="angle_booty">An "angle booty" typically refers to the look of the butt from a side or angled view, where the glutes appear lifted, firm, and round</string>
+    <string name="tonedarm">A toned arm workout is designed to sculpt, define, and strengthen your arms by targeting the biceps, triceps, and shoulders with resistance-based movements. </string>
+    <string name="slimlegs">A slim leg workout is a lower-body routine designed to tone, lengthen, and lean out your legs without adding bulky muscle. The focus is on high-rep, low-resistance movements </string>
+    <string name="prerun">A pre-run warm-up is a series of dynamic movements done before running to prepare your muscles, joints, and cardiovascular system for the workout ahead. </string>
+    <string name="postrun">A post-run warm-down, also known as a cool-down, is a gentle routine done after your run to help your body recover, prevent muscle stiffness, and gradually bring your heart rate back to normal.</string>
+    <string name="sleepytime">A sleepy time stretch workout is a gentle, calming routine designed to help you relax your body, unwind your mind, and prepare for a restful night’s sleep. </string>
+    <string name="easeyoga">Ease Yoga for Beginners is a gentle, beginner-friendly yoga style focused on helping you relax your body, calm your mind, and build flexibility and awareness all at a comfortable pace.</string>
+    <string name="sunsalute">Sun Salutation, or Surya Namaskar, is a foundational yoga flow that links breath with movement in a smooth sequence of poses.</string>
+    <string name="seatedyoga">Simple Seated Yoga is a gentle, accessible yoga practice done entirely from a seated position. It focuses on slow, mindful movements that stretch and relax the body</string>
+    <string name="standyoga">Simple Standing Yoga is a beginner-friendly practice that includes gentle, grounding yoga poses performed entirely from a standing position</string>
+    <string name="morning_warm">A morning warm-up is a gentle, energizing routine that helps you wake up your body, increase circulation, and prepare your muscles and joints for the day ahead.</string>
+
+    <string name="training_health">In today\'s busy world, women\'s self-care, including healthy eating, often takes a backseat.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

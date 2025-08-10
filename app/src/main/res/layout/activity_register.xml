@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@drawable/background"
+    android:padding="18dp">
+
+    <ImageView
+        android:id="@+id/up_img"
+        android:layout_width="580dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="430dp"
+        android:src="@drawable/register_img"
+        android:layout_marginBottom="-105dp"/>
+
+    <TextView
+        android:id="@+id/Sign_Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        style="@style/Title"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/up_Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        app:hintTextColor="@color/green_icon"
+        android:textColorHint="@color/grey_EditText_color"
+        android:layout_below="@id/Sign_Up"
+        app:counterMaxLength="20"
+        app:counterEnabled="true"
+        android:layout_marginTop="15dp"
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeErrorColor="@color/red"
+        app:counterOverflowTextColor="@color/red"
+        app:errorTextColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/green_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/up_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="15dp"
+            style="@style/EditText"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/up_EmailID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email ID"
+        app:hintTextColor="@color/green_icon"
+        android:textColorHint="@color/grey_EditText_color"
+        android:layout_below="@id/up_Username"
+        android:layout_marginTop="3dp"
+        app:endIconMode="clear_text"
+        app:placeholderText="ex:abc@gmail.com"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeErrorColor="@color/red"
+        app:errorTextColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/green_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/up_emailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="15dp"
+            style="@style/EditText"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/up_MobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile Number"
+        app:hintTextColor="@color/green_icon"
+        android:textColorHint="@color/grey_EditText_color"
+        android:layout_below="@id/up_EmailID"
+        app:counterMaxLength="10"
+        app:counterEnabled="true"
+        android:layout_marginTop="15dp"
+        app:endIconMode="clear_text"
+        app:prefixText="+91 "
+        app:prefixTextColor="@color/black"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeErrorColor="@color/red"
+        app:counterOverflowTextColor="@color/red"
+        app:errorTextColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/green_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/up_mobilenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:drawableStart="@drawable/baseline_phone_24"
+            android:drawablePadding="15dp"
+            style="@style/EditText"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/up_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:hintTextColor="@color/green_icon"
+        android:textColorHint="@color/grey_EditText_color"
+        android:layout_below="@id/up_MobileNumber"
+        app:counterMaxLength="20"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/green_icon"
+        android:layout_marginTop="3dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeErrorColor="@color/red"
+        app:errorTextColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/green_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/up_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="15dp"
+            style="@style/EditText"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/up_ConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        app:hintTextColor="@color/green_icon"
+        android:textColorHint="@color/grey_EditText_color"
+        android:layout_below="@id/up_Password"
+        app:counterMaxLength="20"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/green_icon"
+        android:layout_marginTop="15dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeErrorColor="@color/red"
+        app:errorTextColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/green_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/up_confirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="15dp"
+            style="@style/EditText"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/up_button"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="Done"
+        style="@style/Title"
+        android:textSize="20sp"
+        android:background="@drawable/button"
+        android:textColor="#FFFFFF"
+        android:elevation="0dp"
+        android:padding="12dp"
+        android:layout_below="@id/up_ConfirmPassword"
+        android:layout_marginTop="30dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercise_time_6"
+    android:background="@color/white"
+    android:padding="18dp">
+    <TextView
+        android:id="@+id/dayspend7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What does your typical day look like?"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:padding="20dp"/>
+
+    <ImageView
+        android:id="@+id/back7"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/back"/>
+    <ProgressBar
+        android:id="@+id/progress_7"
+        android:layout_width="300dp"
+        android:layout_height="13dp"
+        android:scaleY="0.5"
+        android:progressDrawable="@drawable/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="100"
+        android:max="100"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+
+    <RadioGroup
+        android:layout_below="@id/dayspend7"
+        android:id="@+id/radiogroup_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/dayspend7_l1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/sitting"/>
+            <TextView
+                android:id="@+id/dayspend7_t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="At Work, Mostly Sitting"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dayspend7_l2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/home"/>
+            <TextView
+                android:id="@+id/dayspend7_t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="At Home, Mostly inactive"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dayspend7_l3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/walking"/>
+            <TextView
+                android:id="@+id/dayspend7_t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walking Every Day"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dayspend7_l4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/standing"/>
+            <TextView
+                android:id="@+id/dayspend7_t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="At Work, Mostly Standing"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+    </RadioGroup>
+
+</RelativeLayout>
