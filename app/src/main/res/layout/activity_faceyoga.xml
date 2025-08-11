@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    tools:context=".Faceyoga">
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_challenges">
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="210dp"
+            android:src="@drawable/faceyoga"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="-2dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear2">
+        <TextView
+            android:id="@+id/texfaceyoga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FACE YOGA"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+
+            android:layout_marginStart="20dp"
+            android:fontFamily="serif"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/faceyoga_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/faceyoga"
+            android:layout_below="@id/texfaceyoga"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            />
+        <ImageView
+            android:id="@+id/alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_alarm_24"
+            android:layout_below="@id/faceyoga_desc"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/minutes_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 minutes"
+            android:layout_below="@id/faceyoga_desc"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/alarm"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"/>
+        <ImageView
+            android:id="@+id/walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_directions_walk_24"
+            android:layout_below="@id/alarm"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/workouts_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Workouts"
+            android:layout_below="@id/minutes_1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/alarm"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/start_faceyoga"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/workouts_1"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+
+            android:layout_marginTop="195dp"
+            android:backgroundTint="#2B9BA8"/>
+    </RelativeLayout>
+</RelativeLayout>

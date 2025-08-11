@@ -16,6 +16,63 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Lowerbody_10"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_9"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_8"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_7"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_6"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_5"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_4"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_3"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_2"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_1"
+            android:exported="false" />
+        <activity
+            android:name=".Faceyoga_5"
+            android:exported="false" />
+        <activity
+            android:name=".Faceyoga_4"
+            android:exported="false" />
+        <activity
+            android:name=".Faceyoga_3"
+            android:exported="false" />
+        <activity
+            android:name=".Faceyoga_2"
+            android:exported="false" />
+        <activity
+            android:name=".Faceyoga_1"
+            android:exported="false" />
+        <activity
+            android:name=".Faceyoga"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Chest_inter"
+            android:exported="false" />
+        <activity
             android:name=".Chest_begin"
             android:exported="false" />
         <activity
