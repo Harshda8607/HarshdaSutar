@@ -30,6 +30,25 @@
     <string name="training_health">In today\'s busy world, women\'s self-care, including healthy eating, often takes a backseat.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fullbody_text">A full body workout is a training routine where all major muscle groups are worked in a single session, unlike split routines that target specific muscle groups on different days. </string>
+    <string name="lowerbody_text">The lower body refers to the region of the human body below the waist. It includes several key structures responsible for movement, support, and various physiological functions.</string>
+    <string name="flatstomach_text">A flat stomach workout is aimed at toning and strengthening the core muscles while helping to reduce abdominal fat when combined with proper nutrition and cardio. </string>
+    <string name="faceyoga">Face yoga is a natural, non-invasive technique that involves performing facial exercises, stretches, and massages to tone the muscles of the face, improve circulation, and promote a more youthful, lifted appearance.</string>
+    <string name="abs_begin_text">An abs beginner workout is a simple, low-impact core training routine designed to strengthen and tone the abdominal muscles, especially for people who are new to fitness or coming back after a break.</string>
+    <string name="abs_intermediate_text">An intermediate abs workout is a step up from beginner-level routines, designed to challenge the core muscles more deeply through longer holds, controlled movement, and higher intensity.</string>
+    <string name="abs_advanced_text">An advanced abs workout is a high-intensity, core-focused routine designed for individuals with a solid foundation in core strength and control. </string>
+    <string name="thigh_begin_text">A thigh beginner workout is a low-impact, accessible exercise routine focused on toning, strengthening, and shaping the thighs.</string>
+    <string name="thigh_intermediate_text">A thigh intermediate workout is a strength-focused and toning routine designed for individuals who have already developed some lower-body endurance and control. I</string>
+    <string name="thigh_advan_text">An advanced thigh workout is a high-intensity, challenging routine designed for individuals with a strong fitness foundation who want to maximize muscle growth, strength, and definition in the thighs. </string>
+    <string name="arm_begin_text">An arm beginner workout is a simple, effective routine focused on strengthening and toning the muscles of the upper arms—the biceps, triceps, and forearms. </string>
+    <string name="arm_intermediate_text">An arm intermediate workout is designed for those who have built foundational strength and want to challenge their biceps, triceps, and forearms with more resistance, volume, and variety. </string>
+    <string name="arm_adv_text">An advanced arm workout is a high-intensity, focused routine designed for individuals with strong foundational arm strength who want to build maximum muscle size, power, and definition. </string>
+    <string name="butt_beg_text">A butt beginner workout is a gentle yet effective routine focused on strengthening and toning the glute muscles—the gluteus maximus, medius, and minimus.</string>
+    <string name="butt_inter_text">A butt intermediate workout is a more challenging routine aimed at strengthening and sculpting the glute muscles with increased intensity, volume, and variety.</string>
+    <string name="butt_advan_text">An advanced butt workout is a high-intensity, focused routine designed for experienced individuals who want to maximize glute muscle hypertrophy, strength, and endurance. </string>
+    <string name="chest_begin_text">A chest beginner workout is a simple, effective routine designed to strengthen and tone the muscles of the chest (primarily the pectoralis major). </string>
+    <string name="chest_inter_text">A chest intermediate workout is a more challenging routine for those who have mastered the beginner exercises and want to further develop the chest muscles using heavier resistance, varied angles, and increased volume.</string>
+    <string name="chest_adv_text">A chest advanced workout is an intense, high-volume routine designed for experienced lifters who want to maximize chest size, strength, definition, and symmetry. </string>
 
 
 </resources>
