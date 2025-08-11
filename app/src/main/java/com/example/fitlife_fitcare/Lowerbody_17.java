@@ -3,7 +3,6 @@ package com.example.fitlife_fitcare;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -14,26 +13,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Abs_beginner_3 extends AppCompatActivity {
+import pl.droidsonroids.gif.GifImageView;
 
+public class Lowerbody_17 extends AppCompatActivity {
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
-    private ImageButton nextButton;
+    ImageButton nextButton;
     private CountDownTimer countDownTimer;
+    GifImageView img1;
     private boolean isRunning = true;
-    private long timeLeft = 30000;
+    private long timeLeft = 30000; // 30 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_lowerbody17);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_abs_beginner3);
-
-        timerText = findViewById(R.id.abs_begintime3);
-        progressBar = findViewById(R.id.abs_beginprogressBar3);
-        playPauseButton = findViewById(R.id.abs_beginPauseButton3);
-        nextButton = findViewById(R.id.abs_beginNextButton3);
+        timerText = findViewById(R.id.lowerbodytime17);
+        progressBar = findViewById(R.id.lowerprogressBar17);
+        playPauseButton = findViewById(R.id.lowerplayPauseButton17);
+        nextButton = findViewById(R.id.lowerNextButton17);
         progressBar.setMax(30);
         startTimer();
 
@@ -44,18 +44,16 @@ public class Abs_beginner_3 extends AppCompatActivity {
                 resumeTimer();
             }
         });
-
         nextButton.setOnClickListener(v -> {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_beginner_3.this, Abs_beginner_4.class);
+            Intent intent = new Intent(Lowerbody_17.this, Finish.class);
             startActivity(intent);
             finish();
         });
 
     }
-
     private void startTimer() {
         countDownTimer = new CountDownTimer(timeLeft, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -67,9 +65,8 @@ public class Abs_beginner_3 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Abs_beginner_3.this, Abs_beginner_4.class);
-                startActivity(intent1);
-
+                Intent intent=new Intent(Lowerbody_17.this,Finish.class);
+                startActivity(intent);
             }
         }.start();
         isRunning = true;
@@ -83,6 +80,7 @@ public class Abs_beginner_3 extends AppCompatActivity {
     }
 
     private void resumeTimer() {
+
         startTimer();
     }
 }
