@@ -21,7 +21,7 @@ public class Fullbody_3 extends AppCompatActivity {
     ImageButton nextButton;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
-    private long timeLeft = 30000; // 30 seconds
+    private long timeLeft = 30000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

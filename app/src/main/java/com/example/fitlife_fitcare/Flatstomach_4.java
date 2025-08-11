@@ -23,7 +23,7 @@ public class Flatstomach_4 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     GifImageView img1;
     private boolean isRunning = true;
-    private long timeLeft = 30000; // 30 seconds
+    private long timeLeft = 30000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -226,20 +226,6 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        cbutt2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Butt_inter.class);
-                startActivity(intent);
-            }
-        });
-        cbutt3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Butt_advan.class);
-                startActivity(intent);
-            }
-        });
         cchest1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

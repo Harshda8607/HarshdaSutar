@@ -16,6 +16,75 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".thigh_inter_1"
+            android:exported="false" />
+        <activity
+            android:name=".thigh_beg_1"
+            android:exported="false" />
+        <activity
+            android:name=".thigh_ad_1"
+            android:exported="false" />
+        <activity
+            android:name=".sun_1"
+            android:exported="false" />
+        <activity
+            android:name=".stand_1"
+            android:exported="false" />
+        <activity
+            android:name=".slim_1"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_1"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_1"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_1"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_1"
+            android:exported="false" />
+        <activity
+            android:name=".morning_1"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_1"
+            android:exported="false" />
+        <activity
+            android:name=".chest_inter_1"
+            android:exported="false" />
+        <activity
+            android:name=".chest_beg_1"
+            android:exported="false" />
+        <activity
+            android:name=".chest_ad_1"
+            android:exported="false" />
+        <activity
+            android:name=".butt_inter_1"
+            android:exported="false" />
+        <activity
+            android:name=".butt_beg_1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_ad_1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_inter_1"
+            android:exported="false" />
+        <activity
+            android:name=".arm_ad_1"
+            android:exported="false" />
+        <activity
+            android:name=".arm_beg_1"
+            android:exported="false" />
+        <activity
+            android:name=".arm_inter_1"
+            android:exported="false" />
+        <activity
+            android:name=".butt_ad_1"
+            android:exported="false" />
+        <activity
             android:name=".Lowerbody_12"
             android:exported="false" />
         <activity
@@ -73,15 +142,13 @@
             android:name=".Faceyoga"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".flat_belly"
             android:exported="false" />
         <activity
             android:name=".Chest_inter"
             android:exported="false" />
-        <activity
-            android:name=".Chest_begin"/>
-        <activity
-            android:name=".Fullbody_14"/>
+        <activity android:name=".Chest_begin" />
+        <activity android:name=".Fullbody_14" />
         <activity
             android:name=".Fullbody_13"
             android:exported="false" />
@@ -317,7 +384,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".flat_belly"
+            android:name=".Dashboard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

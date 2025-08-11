@@ -48,7 +48,7 @@ public class anglebooty_8 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(anglebooty_8.this, anglebooty_1.class);
+            Intent intent = new Intent(anglebooty_8.this, Finish.class);
             startActivity(intent);
             finish();
         });
@@ -66,7 +66,7 @@ public class anglebooty_8 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(anglebooty_8.this, anglebooty_1.class);
+                Intent intent1 = new Intent(anglebooty_8.this, Finish.class);
                 startActivity(intent1);
 
             }

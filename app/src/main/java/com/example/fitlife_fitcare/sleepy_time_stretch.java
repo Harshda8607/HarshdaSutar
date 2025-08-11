@@ -23,8 +23,8 @@ public class sleepy_time_stretch extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(sleepy_time_stretch.this,sleep_1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(sleepy_time_stretch.this,sleep_1.class);
+                startActivity(intent);
             }
         });
     }

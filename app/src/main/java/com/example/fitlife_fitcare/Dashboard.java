@@ -13,7 +13,6 @@ import com.example.fitlife_fitcare.R;
 import com.example.fitlife_fitcare.fragment.HomeFragment;
 import com.example.fitlife_fitcare.fragment.ReportFragment;
 import com.example.fitlife_fitcare.fragment.training;
-import com.example.fitlife_fitcare.fragment.training;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Dashboard extends AppCompatActivity {

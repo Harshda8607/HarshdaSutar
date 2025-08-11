@@ -23,8 +23,8 @@ public class prerun_warmup extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(prerun_warmup.this,prerun_1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(prerun_warmup.this,prerun_1.class);
+                startActivity(intent);
             }
         });
     }

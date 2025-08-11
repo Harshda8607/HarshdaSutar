@@ -23,8 +23,8 @@ public class sun_salutation extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(sun_salutation.this,sun_1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(sun_salutation.this,sun_1.class);
+                startActivity(intent);
             }
         });
     }
