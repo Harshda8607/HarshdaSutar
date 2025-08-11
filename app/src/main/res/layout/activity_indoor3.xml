@@ -15,7 +15,6 @@
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="-50dp"
-        android:layout_marginStart="-40dp"
         android:padding="50dp"
         android:src="@drawable/squat_side_kick"/>
 

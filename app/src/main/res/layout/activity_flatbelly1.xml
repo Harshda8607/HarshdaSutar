@@ -14,11 +14,10 @@
         android:layout_height="530dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-30dp"
         android:layout_marginStart="10dp"
         android:layout_centerHorizontal="true"
         android:padding="60dp"
-        android:src="@drawable/ankle_tap_push_ups"/>
+        android:src="@drawable/advanced_bridge"/>
 
 
     <!-- Timer -->
@@ -40,7 +39,7 @@
         android:id="@+id/bellyexercise1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ANKLE TAP PUSH UPS"
+        android:text="ADVANCED BRIDGE"
         android:layout_above="@id/bellytime1"
         android:textColor="#000000"
         android:textSize="25sp"

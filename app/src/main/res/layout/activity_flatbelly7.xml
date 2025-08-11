@@ -11,10 +11,10 @@
     <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="400dp"
-        android:layout_height="600dp"
+        android:layout_height="550dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="-30dp"
         android:layout_marginStart="-10dp"
         android:padding="75dp"
         android:src="@drawable/reverse_crunch_twist"/>
@@ -33,6 +33,11 @@
         android:layout_marginBottom="15dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="400dp"/>
 
     <!-- Exercise Name -->
     <TextView
@@ -45,11 +50,7 @@
         android:textSize="25sp"
         android:layout_marginStart="10dp"
         android:textStyle="bold" />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/white"
-        android:layout_marginTop="373dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

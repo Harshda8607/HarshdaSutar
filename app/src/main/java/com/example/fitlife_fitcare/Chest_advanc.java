@@ -1,4 +1,4 @@
-package com.example.fitlife_fitcare.;
+package com.example.fitlife_fitcare;
 
 import android.os.Bundle;
 

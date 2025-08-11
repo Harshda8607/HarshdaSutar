@@ -23,8 +23,8 @@ public class toned_arms extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(toned_arms.this,toned_1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(toned_arms.this,arm_1.class);
+                startActivity(intent);
             }
         });
     }

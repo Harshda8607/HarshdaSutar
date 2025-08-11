@@ -16,6 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+<activity
             android:name=".Lowerbody_12"
             android:exported="false" />
         <activity
@@ -80,9 +81,48 @@
             android:exported="false" />
         <activity
             android:name=".Chest_begin"
+<activity
+            android:name=".Fullbody_14"
+<activity
             android:exported="false" />
         <activity
-            android:name=".Chest_advanc"
+            android:name=".Fullbody_13"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_12"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_11"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_10"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_9"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_8"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_7"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_6"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_5"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_4"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_3"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_2"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_1"
             android:exported="false" />
         <activity
             android:name=".Abs_beginner_3"
