@@ -11,12 +11,12 @@
     <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="380dp"
-        android:layout_height="600dp"
+        android:layout_height="500dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-70dp"
-        android:padding="20dp"
-        android:src="@drawable/advanced_bridge"/>
+        android:layout_marginTop="10dp"
+        android:padding="50dp"
+        android:src="@drawable/double_leg_stretch"/>
 
 
     <!-- Timer -->
@@ -38,12 +38,17 @@
         android:id="@+id/bellyexercise6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADVANCED BRIDGE"
+        android:text="DOUBLE LEG STRETCH"
         android:layout_above="@id/bellytime6"
         android:textColor="#000000"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
         android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="400dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

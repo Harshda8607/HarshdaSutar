@@ -16,6 +16,54 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".arm_8"
+            android:exported="false" />
+        <activity
+            android:name=".arm_7"
+            android:exported="false" />
+        <activity
+            android:name=".arm_6"
+            android:exported="false" />
+        <activity
+            android:name=".arm_5"
+            android:exported="false" />
+        <activity
+            android:name=".arm_4"
+            android:exported="false" />
+        <activity
+            android:name=".arm_3"
+            android:exported="false" />
+        <activity
+            android:name=".arm_2"
+            android:exported="false" />
+        <activity
+            android:name=".arm_1"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_8"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_7"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_6"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_5"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_4"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_3"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_2"
+            android:exported="false" />
+        <activity
+            android:name=".anglebooty_1"
+            android:exported="false" />
+        <activity
             android:name=".flatbelly_8"
             android:exported="false" />
         <activity
@@ -145,6 +193,9 @@
             android:name=".slim_legss"
             android:exported="false" />
         <activity
+            android:name=".flat_belly"
+            android:exported="false" />
+        <activity
             android:name=".toned_arms"
             android:exported="false" />
         <activity
@@ -152,9 +203,6 @@
             android:exported="false" />
         <activity
             android:name=".office_workout"
-            android:exported="false" />
-        <activity
-            android:name=".indoor_walking"
             android:exported="false" />
         <activity
             android:name=".lazybed_1"
@@ -202,7 +250,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".flat_belly"
+            android:name=".indoor_walking"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

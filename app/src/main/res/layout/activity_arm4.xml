@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workoutLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".arm_4"
+    android:padding="18dp">
+
+    <!-- GIF or Lottie animation -->
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="390dp"
+        android:layout_height="530dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="-30dp"
+        android:layout_marginStart="-40dp"
+        android:padding="60dp"
+        android:src="@drawable/dead_bug"/>
+
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/armtime4"
+        android:layout_above="@id/armlinear4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:30"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="380dp"/>
+
+    <!-- Exercise Name -->
+    <TextView
+        android:id="@+id/armexercise4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEAD BUG"
+        android:layout_above="@id/armtime4"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4/8"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_above="@id/armlinear4"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="150dp"/>
+
+    <!-- Progress & Controls -->
+    <LinearLayout
+        android:id="@+id/armlinear4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp">
+        <ImageButton
+            android:id="@+id/armPauseButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_pause"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="Pause" />
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:id="@+id/armprogressBar4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="2.5"
+            android:progressTint="#33ADA2"
+            android:max="30"
+            android:progressBackgroundTint="#DAEFEA"
+            android:progress="0" />
+        <ImageButton
+            android:id="@+id/armNextButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_next"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="Next" />
+
+
+    </LinearLayout>
+</RelativeLayout>

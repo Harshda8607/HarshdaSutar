@@ -15,7 +15,7 @@
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="-50dp"
-        android:layout_marginStart="-40dp"
+        android:layout_marginStart="-10dp"
         android:padding="50dp"
         android:src="@drawable/cross_crunches"/>
 

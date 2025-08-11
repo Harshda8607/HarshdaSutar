@@ -89,6 +89,7 @@
             android:text="START"
             android:textSize="25sp"
             android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
             android:layout_below="@id/workouts_1"
             android:textStyle="bold"
             android:layout_marginTop="140dp"

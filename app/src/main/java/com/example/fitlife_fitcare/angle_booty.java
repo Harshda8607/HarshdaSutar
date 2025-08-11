@@ -23,8 +23,8 @@ public class angle_booty extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(angle_booty.this,anglebooty1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(angle_booty.this,anglebooty_1.class);
+                startActivity(intent);
             }
         });
     }
