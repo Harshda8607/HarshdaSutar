@@ -16,52 +16,55 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".arm_8"
+            android:name=".FullBody"
             android:exported="false" />
         <activity
-            android:name=".arm_7"
+            android:name=".Flatstomach_5"
             android:exported="false" />
         <activity
-            android:name=".arm_6"
+            android:name=".Flatstomach_4"
             android:exported="false" />
         <activity
-            android:name=".arm_5"
+            android:name=".Flatstomach_3"
             android:exported="false" />
         <activity
-            android:name=".arm_4"
+            android:name=".Flatstomach_2"
             android:exported="false" />
         <activity
-            android:name=".arm_3"
+            android:name=".Flatstomach_1"
             android:exported="false" />
         <activity
-            android:name=".arm_2"
+            android:name=".flatstomach"
             android:exported="false" />
         <activity
-            android:name=".arm_1"
+            android:name=".Finish"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_8"
+            android:name=".Butt_inter"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_7"
+            android:name=".Butt_begin"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_6"
+            android:name=".Butt_advan"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_5"
+            android:name=".arm_intermediate"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_4"
+            android:name=".arm_beginner"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_3"
+            android:name=".arm_advanced"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_2"
+            android:name=".abs_intermediate"
             android:exported="false" />
         <activity
-            android:name=".anglebooty_1"
+            android:name=".abs_beginner"
+            android:exported="false" />
+        <activity
+            android:name=".abs_advanced"
             android:exported="false" />
         <activity
             android:name=".flatbelly_8"
@@ -193,9 +196,6 @@
             android:name=".slim_legss"
             android:exported="false" />
         <activity
-            android:name=".flat_belly"
-            android:exported="false" />
-        <activity
             android:name=".toned_arms"
             android:exported="false" />
         <activity
@@ -203,6 +203,9 @@
             android:exported="false" />
         <activity
             android:name=".office_workout"
+            android:exported="false" />
+        <activity
+            android:name=".indoor_walking"
             android:exported="false" />
         <activity
             android:name=".lazybed_1"
@@ -250,7 +253,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".indoor_walking"
+            android:name=".flat_belly"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
