@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Lowerbody_11"
+            android:exported="false" />
+        <activity
             android:name=".Lowerbody_10"
             android:exported="false" />
         <activity
