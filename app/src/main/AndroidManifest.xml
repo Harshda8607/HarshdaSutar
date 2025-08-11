@@ -16,18 +16,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Fullbody_18"
-            android:exported="false" />
-        <activity
-            android:name=".Fullbody_17"
-            android:exported="false" />
-        <activity
-            android:name=".Fullbody_16"
-            android:exported="false" />
-        <activity
-            android:name=".Fullbody_15"
-            android:exported="false" />
-        <activity
             android:name=".Lowerbody_12"
             android:exported="false" />
         <activity
@@ -90,10 +78,10 @@
         <activity
             android:name=".Chest_inter"
             android:exported="false" />
-        <activity android:name=".Chest_begin" />
         <activity
-            android:name=".Fullbody_14"
-            android:exported="false" />
+            android:name=".Chest_begin"/>
+        <activity
+            android:name=".Fullbody_14"/>
         <activity
             android:name=".Fullbody_13"
             android:exported="false" />
