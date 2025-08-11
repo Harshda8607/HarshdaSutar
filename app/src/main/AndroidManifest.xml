@@ -16,6 +16,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Chest_begin"
+            android:exported="false" />
+        <activity
+            android:name=".Chest_advanc"
+            android:exported="false" />
+        <activity
             android:name=".Abs_beginner_3"
             android:exported="false" />
         <activity
