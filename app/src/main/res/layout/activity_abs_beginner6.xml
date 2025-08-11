@@ -4,25 +4,32 @@
     android:id="@+id/workoutLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".Lowerbody_11"
+    android:background="@color/white"
+    tools:context=".Abs_beginner_6"
     android:padding="18dp">
 
     <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
-        android:layout_width="wrap_content"
+        android:layout_width="380dp"
         android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
-        android:padding="50dp"
-        android:src="@drawable/alternate_heel_touch"/>
+        android:layout_marginTop="-40dp"
+        android:padding="60dp"
+        android:src="@drawable/butt_bridge"/>
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginStart="340dp"
+        android:background="@color/white"
+        android:orientation="vertical"/>
 
 
     <!-- Timer -->
     <TextView
-        android:id="@+id/lowerbodytime11"
-        android:layout_above="@id/lowerlinear11"
+        android:id="@+id/abs_begintime6"
+        android:layout_above="@id/abs_beginlinear6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:30"
@@ -34,31 +41,30 @@
         android:layout_marginTop="15dp" />
 
     <!-- Exercise Name -->
-
     <TextView
-        android:id="@+id/lowerexercise11"
+        android:id="@+id/babs_beginexercise6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ALTERNATE HEEL TOUCH"
-        android:layout_above="@id/lowerbodytime11"
-        android:textColor="@color/black"
+        android:text="BUTT BRIDGE"
+        android:layout_above="@id/abs_begintime6"
+        android:textColor="#000000"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
         android:textStyle="bold" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="11/17"
+        android:text="6/10"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_above="@id/lowerlinear11"
+        android:layout_above="@id/abs_beginlinear6"
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
     <!-- Progress & Controls -->
     <LinearLayout
-        android:id="@+id/lowerlinear11"
+        android:id="@+id/abs_beginlinear6"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
@@ -67,7 +73,7 @@
         android:layout_marginBottom="30dp"
         android:padding="10dp">
         <ImageButton
-            android:id="@+id/lowerplayPauseButton11"
+            android:id="@+id/abs_beginPauseButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_pause"
@@ -76,7 +82,7 @@
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:id="@+id/lowerprogressBar11"
+            android:id="@+id/abs_beginprogressBar6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -86,11 +92,13 @@
             android:progressBackgroundTint="#DAEFEA"
             android:progress="0" />
         <ImageButton
-            android:id="@+id/lowerNextButton11"
+            android:id="@+id/abs_beginNextButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_next"
             android:background="?android:selectableItemBackground"
             android:contentDescription="Next" />
+
+
     </LinearLayout>
 </RelativeLayout>

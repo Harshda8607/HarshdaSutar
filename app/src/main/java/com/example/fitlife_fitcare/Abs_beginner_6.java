@@ -14,7 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Abs_beginner_3 extends AppCompatActivity {
+public class Abs_beginner_6 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
@@ -28,12 +28,12 @@ public class Abs_beginner_3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_abs_beginner3);
+        setContentView(R.layout.activity_abs_beginner6);
 
-        timerText = findViewById(R.id.abs_begintime3);
-        progressBar = findViewById(R.id.abs_beginprogressBar3);
-        playPauseButton = findViewById(R.id.abs_beginPauseButton3);
-        nextButton = findViewById(R.id.abs_beginNextButton3);
+        timerText = findViewById(R.id.abs_begintime6);
+        progressBar = findViewById(R.id.abs_beginprogressBar6);
+        playPauseButton = findViewById(R.id.abs_beginPauseButton6);
+        nextButton = findViewById(R.id.abs_beginNextButton6);
         progressBar.setMax(30);
         startTimer();
 
@@ -49,7 +49,7 @@ public class Abs_beginner_3 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_beginner_3.this, Abs_beginner_4.class);
+            Intent intent = new Intent(Abs_beginner_6.this, Abs_beginner_7.class);
             startActivity(intent);
             finish();
         });
@@ -67,7 +67,7 @@ public class Abs_beginner_3 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Abs_beginner_3.this, Abs_beginner_4.class);
+                Intent intent1 = new Intent(Abs_beginner_6.this, Abs_beginner_7.class);
                 startActivity(intent1);
 
             }
