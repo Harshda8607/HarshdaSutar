@@ -16,55 +16,55 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".FullBody"
+            android:name=".Fullbody_14"
             android:exported="false" />
         <activity
-            android:name=".Flatstomach_5"
+            android:name=".Fullbody_13"
             android:exported="false" />
         <activity
-            android:name=".Flatstomach_4"
+            android:name=".Fullbody_12"
             android:exported="false" />
         <activity
-            android:name=".Flatstomach_3"
+            android:name=".Fullbody_11"
             android:exported="false" />
         <activity
-            android:name=".Flatstomach_2"
+            android:name=".Fullbody_10"
             android:exported="false" />
         <activity
-            android:name=".Flatstomach_1"
+            android:name=".Fullbody_9"
             android:exported="false" />
         <activity
-            android:name=".flatstomach"
+            android:name=".Fullbody_8"
             android:exported="false" />
         <activity
-            android:name=".Finish"
+            android:name=".Fullbody_7"
             android:exported="false" />
         <activity
-            android:name=".Butt_inter"
+            android:name=".Fullbody_6"
             android:exported="false" />
         <activity
-            android:name=".Butt_begin"
+            android:name=".Fullbody_5"
             android:exported="false" />
         <activity
-            android:name=".Butt_advan"
+            android:name=".Fullbody_4"
             android:exported="false" />
         <activity
-            android:name=".arm_intermediate"
+            android:name=".Fullbody_3"
             android:exported="false" />
         <activity
-            android:name=".arm_beginner"
+            android:name=".Fullbody_2"
             android:exported="false" />
         <activity
-            android:name=".arm_advanced"
+            android:name=".Fullbody_1"
             android:exported="false" />
         <activity
-            android:name=".abs_intermediate"
+            android:name=".Abs_beginner_3"
             android:exported="false" />
         <activity
-            android:name=".abs_beginner"
+            android:name=".Abs_beginner_2"
             android:exported="false" />
         <activity
-            android:name=".abs_advanced"
+            android:name=".Abs_beginner_1"
             android:exported="false" />
         <activity
             android:name=".flatbelly_8"

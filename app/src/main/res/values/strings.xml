@@ -26,6 +26,9 @@
     <string name="seatedyoga">Simple Seated Yoga is a gentle, accessible yoga practice done entirely from a seated position. It focuses on slow, mindful movements that stretch and relax the body</string>
     <string name="standyoga">Simple Standing Yoga is a beginner-friendly practice that includes gentle, grounding yoga poses performed entirely from a standing position</string>
     <string name="morning_warm">A morning warm-up is a gentle, energizing routine that helps you wake up your body, increase circulation, and prepare your muscles and joints for the day ahead.</string>
+
+    <string name="training_health">In today\'s busy world, women\'s self-care, including healthy eating, often takes a backseat.</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fullbody_text">A full body workout is a training routine where all major muscle groups are worked in a single session, unlike split routines that target specific muscle groups on different days. </string>
     <string name="lowerbody_text">The lower body refers to the region of the human body below the waist. It includes several key structures responsible for movement, support, and various physiological functions.</string>
@@ -46,9 +49,6 @@
     <string name="chest_begin_text">A chest beginner workout is a simple, effective routine designed to strengthen and tone the muscles of the chest (primarily the pectoralis major). </string>
     <string name="chest_inter_text">A chest intermediate workout is a more challenging routine for those who have mastered the beginner exercises and want to further develop the chest muscles using heavier resistance, varied angles, and increased volume.</string>
     <string name="chest_adv_text">A chest advanced workout is an intense, high-volume routine designed for experienced lifters who want to maximize chest size, strength, definition, and symmetry. </string>
-
-    <string name="training_health">In today\'s busy world, women\'s self-care, including healthy eating, often takes a backseat.</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
 
 </resources>
