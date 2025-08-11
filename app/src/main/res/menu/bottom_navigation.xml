@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/baseline_home_24"/>
+        <item android:id="@+id/training"
+            android:title="Training"
+            android:icon="@drawable/outline_assistant_navigation_24"/>
+        <item android:id="@+id/report"
+            android:title="Report"
+            android:icon="@drawable/outline_graphic_eq_24"/>
+        <item android:id="@+id/profile"
+            android:title="Profile"
+            android:icon="@drawable/outline_account_circle_24"/>
+</menu>
