@@ -3,7 +3,6 @@ package com.example.fitlife_fitcare;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -16,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class Fullbody_9 extends AppCompatActivity {
+public class Fullbody_16 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
@@ -30,13 +29,12 @@ public class Fullbody_9 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fullbody9);
+        setContentView(R.layout.activity_fullbody16);
         EdgeToEdge.enable(this);
-        timerText = findViewById(R.id.fulltimer9);
-        progressBar = findViewById(R.id.fullprogressBar9);
-        playPauseButton = findViewById(R.id.fullplayPauseButton9);
-        nextButton=findViewById(R.id.fullNextButton9);
-        img1=findViewById(R.id.gif1);
+        timerText = findViewById(R.id.fulltimer16);
+        progressBar = findViewById(R.id.fullprogressBar16);
+        playPauseButton = findViewById(R.id.fullplayPauseButton16);
+        nextButton = findViewById(R.id.fullNextButton16);
         progressBar.setMax(30);
         startTimer();
 
@@ -51,7 +49,7 @@ public class Fullbody_9 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Fullbody_9.this, Fullbody_10.class);
+            Intent intent = new Intent(Fullbody_16.this, Fullbody_17.class);
             startActivity(intent);
             finish();
         });
@@ -68,7 +66,7 @@ public class Fullbody_9 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent=new Intent(Fullbody_9.this,Fullbody_10.class);
+                Intent intent=new Intent(Fullbody_16.this,Fullbody_17.class);
                 startActivity(intent);
             }
         }.start();

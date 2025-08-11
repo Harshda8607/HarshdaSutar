@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Fullbody_12"
+    tools:context=".Fullbody_16"
     android:padding="18dp">
 
 
@@ -14,14 +14,14 @@
         android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="-60dp"
         android:padding="50dp"
-        android:src="@drawable/donkey_kick"/>
+        android:src="@drawable/sumo_side_kick"/>
 
     <!-- Timer -->
     <TextView
-        android:id="@+id/fulltimer12"
-        android:layout_above="@id/fulllinear12"
+        android:id="@+id/fulltimer16"
+        android:layout_above="@id/fulllinear16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:30"
@@ -35,11 +35,11 @@
     <!-- Exercise Name -->
 
     <TextView
-        android:id="@+id/fullexercise12"
+        android:id="@+id/fullexercise16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DONKEY KICK"
-        android:layout_above="@id/fulltimer12"
+        android:text="SUMO SIDE KICK "
+        android:layout_above="@id/fulltimer16"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
@@ -47,25 +47,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12/18"
+        android:text="16/18"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_above="@id/fulllinear12"
+        android:layout_above="@id/fulllinear16"
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
     <!-- Progress & Controls -->
     <LinearLayout
-        android:id="@+id/fulllinear12"
+        android:id="@+id/fulllinear16"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:gravity="center"
+        android:layout_marginBottom="30dp"
         android:padding="10dp">
         <ImageButton
-            android:id="@+id/fullplayPauseButton12"
+            android:id="@+id/fullplayPauseButton16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_pause"
@@ -74,7 +75,7 @@
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:id="@+id/fullprogressBar12"
+            android:id="@+id/fullprogressBar16"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -84,7 +85,7 @@
             android:progressBackgroundTint="#DAEFEA"
             android:progress="0" />
         <ImageButton
-            android:id="@+id/fullNextButton12"
+            android:id="@+id/fullNextButton16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_next"

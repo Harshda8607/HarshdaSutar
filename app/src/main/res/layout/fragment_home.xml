@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragment.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Week Goal"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp" />
+            <!--Weekday-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/sunday"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="S"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:background="@drawable/daycircle"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/munday"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="M"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@id/sunday"
+                        android:background="@drawable/daycircle"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/tuesday"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="T"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@id/munday"
+                        android:background="@drawable/daycircle"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/wednesday"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="W"
+                        android:layout_toEndOf="@id/tuesday"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:background="@drawable/daycircle"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/thursday"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="T"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@id/wednesday"
+                        android:background="@drawable/daycircle"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/friday"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="F"
+                        android:layout_toEndOf="@id/thursday"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:background="@drawable/daycircle"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/saturday"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="S"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@id/friday"
+                        android:gravity="center"
+                        android:background="@drawable/daycircle"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"/>
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <!--Challenges-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Challenges"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="310dp"
+                        android:layout_height="210dp"
+                        app:cardCornerRadius="15dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_challenges">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_marginStart="170dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/fullbody2" />
+
+                            <TextView
+                                android:id="@+id/fullbody"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-130dp"
+                                android:gravity="center"
+                                android:text="FULL BODY CHALLENGE"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:layout_marginStart="10dp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="270dp"
+                                android:layout_height="70dp"
+                                android:text="Start your body-toning journey to target all muscles."
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:padding="14dp"
+                                android:layout_marginTop="0dp"/>
+                            <Button
+                                android:id="@+id/btn1_fullbody"
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:text="START"
+                                android:textSize="20sp"
+                                android:backgroundTint="@color/white"
+                                android:textColor="#29928A"
+                                android:textStyle="bold"
+                                android:layout_marginTop="-10dp"
+                                android:gravity="center"
+                                android:layout_marginStart="35dp"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="310dp"
+                        android:layout_height="210dp"
+                        android:backgroundTint="#7AAFAB"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_challenges">
+
+                            <ImageView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_marginStart="180dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/lowerbody" />
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-150dp"
+                                android:gravity="center"
+                                android:text="LOWER BODY CHALLENGE"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:layout_marginStart="15dp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="270dp"
+                                android:layout_height="70dp"
+                                android:text="Boost lower body strenght and enhace your overall strenght."
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:layout_marginStart="10dp"
+                                android:padding="14dp"
+                                android:layout_marginTop="0dp"/>
+                            <Button
+                                android:id="@+id/btn2_lowerbody"
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:text="START"
+                                android:textSize="20sp"
+                                android:backgroundTint="@color/white"
+                                android:textColor="#2E2E2E"
+                                android:textStyle="bold"
+                                android:layout_marginTop="-10dp"
+                                android:gravity="center"
+                                android:layout_marginStart="40dp"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="310dp"
+                        android:layout_height="210dp"
+                        android:backgroundTint="#7AAFAB"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_challenges">
+
+                            <ImageView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_marginStart="180dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/flatstomach" />
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-150dp"
+                                android:text="FLAT STOMACH"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:layout_marginStart="30dp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="270dp"
+                                android:layout_height="70dp"
+                                android:text="Flat stomach workout helps to reduce your fat and to build abs."
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:layout_marginStart="10dp"
+                                android:padding="14dp"
+                                android:layout_marginTop="0dp"/>
+                            <Button
+                                android:id="@+id/btn3_flatstomach"
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:text="START"
+                                android:textSize="20sp"
+                                android:backgroundTint="@color/white"
+                                android:textColor="#29928A"
+                                android:textStyle="bold"
+                                android:layout_marginTop="-10dp"
+                                android:gravity="center"
+                                android:layout_marginStart="40dp"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="310dp"
+                        android:layout_height="210dp"
+                        android:backgroundTint="#7AAFAB"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_challenges">
+
+                            <ImageView
+                                android:layout_width="180dp"
+                                android:layout_height="180dp"
+                                android:layout_marginStart="160dp"
+                                android:layout_marginTop="-10dp"
+                                android:src="@drawable/faceyoga" />
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-130dp"
+                                android:text="FACE YOGA"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:layout_marginStart="40dp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="230dp"
+                                android:layout_height="70dp"
+                                android:text="Face yoga is a series of facial exercises, stretches, massage techniques."
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:padding="14dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="20dp"/>
+                            <Button
+                                android:id="@+id/btn4_faceyoga"
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:text="START"
+                                android:textSize="20sp"
+                                android:backgroundTint="@color/white"
+                                android:textColor="#29928A"
+                                android:textStyle="bold"
+                                android:layout_marginTop="-10dp"
+                                android:gravity="center"
+                                android:layout_marginStart="40dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!--            bodyfocus-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body Focus"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <!--            abs workout-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABS WORKOUT"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#699BBA"
+                        android:id="@+id/abs_workout1"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="132dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/abs_begin" />
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="ABS BEGINNER"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="10 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#699BBA"
+                        android:id="@+id/abs_workout_2"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="130dp"
+                            android:layout_marginTop="-5dp"
+                            android:src="@drawable/abs_inter2" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="ABS                    INTERMEDIATE"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="10 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#699BBA"
+                        android:id="@+id/abs_workout_3"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="120dp"
+                            android:layout_marginTop="-5dp"
+                            android:src="@drawable/abs_advance" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="ABS ADVANCED"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="10 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--            thigh workout-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THIGH WORKOUT"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/thigh_workout_1"
+                        android:backgroundTint="#A07FB1"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="130dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/thigh_beg" />
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="THIGH BEGINNER"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="10 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/thighr_workout2"
+                        android:backgroundTint="#A07FB1"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="130dp"
+                            android:layout_marginTop="-20dp"
+                            android:src="@drawable/thigh_inter" />
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="THIGH           INTERMEDIATE"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="10 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#A07FB1"
+                        android:id="@+id/thigh_workout3"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="150dp"
+                            android:layout_marginTop="0dp"
+                            android:src="@drawable/thigh_adv" />
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="THIGH ADVANCED"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="10 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARM WORKOUT"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#54A294"
+                        android:id="@+id/arm_workout1"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/arm_begin" />
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="ARM BEGINNER"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="8 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:backgroundTint="#54A294"
+                        android:id="@+id/arm_workout2"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/arm_inter" />
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="ARM                         INTERMEDIATE"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="8 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:backgroundTint="#54A294"
+                        android:id="@+id/arm_workout3"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/arm_adva" />
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="ARM ADVANVED"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="8 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BUTT WORKOUT"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#5476A2"
+                        android:id="@+id/butt_workout1"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/buut_begin" />
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="BUTT BEGINNER"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="6 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/butt_workout2"
+                        android:backgroundTint="#5476A2"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="190dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="120dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/butt_inter" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="BUTT                       INTERMEDIATE"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="6 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:backgroundTint="#5476A2"
+                        android:id="@+id/butt_workout3"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="190dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="110dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/butt_adv" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="BUTT ADVANCED"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="6 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHEST WORKOUT"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#99A06A"
+                        android:id="@+id/chest_workout1"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="260dp"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="-45dp"
+                            android:src="@drawable/chest_begin" />
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="CHEST BEGINNER"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="5 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#99A06A"
+                        android:id="@+id/chest_workout2"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/chest_inter" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="CHEST              INTERMEDIATE"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="5 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="160dp"
+                        android:backgroundTint="#99A06A"
+                        android:id="@+id/chest_workout3"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageView
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="-10dp"
+                            android:src="@drawable/chest_adv" />
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:text="CHEST ADVANCED"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:text="5 Workouts"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

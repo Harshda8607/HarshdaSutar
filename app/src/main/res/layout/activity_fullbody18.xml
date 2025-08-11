@@ -5,23 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Fullbody_12"
+    tools:context=".Fullbody_18"
     android:padding="18dp">
 
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
-        android:layout_height="600dp"
+        android:layout_height="500dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="-60dp"
         android:padding="50dp"
-        android:src="@drawable/donkey_kick"/>
+        android:src="@drawable/staright_leg_raise"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="350dp"/>
 
     <!-- Timer -->
     <TextView
-        android:id="@+id/fulltimer12"
-        android:layout_above="@id/fulllinear12"
+        android:id="@+id/fulltimer18"
+        android:layout_above="@id/fulllinear18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:30"
@@ -35,11 +40,11 @@
     <!-- Exercise Name -->
 
     <TextView
-        android:id="@+id/fullexercise12"
+        android:id="@+id/fullexercise18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DONKEY KICK"
-        android:layout_above="@id/fulltimer12"
+        android:text="STRAIGHT LEG RAISE"
+        android:layout_above="@id/fulltimer18"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
@@ -47,25 +52,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12/18"
+        android:text="18/18"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_above="@id/fulllinear12"
+        android:layout_above="@id/fulllinear18"
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
     <!-- Progress & Controls -->
     <LinearLayout
-        android:id="@+id/fulllinear12"
+        android:id="@+id/fulllinear18"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:gravity="center"
+        android:layout_marginBottom="30dp"
         android:padding="10dp">
         <ImageButton
-            android:id="@+id/fullplayPauseButton12"
+            android:id="@+id/fullplayPauseButton18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_pause"
@@ -74,7 +80,7 @@
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:id="@+id/fullprogressBar12"
+            android:id="@+id/fullprogressBar18"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -84,13 +90,11 @@
             android:progressBackgroundTint="#DAEFEA"
             android:progress="0" />
         <ImageButton
-            android:id="@+id/fullNextButton12"
+            android:id="@+id/fullNextButton18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_next"
             android:background="?android:selectableItemBackground"
             android:contentDescription="Next" />
-
-
     </LinearLayout>
 </RelativeLayout>
