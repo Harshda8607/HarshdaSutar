@@ -5,31 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Abs_beginner_9"
+    tools:context=".Abs_inter_7"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
-        android:layout_width="4000dp"
-        android:layout_height="700dp"
+        android:layout_width="5000dp"
+        android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-80dp"
+        android:layout_marginTop="-90dp"
         android:padding="60dp"
-        android:src="@drawable/standing_side_left"/>
+        android:src="@drawable/reverse_plank_leg_raises"/>
     <LinearLayout
         android:layout_width="70dp"
         android:layout_height="60dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="390dp"
         android:layout_marginStart="340dp"
         android:background="@color/white"
         android:orientation="vertical"/>
-
-
     <!-- Timer -->
     <TextView
-        android:id="@+id/abs_begintime9"
-        android:layout_above="@id/abs_beginlinear9"
+        android:id="@+id/abs_intertime7"
+        android:layout_above="@id/abs_interlinear7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:30"
@@ -42,11 +39,11 @@
 
     <!-- Exercise Name -->
     <TextView
-        android:id="@+id/abs_beginexercise9"
+        android:id="@+id/abs_interexercise7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="STANDING LEFT LEG RAISE"
-        android:layout_above="@id/abs_begintime9"
+        android:text="RIVERSE PLANK LEG RAISE"
+        android:layout_above="@id/abs_intertime7"
         android:textColor="#000000"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
@@ -54,17 +51,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="9/10"
+        android:text="7/10"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_above="@id/abs_beginlinear9"
+        android:layout_above="@id/abs_interlinear7"
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
     <!-- Progress & Controls -->
     <LinearLayout
-        android:id="@+id/abs_beginlinear9"
+        android:id="@+id/abs_interlinear7"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
@@ -73,7 +70,7 @@
         android:layout_marginBottom="30dp"
         android:padding="10dp">
         <ImageButton
-            android:id="@+id/abs_beginPauseButton9"
+            android:id="@+id/abs_interPauseButton7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_pause"
@@ -82,7 +79,7 @@
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:id="@+id/abs_beginprogressBar9"
+            android:id="@+id/abs_interprogressBar7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -92,13 +89,12 @@
             android:progressBackgroundTint="#DAEFEA"
             android:progress="0" />
         <ImageButton
-            android:id="@+id/abs_beginNextButton9"
+            android:id="@+id/abs_interNextButton7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_next"
             android:background="?android:selectableItemBackground"
             android:contentDescription="Next" />
-
 
     </LinearLayout>
 </RelativeLayout>
