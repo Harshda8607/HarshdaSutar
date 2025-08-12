@@ -42,7 +42,7 @@
 
     <!-- Exercise Name -->
     <TextView
-        android:id="@+id/babs_beginexercise9"
+        android:id="@+id/abs_beginexercise9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="STANDING LEFT LEG RAISE"

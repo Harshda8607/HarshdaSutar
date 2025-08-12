@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
     android:background="@color/white"
     tools:context=".Thigh_intermediate">
     <LinearLayout
@@ -13,7 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:orientation="vertical"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
+=======
+        android:layout_marginTop="40dp"
+>>>>>>> a3edb42d3ea2e9b19979f4bac933412f4067690b
         android:background="#A07FB1">
         <ImageView
             android:layout_width="380dp"

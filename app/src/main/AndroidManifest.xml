@@ -69,9 +69,7 @@
         <activity
             android:name=".abs_ad_1"
             android:exported="false" />
-        <activity
-            android:name=".abs_inter_1"
-            android:exported="false" />
+
         <activity
             android:name=".arm_ad_1"
             android:exported="false" />
@@ -82,7 +80,36 @@
             android:name=".arm_inter_1"
             android:exported="false" />
         <activity
-            android:name=".butt_ad_1"
+            android:name=".butt_ad_1"/>
+        <activity
+            android:name=".Abs_inter_10"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_9"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_8"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_7"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_6"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_5"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_4"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_3"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_2"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_inter_1"
             android:exported="false" />
         <activity
             android:name=".Lowerbody_12"

@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".slim_legss"
-    android:padding="18dp"
     android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/linear2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:orientation="vertical"

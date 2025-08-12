@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".abs_inter_1">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-=======
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/workoutLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Abs_inter_1"
+    tools:context=".Abs_inter_5"
     android:padding="18dp">
 
     <pl.droidsonroids.gif.GifImageView
@@ -26,20 +15,18 @@
         android:scaleType="centerCrop"
         android:layout_marginTop="-90dp"
         android:padding="60dp"
-        android:src="@drawable/jumping_jacks"/>
+        android:src="@drawable/ankle_tap_push_ups"/>
     <LinearLayout
         android:layout_width="70dp"
         android:layout_height="60dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="390dp"
         android:layout_marginStart="340dp"
         android:background="@color/white"
         android:orientation="vertical"/>
-
-
     <!-- Timer -->
     <TextView
-        android:id="@+id/abs_intertime1"
-        android:layout_above="@id/abs_interlinear1"
+        android:id="@+id/abs_intertime5"
+        android:layout_above="@id/abs_interlinear5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:30"
@@ -52,11 +39,11 @@
 
     <!-- Exercise Name -->
     <TextView
-        android:id="@+id/abs_interexercise1"
+        android:id="@+id/abs_interexercise5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="JUMPING JACKS"
-        android:layout_above="@id/abs_intertime1"
+        android:text="ANKLE PUSH UPS"
+        android:layout_above="@id/abs_intertime5"
         android:textColor="#000000"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
@@ -64,17 +51,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1/10"
+        android:text="5/10"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_above="@id/abs_interlinear1"
+        android:layout_above="@id/abs_interlinear5"
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
     <!-- Progress & Controls -->
     <LinearLayout
-        android:id="@+id/abs_interlinear1"
+        android:id="@+id/abs_interlinear5"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
@@ -83,7 +70,7 @@
         android:layout_marginBottom="30dp"
         android:padding="10dp">
         <ImageButton
-            android:id="@+id/abs_interPauseButton1"
+            android:id="@+id/abs_interPauseButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_pause"
@@ -92,7 +79,7 @@
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:id="@+id/abs_interprogressBar1"
+            android:id="@+id/abs_interprogressBar5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -102,14 +89,12 @@
             android:progressBackgroundTint="#DAEFEA"
             android:progress="0" />
         <ImageButton
-            android:id="@+id/abs_interNextButton1"
+            android:id="@+id/abs_interNextButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_next"
             android:background="?android:selectableItemBackground"
             android:contentDescription="Next" />
 
-
     </LinearLayout>
 </RelativeLayout>
->>>>>>> a3edb42d3ea2e9b19979f4bac933412f4067690b
