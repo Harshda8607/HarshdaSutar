@@ -11,12 +11,18 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
-        android:layout_height="600dp"
+        android:layout_height="530dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
-        android:padding="50dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginStart="-80dp"
+        android:padding="70dp"
         android:src="@drawable/overhead_reach"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="380dp"/>
 
     <!-- Timer -->
     <TextView
@@ -63,6 +69,8 @@
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:gravity="center"
+        android:layout_marginBottom="30dp"
+
         android:padding="10dp">
         <ImageButton
             android:id="@+id/fullplayPauseButton5"

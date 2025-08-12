@@ -48,7 +48,7 @@ public class lazybed_9 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(lazybed_9.this, lazybed_3.class);
+            Intent intent = new Intent(lazybed_9.this, Finish.class);
             startActivity(intent);
             finish();
         });
@@ -67,7 +67,7 @@ public class lazybed_9 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1=new Intent(lazybed_9.this,lazybed_1.class);
+                Intent intent1=new Intent(lazybed_9.this,Finish.class);
                 startActivity(intent1);
 
             }

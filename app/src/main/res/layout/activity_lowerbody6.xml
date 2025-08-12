@@ -10,7 +10,7 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
-        android:layout_height="600dp"
+        android:layout_height="580dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="-60dp"

@@ -11,17 +11,17 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_height="470dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="10dp"
         android:padding="50dp"
         android:src="@drawable/staright_leg_raise"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/white"
-        android:layout_marginTop="350dp"/>
+        android:layout_marginTop="380dp"/>
 
     <!-- Timer -->
     <TextView

@@ -14,7 +14,7 @@
         android:layout_height="500dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="10dp"
         android:padding="50dp"
         android:src="@drawable/double_leg_stretch"/>
 
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white"
-        android:layout_marginTop="340dp"/>
+        android:layout_marginTop="380dp"/>
 
     <!-- Exercise Name -->
 
@@ -67,6 +67,8 @@
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
+        android:layout_marginBottom="30dp"
+
         android:gravity="center"
         android:padding="10dp">
         <ImageButton

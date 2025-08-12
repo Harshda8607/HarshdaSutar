@@ -13,7 +13,7 @@
         android:layout_height="530dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_centerHorizontal="true"
         android:padding="60dp"

@@ -12,12 +12,20 @@
         android:id="@+id/img"
         android:layout_width="350dp"
         android:layout_height="470dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="20dp"
         android:background="@color/white"
         android:padding="60dp"
         android:layout_centerHorizontal="true"
         android:scaleType="centerCrop"
         android:src="@drawable/superman" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="370dp">
+
+    </LinearLayout>
+
 
 
 
@@ -57,13 +65,6 @@
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:layout_marginTop="350dp">
-
-    </LinearLayout>
 
     <!-- Progress & Controls -->
     <LinearLayout

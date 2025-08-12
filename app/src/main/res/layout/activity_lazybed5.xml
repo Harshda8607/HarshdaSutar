@@ -11,7 +11,7 @@
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="380dp"
         android:layout_height="500dp"
-        android:layout_marginTop="-70dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="-20dp"
         android:background="@color/white"
         android:padding="60dp"
@@ -20,7 +20,13 @@
         android:src="@drawable/superman_twist" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="400dp">
 
+    </LinearLayout>
     <!-- Timer -->
     <TextView
         android:id="@+id/lazytime5"
@@ -57,13 +63,7 @@
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:layout_marginTop="320dp">
 
-    </LinearLayout>
 
     <!-- Progress & Controls -->
     <LinearLayout

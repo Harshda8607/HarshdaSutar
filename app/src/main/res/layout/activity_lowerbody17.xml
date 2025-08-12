@@ -13,7 +13,7 @@
         android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-30dp"
         android:padding="50dp"
         android:src="@drawable/standind_side_bend"/>
 

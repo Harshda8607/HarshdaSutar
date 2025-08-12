@@ -18,7 +18,8 @@ public class Lowerbody extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        btn=findViewById(R.id.lazybed_btn);
+        setContentView(R.layout.activity_lowerbody);
+        btn=findViewById(R.id.start_lower);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

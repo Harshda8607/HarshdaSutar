@@ -11,10 +11,10 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
-        android:layout_height="600dp"
+        android:layout_height="570dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="10dp"
         android:padding="50dp"
         android:src="@drawable/plank_hip_dip"/>
 
@@ -63,6 +63,8 @@
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:gravity="center"
+        android:layout_marginBottom="30dp"
+
         android:padding="10dp">
         <ImageButton
             android:id="@+id/fullplayPauseButton8"

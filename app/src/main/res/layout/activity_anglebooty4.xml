@@ -14,7 +14,7 @@
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="-30dp"
-        android:layout_marginStart="-20dp"
+        android:layout_marginStart="10dp"
         android:padding="60dp"
         android:src="@drawable/lunge_back_kick"/>
 

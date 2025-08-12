@@ -49,7 +49,7 @@ public class indoor_9 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(indoor_9.this, indoor_1.class);
+            Intent intent = new Intent(indoor_9.this, Finish.class);
             startActivity(intent);
             finish();
         });
@@ -67,7 +67,7 @@ public class indoor_9 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(indoor_9.this, indoor_1.class);
+                Intent intent1 = new Intent(indoor_9.this, Finish.class);
                 startActivity(intent1);
 
             }

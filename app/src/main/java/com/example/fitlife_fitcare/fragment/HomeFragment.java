@@ -83,40 +83,34 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_home, container, false);
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        bt1=requireView().findViewById(R.id.btn1_fullbody);
-        bt2=requireView().findViewById(R.id.btn2_lowerbody);
-        bt3=requireView().findViewById(R.id.btn3_flatstomach);
-        bt4=requireView().findViewById(R.id.btn4_faceyoga);
-        cabs1=requireView().findViewById(R.id.abs_workout1);
-        cabs2=requireView().findViewById(R.id.abs_workout_2);
-        cabs3=requireView().findViewById(R.id.abs_workout_3);
-        cthigh1=requireView().findViewById(R.id.thigh_workout_1);
-        cthigh2=requireView().findViewById(R.id.thighr_workout2);
-        cthigh3=requireView().findViewById(R.id.thigh_workout3);
-        carm1=requireView().findViewById(R.id.arm_workout1);
-        carm2=requireView().findViewById(R.id.arm_workout2);
-        carm3=requireView().findViewById(R.id.arm_workout3);
-        cbutt1=requireView().findViewById(R.id.butt_workout1);
-        cbutt2=requireView().findViewById(R.id.butt_workout2);
-        cbutt3=requireView().findViewById(R.id.butt_workout3);
-        cchest1=requireView().findViewById(R.id.chest_workout1);
-        cchest2=requireView().findViewById(R.id.chest_workout2);
-        cchest3=requireView().findViewById(R.id.chest_workout3);
+        bt1=view.findViewById(R.id.btn1_fullbody);
+        bt2=view.findViewById(R.id.btn2_lowerbody);
+        bt3=view.findViewById(R.id.btn3_flatstomach);
+        bt4=view.findViewById(R.id.btn4_faceyoga);
+        cabs1=view.findViewById(R.id.abs_workout1);
+        cabs2=view.findViewById(R.id.abs_workout_2);
+        cabs3=view.findViewById(R.id.abs_workout_3);
+        cthigh1=view.findViewById(R.id.thigh_workout_1);
+        cthigh2=view.findViewById(R.id.thighr_workout2);
+        cthigh3=view.findViewById(R.id.thigh_workout3);
+        carm1=view.findViewById(R.id.arm_workout1);
+        carm2=view.findViewById(R.id.arm_workout2);
+        carm3=view.findViewById(R.id.arm_workout3);
+        cbutt1=view.findViewById(R.id.butt_workout1);
+        cbutt2=view.findViewById(R.id.butt_workout2);
+        cbutt3=view.findViewById(R.id.butt_workout3);
+        cchest1=view.findViewById(R.id.chest_workout1);
+        cchest2=view.findViewById(R.id.chest_workout2);
+        cchest3=view.findViewById(R.id.chest_workout3);
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent(requireActivity(), FullBody.class);
+                Intent intent1=new Intent(getActivity(), FullBody.class);
                 startActivity(intent1);
 
             }
@@ -124,128 +118,140 @@ public class HomeFragment extends Fragment {
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2=new Intent(requireActivity(), Lowerbody.class);
-                startActivity(intent2);
+                Intent intent1=new Intent(getActivity(), Lowerbody.class);
+                startActivity(intent1);
+
             }
         });
+
         bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3=new Intent(requireActivity(), flatstomach.class);
+                Intent intent3=new Intent(getActivity(), flatstomach.class);
                 startActivity(intent3);
             }
         });
         bt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent4=new Intent(requireActivity(), Faceyoga.class);
+                Intent intent4=new Intent(getActivity(), Faceyoga.class);
                 startActivity(intent4);
             }
         });
         cabs1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), abs_beginner.class);
+                Intent intent=new Intent(getActivity(), abs_beginner.class);
                 startActivity(intent);
             }
         });
         cabs2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), abs_intermediate.class);
+                Intent intent=new Intent(getActivity(), abs_intermediate.class);
                 startActivity(intent);
             }
         });
         cabs3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), abs_advanced.class);
+                Intent intent=new Intent(getActivity(), abs_advanced.class);
                 startActivity(intent);
             }
         });
         cthigh1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Thigh_begin.class);
+                Intent intent=new Intent(getActivity(), Thigh_begin.class);
                 startActivity(intent);
             }
         });
         cthigh2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Thigh_intermediate.class);
+                Intent intent=new Intent(getActivity(), Thigh_intermediate.class);
                 startActivity(intent);
             }
         });
         cthigh3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Thigh_advanced.class);
+                Intent intent=new Intent(getActivity(), Thigh_advanced.class);
                 startActivity(intent);
             }
         });
         carm1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), arm_beginner.class);
+                Intent intent=new Intent(getActivity(), arm_beginner.class);
                 startActivity(intent);
             }
         });
         carm2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), arm_intermediate.class);
+                Intent intent=new Intent(getActivity(), arm_intermediate.class);
                 startActivity(intent);
             }
         });
         carm3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), arm_advanced.class);
+                Intent intent=new Intent(getActivity(), arm_advanced.class);
                 startActivity(intent);
             }
         });
         cbutt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Butt_begin.class);
+                Intent intent=new Intent(getActivity(), Butt_begin.class);
                 startActivity(intent);
             }
         });
         cbutt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Butt_inter.class);
+                Intent intent=new Intent(getActivity(), Butt_inter.class);
                 startActivity(intent);
             }
         });
         cbutt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Butt_begin.class);
+                Intent intent=new Intent(getActivity(), Butt_advan.class);
                 startActivity(intent);
             }
         });
         cchest1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Chest_begin.class);
+                Intent intent=new Intent(getActivity(), Chest_begin.class);
                 startActivity(intent);
             }
         });
         cchest2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Chest_inter.class);
+                Intent intent=new Intent(getActivity(), Chest_inter.class);
                 startActivity(intent);
             }
         });
         cchest3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(requireActivity(), Chest_advanc.class);
+                Intent intent=new Intent(getActivity(), Chest_advanc.class);
                 startActivity(intent);
             }
         });
     }
+
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
 }

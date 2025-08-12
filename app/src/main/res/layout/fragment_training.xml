@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.training"
-    android:padding="18dp"
     android:background="@color/white">
 
     <androidx.appcompat.widget.Toolbar
@@ -20,8 +19,7 @@
         android:id="@+id/training_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/training_toolbar"
-        android:padding="15dp">
+        android:layout_below="@id/training_toolbar">
 
 
         <ScrollView
@@ -44,8 +42,7 @@
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp">
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="wrap_content"

@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
     android:background="@color/white"
     tools:context=".Dashboard">
     <androidx.appcompat.widget.Toolbar
@@ -21,7 +22,6 @@
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
         android:layout_above="@id/bottom_nav"
-        android:padding="5dp"
         android:id="@+id/framelayiut"
         android:background="@color/white">
 
@@ -29,11 +29,12 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:id="@+id/bottom_nav"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:background="@color/white"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_navigation"
         app:itemIconTint="#009688"
+        app:itemTextColor="@color/black"
         app:itemIconSize="28dp"
         app:labelVisibilityMode="labeled"
         />

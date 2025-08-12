@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:padding="18dp"
     tools:context=".Lowerbody">
     <LinearLayout
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:orientation="vertical"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_challenges">
         <ImageView
             android:layout_width="350dp"

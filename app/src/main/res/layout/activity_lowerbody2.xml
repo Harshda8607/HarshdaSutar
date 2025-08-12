@@ -10,12 +10,17 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
-        android:layout_height="600dp"
+        android:layout_height="550dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="-60dp"
         android:padding="50dp"
         android:src="@drawable/lunge_kicks"/>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_marginTop="400dp"/>-->
 
     <!-- Timer -->
     <TextView

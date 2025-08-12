@@ -362,6 +362,7 @@
                 android:layout_height="wrap_content"
                 android:text="ABS WORKOUT"
                 android:textSize="18sp"
+                android:textColor="@color/black"
                 android:layout_marginTop="10dp"/>
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -418,10 +419,10 @@
                             android:layout_marginTop="-5dp"
                             android:src="@drawable/abs_inter2" />
                         <TextView
-                            android:layout_width="180dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="35dp"
-                            android:text="ABS                    INTERMEDIATE"
+                            android:text="ABS                       INTERMEDIATE"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:layout_marginStart="20dp"
@@ -477,6 +478,8 @@
                 android:layout_height="wrap_content"
                 android:text="THIGH WORKOUT"
                 android:textSize="18sp"
+                android:textColor="@color/black"
+
                 android:layout_marginTop="20dp"/>
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -591,6 +594,8 @@
                 android:layout_height="wrap_content"
                 android:text="ARM WORKOUT"
                 android:textSize="18sp"
+                android:textColor="@color/black"
+
                 android:layout_marginTop="20dp"/>
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -705,6 +710,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BUTT WORKOUT"
+                android:textColor="@color/black"
+
                 android:textSize="18sp"
                 android:layout_marginTop="20dp"/>
             <HorizontalScrollView
@@ -764,10 +771,10 @@
                             android:layout_marginTop="-10dp"
                             android:src="@drawable/butt_inter" />
                         <TextView
-                            android:layout_width="180dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="35dp"
-                            android:text="BUTT                       INTERMEDIATE"
+                            android:text="BUTT                      INTERMEDIATE"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:layout_marginStart="20dp"
@@ -822,6 +829,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CHEST WORKOUT"
+                android:textColor="@color/black"
+
                 android:textSize="18sp"
                 android:layout_marginTop="20dp"/>
             <HorizontalScrollView
@@ -879,10 +888,10 @@
                             android:layout_marginTop="-10dp"
                             android:src="@drawable/chest_inter" />
                         <TextView
-                            android:layout_width="180dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="35dp"
-                            android:text="CHEST              INTERMEDIATE"
+                            android:text="CHEST                INTERMEDIATE"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:layout_marginStart="20dp"

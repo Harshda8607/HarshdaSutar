@@ -5,6 +5,7 @@ import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -103,6 +104,8 @@ public class Register extends AppCompatActivity {
                     response -> {
                         Log.d("Server Response: " ,response);
                         Toast.makeText(Register.this,response,LENGTH_LONG).show();
+                        Intent intent=new Intent(Register.this,Welcome.class);
+                        startActivity(intent);
                     },
                     error -> {
                         String errorMSG= Boolean.parseBoolean(String.valueOf((error.networkResponse!=null)))
