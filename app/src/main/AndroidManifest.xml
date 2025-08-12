@@ -345,7 +345,7 @@
             android:name=".lazy_bed"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".workout_5"
@@ -384,7 +384,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
