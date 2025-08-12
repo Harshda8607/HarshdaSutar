@@ -18,6 +18,12 @@
         android:layout_marginTop="-70dp"
         android:padding="60dp"
         android:src="@drawable/glute_bridge"/>
+    <ImageView
+        android:id="@+id/back_lazybed3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
 
 
     <!-- Timer -->

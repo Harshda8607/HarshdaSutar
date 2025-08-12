@@ -16,7 +16,12 @@
         android:layout_marginTop="-50dp"
         android:padding="50dp"
         android:src="@drawable/standing_cross_chest_curl"/>
-
+    <ImageView
+        android:id="@+id/back_office7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
 
     <!-- Timer -->
     <TextView

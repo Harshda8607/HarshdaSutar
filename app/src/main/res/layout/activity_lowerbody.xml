@@ -5,22 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     android:background="@color/white"
-    android:padding="18dp"
-=======
->>>>>>> a3edb42d3ea2e9b19979f4bac933412f4067690b
     tools:context=".Lowerbody">
     <LinearLayout
         android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:orientation="vertical"
-<<<<<<< HEAD
-        android:layout_marginTop="20dp"
-=======
         android:layout_marginTop="40dp"
->>>>>>> a3edb42d3ea2e9b19979f4bac933412f4067690b
         android:background="@drawable/bg_challenges">
         <ImageView
             android:layout_width="350dp"

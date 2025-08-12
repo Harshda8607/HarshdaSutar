@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Abs_advan_1"
+            android:exported="false" />
+        <activity
             android:name=".thigh_inter_1"
             android:exported="false" />
         <activity
@@ -67,10 +70,6 @@
             android:name=".butt_beg_1"
             android:exported="false" />
         <activity
-            android:name=".abs_ad_1"
-            android:exported="false" />
-
-        <activity
             android:name=".arm_ad_1"
             android:exported="false" />
         <activity
@@ -79,8 +78,7 @@
         <activity
             android:name=".arm_inter_1"
             android:exported="false" />
-        <activity
-            android:name=".butt_ad_1"/>
+        <activity android:name=".butt_ad_1" />
         <activity
             android:name=".Abs_inter_10"
             android:exported="false" />
@@ -174,10 +172,12 @@
         <activity
             android:name=".Chest_inter"
             android:exported="false" />
-        <activity android:name=".Chest_begin"
-            android:exported="false"/>
-        <activity android:name=".Fullbody_14"
-            android:exported="false"/>
+        <activity
+            android:name=".Chest_begin"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_14"
+            android:exported="false" />
         <activity
             android:name=".Fullbody_13"
             android:exported="false" />
@@ -465,117 +465,112 @@
             android:exported="false" />
         <activity
             android:name=".arm_beginner"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".abs_beginner"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".abs_intermediate"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".abs_advanced"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Abs_beginner_4"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Abs_beginner_5"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Abs_beginner_6"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Abs_beginner_7"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Abs_beginner_8"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Abs_beginner_9"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Abs_beginner_10"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".anglebooty_1"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".anglebooty_2"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".anglebooty_3"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".anglebooty_4"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".anglebooty_5"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".anglebooty_6"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".anglebooty_7"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".anglebooty_8"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".arm_1"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_2"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_3"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_4"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_5"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_6"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_7"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_8"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Thigh_intermediate"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Thigh_begin"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".arm_intermediate"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".arm_advanced"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Butt_begin"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Butt_inter"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Butt_advan"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Chest_advanc"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Dashboard"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -18,6 +18,18 @@
         android:layout_marginStart="-40dp"
         android:padding="50dp"
         android:src="@drawable/cross_jacks"/>
+    <ImageView
+        android:id="@+id/back_indoor2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:layout_marginTop="380dp"
+        android:layout_marginStart="320dp"/>
 
 
     <!-- Timer -->

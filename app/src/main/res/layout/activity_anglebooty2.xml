@@ -19,6 +19,19 @@
         android:layout_centerHorizontal="true"
         android:padding="60dp"
         android:src="@drawable/sumo_side_bends"/>
+    <ImageView
+        android:id="@+id/back_booty2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:layout_marginTop="380dp"
+        android:layout_marginStart="320dp"/>
+
 
 
     <!-- Timer -->

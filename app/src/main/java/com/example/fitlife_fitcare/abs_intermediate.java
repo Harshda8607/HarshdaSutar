@@ -23,7 +23,7 @@ public class abs_intermediate extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(abs_intermediate.this, abs_inter_1.class);
+                Intent intent=new Intent(abs_intermediate.this, Abs_inter_1.class);
                 startActivity(intent);
             }
         });
