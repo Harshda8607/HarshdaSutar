@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".prerun_warmup"
-    android:padding="18dp"
     android:background="@color/white">
 
     <LinearLayout
@@ -14,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/training_prerun">
     </LinearLayout>
     <RelativeLayout

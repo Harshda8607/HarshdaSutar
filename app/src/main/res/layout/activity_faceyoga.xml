@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
     android:background="@color/white"
     tools:context=".Faceyoga">
     <LinearLayout
@@ -13,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/bg_challenges">
         <ImageView
             android:layout_width="350dp"
@@ -102,7 +101,7 @@
             android:layout_below="@id/workouts_1"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_marginTop="165dp"
+            android:layout_marginTop="160dp"
             android:backgroundTint="#2B9BA8"/>
     </RelativeLayout>
 </RelativeLayout>

@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".angle_booty"
-    android:padding="18dp"
     android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:background="@drawable/angle_booty">
     </LinearLayout>
@@ -91,7 +90,7 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/workouts_1"
             android:textStyle="bold"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="210dp"
             android:backgroundTint="#2B9BA8"/>
     </RelativeLayout>
 

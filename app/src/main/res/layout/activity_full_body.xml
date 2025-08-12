@@ -6,13 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="18dp"
     tools:context=".FullBody">
     <LinearLayout
         android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:background="@drawable/bg_challenges">
         <ImageView
@@ -98,7 +97,7 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/workouts_1"
             android:textStyle="bold"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="140dp"
             android:backgroundTint="#2B9BA8"/>
     </RelativeLayout>
 </RelativeLayout>

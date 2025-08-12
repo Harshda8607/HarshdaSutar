@@ -5,14 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
     android:background="@color/white"
     tools:context=".Butt_begin">
     <LinearLayout
         android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:background="#5476A2">
         <ImageView
