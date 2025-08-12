@@ -14,8 +14,9 @@
         android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-100dp"
         android:padding="50dp"
+        android:layout_marginStart="-30dp"
         android:src="@drawable/jumping_jacks"/>
 
     <!-- Timer -->

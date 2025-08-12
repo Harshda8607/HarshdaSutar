@@ -8,10 +8,6 @@
     tools:context=".lazybed_4"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
-
-
-
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/img"
         android:layout_width="350dp"

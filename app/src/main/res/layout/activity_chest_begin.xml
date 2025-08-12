@@ -12,7 +12,7 @@
         android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:background="#99A06A">
         <ImageView
@@ -102,8 +102,7 @@
             android:layout_below="@id/workouts_1"
             android:textStyle="bold"
             android:textColor="@color/white"
-
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="155dp"
             android:backgroundTint="#2B9BA8"/>
     </RelativeLayout>
 </RelativeLayout>

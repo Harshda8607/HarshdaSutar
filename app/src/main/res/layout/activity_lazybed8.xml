@@ -8,10 +8,7 @@
     tools:context=".lazybed_8"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
 
-
-    <!-- Timer -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="400dp"
         android:layout_height="520dp"
@@ -22,6 +19,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/cobra_lat_pulldown" />
 
+    <!-- Timer -->
     <TextView
         android:id="@+id/lazytime8"
         android:layout_above="@id/lazylinear8"
