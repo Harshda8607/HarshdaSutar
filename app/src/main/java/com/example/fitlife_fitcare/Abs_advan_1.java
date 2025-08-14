@@ -1,8 +1,6 @@
 package com.example.fitlife_fitcare;
 
-<<<<<<< HEAD
 import android.os.Bundle;
-=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,7 +9,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
->>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,8 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Abs_advan_1 extends AppCompatActivity {
 
-<<<<<<< HEAD
-=======
+
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
@@ -32,26 +28,15 @@ public class Abs_advan_1 extends AppCompatActivity {
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
->>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_advan1);
-<<<<<<< HEAD
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-    }
-}
-=======
-
-        timerText = findViewById(R.id.abs_advantime1);
-        progressBar = findViewById(R.id.abs_advanprogressBar1);
-        playPauseButton = findViewById(R.id.abs_advanPauseButton1);
-        nextButton = findViewById(R.id.abs_advanNextButton1);
+        timerText = findViewById(R.id.abs_advtime1);
+        progressBar = findViewById(R.id.abs_advprogressBar1);
+        playPauseButton = findViewById(R.id.abs_advPauseButton1);
+        nextButton = findViewById(R.id.abs_advNextButton1);
         backbutton=findViewById(R.id.back_abs_adv1);
         progressBar.setMax(30);
         startTimer();
@@ -80,9 +65,7 @@ public class Abs_advan_1 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-
     }
-
     private void startTimer() {
         countDownTimer = new CountDownTimer(timeLeft, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -113,4 +96,4 @@ public class Abs_advan_1 extends AppCompatActivity {
         startTimer();
     }
 }
->>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
+

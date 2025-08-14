@@ -16,7 +16,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
             android:name=".slim_8"
             android:exported="false" />
         <activity
@@ -35,8 +34,8 @@
             android:name=".slim_3"
             android:exported="false" />
         <activity
-            android:name=".slim_2"
-=======
+            android:name=".slim_2"/>
+        <activity
             android:name=".Arm_begin_8"
             android:exported="false" />
         <activity
@@ -176,17 +175,9 @@
             android:exported="false" />
         <activity
             android:name=".Abs_advan_2"
->>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
             android:exported="false" />
         <activity
             android:name=".Abs_advan_1"
-            android:exported="false" />
-        <activity
-<<<<<<< HEAD
-            android:name=".thigh_inter_1"
-            android:exported="false" />
-        <activity
-            android:name=".thigh_beg_1"
             android:exported="false" />
         <activity
             android:name=".thigh_ad_1"
@@ -243,11 +234,11 @@
             android:name=".arm_inter_1"
             android:exported="false" />
         <activity android:name=".butt_ad_1" />
+
         <activity
-=======
->>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
             android:name=".Abs_inter_10"
             android:exported="false" />
+
         <activity
             android:name=".Abs_inter_9"
             android:exported="false" />
