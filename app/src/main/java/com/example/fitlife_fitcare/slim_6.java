@@ -3,7 +3,6 @@ package com.example.fitlife_fitcare;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -15,28 +14,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class office_3 extends AppCompatActivity {
+public class slim_6 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_office3);
+        setContentView(R.layout.activity_slim6);
 
-        timerText = findViewById(R.id.officetime3);
-        progressBar = findViewById(R.id.officeprogressBar3);
-        playPauseButton = findViewById(R.id.officePauseButton3);
-        nextButton = findViewById(R.id.officeNextButton3);
-        back=findViewById(R.id.back_office3);
+        timerText = findViewById(R.id.slimtime6);
+        progressBar = findViewById(R.id.slimprogressBar6);
+        playPauseButton = findViewById(R.id.slimPauseButton6);
+        nextButton = findViewById(R.id.slimNextButton6);
+        back=findViewById(R.id.back_slim6);
         progressBar.setMax(30);
         startTimer();
 
@@ -52,14 +51,14 @@ public class office_3 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(office_3.this, office_4.class);
+            Intent intent = new Intent(slim_6.this, slim_7.class);
             startActivity(intent);
             finish();
         });
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(office_3.this, office_2.class);
+            Intent intent = new Intent(slim_6.this, slim_5.class);
             startActivity(intent);
             finish();
         });
@@ -78,7 +77,7 @@ public class office_3 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(office_3.this, office_4.class);
+                Intent intent1 = new Intent(slim_6.this, slim_7.class);
                 startActivity(intent1);
 
             }

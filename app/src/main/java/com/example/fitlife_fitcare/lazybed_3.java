@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class lazybed_3 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
+    private ImageView back;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
@@ -34,6 +36,7 @@ public class lazybed_3 extends AppCompatActivity {
         progressBar = findViewById(R.id.lazyprogressBar3);
         playPauseButton = findViewById(R.id.lazyPauseButton3);
         nextButton=findViewById(R.id.lazyNextButton3);
+        back=findViewById(R.id.back_lazybed3);
         progressBar.setMax(30);
         startTimer();
 
@@ -52,6 +55,14 @@ public class lazybed_3 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(lazybed_3.this, lazybed_2.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
 

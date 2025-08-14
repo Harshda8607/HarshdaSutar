@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class office_9 extends AppCompatActivity {
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
+    private ImageView back;
     private long timeLeft = 30000;
 
     @Override
@@ -34,6 +36,7 @@ public class office_9 extends AppCompatActivity {
         progressBar = findViewById(R.id.officeprogressBar9);
         playPauseButton = findViewById(R.id.officePauseButton9);
         nextButton = findViewById(R.id.officeNextButton9);
+        back=findViewById(R.id.back_office9);
         progressBar.setMax(30);
         startTimer();
 
@@ -53,6 +56,14 @@ public class office_9 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(office_9.this, office_8.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
 

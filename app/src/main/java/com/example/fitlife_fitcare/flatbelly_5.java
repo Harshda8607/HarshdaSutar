@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class flatbelly_5 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
+    private ImageView back;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
@@ -34,6 +36,7 @@ public class flatbelly_5 extends AppCompatActivity {
         progressBar = findViewById(R.id.bellyrprogressBar5);
         playPauseButton = findViewById(R.id.bellyPauseButton5);
         nextButton = findViewById(R.id.bellyNextButton5);
+        back=findViewById(R.id.back_belly5);
         progressBar.setMax(30);
         startTimer();
 
@@ -53,6 +56,14 @@ public class flatbelly_5 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(flatbelly_5.this, flatbelly_4.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
 
