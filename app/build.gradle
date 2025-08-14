@@ -45,5 +45,6 @@ dependencies {
     implementation libs.volley
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.29'
     implementation 'com.applandeo:material-calendar-view:1.9.0-rc03'
-
+    implementation libs.applandeo.material.calendar.view
 }
+

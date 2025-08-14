@@ -32,10 +32,10 @@ public class Abs_advan_10 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_advan10);
 
-        timerText = findViewById(R.id.abs_advantime10);
-        progressBar = findViewById(R.id.abs_advanprogressBar10);
-        playPauseButton = findViewById(R.id.abs_advanPauseButton10);
-        nextButton = findViewById(R.id.abs_advanNextButton10);
+        timerText = findViewById(R.id.abs_advtime10);
+        progressBar = findViewById(R.id.abs_advprogressBar10);
+        playPauseButton = findViewById(R.id.abs_advPauseButton10);
+        nextButton = findViewById(R.id.abs_advNextButton10);
         backbutton=findViewById(R.id.back_abs_adv10);
         progressBar.setMax(30);
         startTimer();

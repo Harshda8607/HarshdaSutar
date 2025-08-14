@@ -33,32 +33,7 @@ public class Abs_inter_9 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_inter9);
 
-<<<<<<< HEAD
-//        timerText = findViewById(R.id.abs_intertime9);
-//        progressBar = findViewById(R.id.abs_interprogressBar9);
-//        playPauseButton = findViewById(R.id.abs_interPauseButton9);
-//        nextButton = findViewById(R.id.abs_interNextButton9);
-//        progressBar.setMax(30);
-//        startTimer();
-//
-//        playPauseButton.setOnClickListener(v -> {
-//            if (isRunning) {
-//                pauseTimer();
-//            } else {
-//                resumeTimer();
-//            }
-//        });
-//
-//        nextButton.setOnClickListener(v -> {
-//
-//            countDownTimer.cancel();
-//            isRunning = false;
-//            Intent intent = new Intent(Abs_inter_9.this, Abs_inter_10.class);
-//            startActivity(intent);
-//            finish();
-//        });
-//
-=======
+
         timerText = findViewById(R.id.abs_intertime9);
         progressBar = findViewById(R.id.abs_interprogressBar9);
         playPauseButton = findViewById(R.id.abs_interPauseButton9);
@@ -122,36 +97,6 @@ public class Abs_inter_9 extends AppCompatActivity {
 
     private void resumeTimer() {
         startTimer();
->>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
     }
-//
-//    private void startTimer() {
-//        countDownTimer = new CountDownTimer(timeLeft, 1000) {
-//            public void onTick(long millisUntilFinished) {
-//                timeLeft = millisUntilFinished;
-//                int seconds = (int) millisUntilFinished / 1000;
-//                timerText.setText("00:" + String.format("%02d", seconds));
-//                progressBar.setProgress(30 - seconds);
-//            }
-//
-//            public void onFinish() {
-//                timerText.setText("00:00");
-//                Intent intent1 = new Intent(Abs_inter_9.this, Abs_inter_10.class);
-//                startActivity(intent1);
-//
-//            }
-//        }.start();
-//        isRunning = true;
-//        playPauseButton.setImageResource(android.R.drawable.ic_media_pause);
-//    }
-//
-//    private void pauseTimer() {
-//        countDownTimer.cancel();
-//        isRunning = false;
-//        playPauseButton.setImageResource(android.R.drawable.ic_media_play);
-//    }
-//
-//    private void resumeTimer() {
-//        startTimer();
-//    }
+
 }

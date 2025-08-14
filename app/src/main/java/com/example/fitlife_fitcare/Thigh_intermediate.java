@@ -23,7 +23,7 @@ public class Thigh_intermediate extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Thigh_intermediate.this,thigh_inter_1.class);
+                Intent intent=new Intent(Thigh_intermediate.this,Thigh_inter_1.class);
                 startActivity(intent);
             }
         });
