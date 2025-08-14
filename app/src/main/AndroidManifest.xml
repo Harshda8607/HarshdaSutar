@@ -15,8 +15,9 @@
         android:theme="@style/Theme.FitLife_FitCare"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".abc"
+            android:exported="false" />
         <activity
             android:name=".Arm_begin_8"
             android:exported="false" />
@@ -460,7 +461,7 @@
             android:exported="false" />
         <activity
             android:name=".Dashboard"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Fullbody_1"
             android:exported="true">
