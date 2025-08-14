@@ -14,7 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class morning_1 extends AppCompatActivity {
+public class prerun_3 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
@@ -29,13 +29,13 @@ public class morning_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_morning1);
+        setContentView(R.layout.activity_prerun3);
 
-        timerText = findViewById(R.id.morningtime1);
-        progressBar = findViewById(R.id.morningprogressBar1);
-        playPauseButton = findViewById(R.id.morningPauseButton1);
-        nextButton = findViewById(R.id. morningNextButton1);
-        back=findViewById(R.id.back_morning1);
+        timerText = findViewById(R.id.preruntime3);
+        progressBar = findViewById(R.id.prerunprogressBar3);
+        playPauseButton = findViewById(R.id.prerunPauseButton3);
+        nextButton = findViewById(R.id. prerunNextButton3);
+        back=findViewById(R.id.back_prerun3);
         progressBar.setMax(30);
         startTimer();
 
@@ -51,14 +51,14 @@ public class morning_1 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(morning_1.this, morning_2.class);
+            Intent intent = new Intent(prerun_3.this, prerun_4.class);
             startActivity(intent);
             finish();
         });
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(morning_1.this, morning_warmup.class);
+            Intent intent = new Intent(prerun_3.this, prerun_2.class);
             startActivity(intent);
             finish();
         });
@@ -77,7 +77,7 @@ public class morning_1 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(morning_1.this, morning_2.class);
+                Intent intent1 = new Intent(prerun_3.this, prerun_4.class);
                 startActivity(intent1);
 
             }

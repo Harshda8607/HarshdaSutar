@@ -16,7 +16,58 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".abc"
+            android:name=".postrun_7"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_6"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_5"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_4"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_3"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_2"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_7"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_6"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_5"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_4"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_3"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_2"
+            android:exported="false" />
+        <activity
+            android:name=".morning_7"
+            android:exported="false" />
+        <activity
+            android:name=".morning_6"
+            android:exported="false" />
+        <activity
+            android:name=".morning_5"
+            android:exported="false" />
+        <activity
+            android:name=".morning_4"
+            android:exported="false" />
+        <activity
+            android:name=".morning_3"
+            android:exported="false" />
+        <activity
+            android:name=".morning_2"
             android:exported="false" />
         <activity
             android:name=".Arm_begin_8"
@@ -458,6 +509,15 @@
             android:exported="false" />
         <activity
             android:name=".flat_belly"
+            android:exported="false" />
+        <activity
+            android:name=".abs_advanced"
+            android:exported="false" />
+        <activity
+            android:name=".abs_beginner"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_4"
             android:exported="false" />
         <activity
             android:name=".Dashboard"

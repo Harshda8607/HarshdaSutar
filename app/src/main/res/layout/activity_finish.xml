@@ -1,10 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Finish">
+    tools:context=".Finish"
+    android:padding="18dp"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How do you feel about workout?"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:padding="20dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RadioGroup
+        android:layout_below="@id/finish"
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/finish_l1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/look"/>
+            <TextView
+                android:id="@+id/finish_t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Too easy"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/finish_l2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/confident"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A little easy"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/finish_l3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/selflove"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just right"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/finish_l4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/stress"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A little hard"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/finish_l5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/option_background"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/stress"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Too hard"
+                android:textSize="20dp"
+                android:paddingStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/finish_btn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="DONE"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/radiogroup"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#2B9BA8"/>
+
+
+</RelativeLayout>
