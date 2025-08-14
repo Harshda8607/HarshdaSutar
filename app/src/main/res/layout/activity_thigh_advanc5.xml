@@ -15,7 +15,7 @@
         android:scaleType="centerCrop"
         android:layout_marginTop="10dp"
         android:padding="60dp"
-        android:src="@drawable/KNEE_ELBOW_KICKBACK"/>
+        android:src="@drawable/knee_elbow_kickback"/>
     <ImageView
         android:id="@+id/back_thigh_ad5"
         android:layout_width="40dp"

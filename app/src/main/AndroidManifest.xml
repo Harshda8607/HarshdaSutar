@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".flat_belly"
+            android:exported="false" />
+        <activity
             android:name=".Arm_begin_8"
             android:exported="false" />
         <activity
@@ -454,7 +457,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".flat_belly"
+            android:name=".Calendar_1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
