@@ -250,7 +250,7 @@
             android:name=".Faceyoga"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Fullbody_1"
             android:exported="false" />
         <activity
             android:name=".Chest_inter"
@@ -463,7 +463,7 @@
             android:name=".Dashboard"
             android:exported="true" />
         <activity
-            android:name=".Fullbody_1"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
