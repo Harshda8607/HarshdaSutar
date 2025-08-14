@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class Abs_inter_10 extends AppCompatActivity {
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
+    ImageView backbutton;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -30,6 +32,7 @@ public class Abs_inter_10 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_inter10);
 
+<<<<<<< HEAD
 //        timerText = findViewById(R.id.abs_intertime10);
 //        progressBar = findViewById(R.id.abs_interprogressBar10);
 //        playPauseButton = findViewById(R.id.abs_interPauseButton10);
@@ -53,6 +56,40 @@ public class Abs_inter_10 extends AppCompatActivity {
 //            startActivity(intent);
 //            finish();
 //        });
+=======
+        timerText = findViewById(R.id.abs_intertime10);
+        progressBar = findViewById(R.id.abs_interprogressBar10);
+        playPauseButton = findViewById(R.id.abs_interPauseButton10);
+        nextButton = findViewById(R.id.abs_interNextButton10);
+        backbutton=findViewById(R.id.back_abs_i10);
+        progressBar.setMax(30);
+        startTimer();
+
+        playPauseButton.setOnClickListener(v -> {
+            if (isRunning) {
+                pauseTimer();
+            } else {
+                resumeTimer();
+            }
+        });
+
+        nextButton.setOnClickListener(v -> {
+
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Abs_inter_10.this, Finish.class);
+            startActivity(intent);
+            finish();
+        });
+        backbutton.setOnClickListener(v -> {
+
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Abs_inter_10.this, Abs_inter_9.class);
+            startActivity(intent);
+            finish();
+        });
+>>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
 
     }
 

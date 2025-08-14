@@ -16,6 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".slim_8"
             android:exported="false" />
         <activity
@@ -35,11 +36,153 @@
             android:exported="false" />
         <activity
             android:name=".slim_2"
+=======
+            android:name=".Arm_begin_8"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_begin_7"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_begin_6"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_begin_5"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_begin_4"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_begin_3"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_begin_2"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_begin_1"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_10"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_9"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_8"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_7"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_6"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_5"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_4"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_3"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_2"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_inter_1"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_10"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_9"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_8"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_7"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_6"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_5"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_4"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_3"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_2"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanc_1"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_10"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_9"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_8"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_7"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_6"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_5"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_4"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_3"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_2"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin_1"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_10"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_9"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_8"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_7"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_6"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_5"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_4"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_3"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_advan_2"
+>>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
             android:exported="false" />
         <activity
             android:name=".Abs_advan_1"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".thigh_inter_1"
             android:exported="false" />
         <activity
@@ -101,6 +244,8 @@
             android:exported="false" />
         <activity android:name=".butt_ad_1" />
         <activity
+=======
+>>>>>>> bb5ee0acaac8ac67194c18d871ba99b14b7dc214
             android:name=".Abs_inter_10"
             android:exported="false" />
         <activity
