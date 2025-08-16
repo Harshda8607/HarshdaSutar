@@ -22,7 +22,21 @@
         app:abbreviationsBarColor="@color/white"
         app:headerColor="@color/white"
         app:selectionColor="#7B2BCE"
-        app:todayLabelColor="@color/black" />
+        app:todayLabelColor="@color/black" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.applandeo.materialcalendarview.CalendarView>
 
     <Button
         android:id="@+id/btnMarkWorkout"

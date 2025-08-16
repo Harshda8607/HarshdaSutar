@@ -16,6 +16,72 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Chest_begin_5"
+            android:exported="false" />
+        <activity
+            android:name=".Chest_begin_4"
+            android:exported="false" />
+        <activity
+            android:name=".Chest_begin_3"
+            android:exported="false" />
+        <activity
+            android:name=".Chest_begin_2"
+            android:exported="false" />
+        <activity
+            android:name=".Chest"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_8"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_7"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_6"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_5"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_4"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_3"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_2"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_1"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_8"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_7"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_6"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_5"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_4"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_3"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_2"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_inter_1"
+            android:exported="false" />
+        <activity
+            android:name=".Calendar_1"
+            android:exported="false" />
+        <activity
             android:name=".flat_belly"
             android:exported="false" />
         <activity
@@ -457,7 +523,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".Calendar_1"
+            android:name=".Break"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

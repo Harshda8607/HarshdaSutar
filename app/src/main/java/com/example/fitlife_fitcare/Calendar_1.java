@@ -3,6 +3,7 @@ package com.example.fitlife_fitcare;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,7 @@ public class Calendar_1 extends AppCompatActivity {
 
     private CalendarView calendarView;
     private Button btnMarkWorkout;
+    TextView mon,yr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,8 @@ public class Calendar_1 extends AppCompatActivity {
 
         calendarView = findViewById(R.id.calendarView);
         btnMarkWorkout = findViewById(R.id.btnMarkWorkout);
-
+        mon=findViewById(R.id.mon);
+        yr=findViewById(R.id.year);
         // Load saved workout days when activity starts
         loadWorkoutDays();
 
@@ -46,7 +49,7 @@ public class Calendar_1 extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
 
         // Convert date to string: YYYY-MM-DD
-        String dateStr = date.get(Calendar.YEAR) + "-" +
+        String dateStr = date.get(Calen   dar.YEAR) + "-" +
                 (date.get(Calendar.MONTH) + 1) + "-" +
                 date.get(Calendar.DAY_OF_MONTH);
 
@@ -69,6 +72,8 @@ public class Calendar_1 extends AppCompatActivity {
 
                 Calendar cal = Calendar.getInstance();
                 cal.set(year, month, day);
+                mon.setText(month);
+                yr.setText(year);
                 events.add(new EventDay(cal, R.drawable.ic_dot));
             }
         }
