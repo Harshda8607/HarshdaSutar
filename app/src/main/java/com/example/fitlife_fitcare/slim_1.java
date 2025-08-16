@@ -58,7 +58,7 @@ public class slim_1 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(slim_1.this, slim_legss.class);
+            Intent intent = new Intent(slim_1.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

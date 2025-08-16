@@ -61,7 +61,7 @@ public class arm_5 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(arm_5.this, arm_4.class);
+            Intent intent = new Intent(arm_5.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

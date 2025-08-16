@@ -58,7 +58,7 @@ public class arm_1 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(arm_1.this, toned_arms.class);
+            Intent intent = new Intent(arm_1.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

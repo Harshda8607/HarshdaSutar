@@ -21,7 +21,7 @@ public class Thigh_begin_9 extends AppCompatActivity {
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
-    ImageView backbutton;
+    private ImageView backbutton;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
     private long timeLeft = 30000;
@@ -30,7 +30,7 @@ public class Thigh_begin_9 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_thigh_begin8);
+        setContentView(R.layout.activity_thigh_begin9);
 
         timerText = findViewById(R.id.thigh_begtime9);
         progressBar = findViewById(R.id.thigh_begprogressBar9);
@@ -60,7 +60,7 @@ public class Thigh_begin_9 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Thigh_begin_9.this, Thigh_begin_8.class);
+            Intent intent = new Intent(Thigh_begin_9.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

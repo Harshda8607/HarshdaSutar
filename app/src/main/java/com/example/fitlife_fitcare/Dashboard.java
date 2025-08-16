@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.fitlife_fitcare.R;
 import com.example.fitlife_fitcare.fragment.HomeFragment;
+import com.example.fitlife_fitcare.fragment.Profile;
 import com.example.fitlife_fitcare.fragment.ReportFragment;
 import com.example.fitlife_fitcare.fragment.training;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -38,6 +39,8 @@ public class Dashboard extends AppCompatActivity {
                 selectedFragment = new training();
             } else if (id == R.id.report) {
                 selectedFragment = new ReportFragment();
+            }else if (id == R.id.profile) {
+                selectedFragment = new Profile();
             }
 
             return loadFragment(selectedFragment);

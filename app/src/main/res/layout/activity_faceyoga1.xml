@@ -23,6 +23,12 @@
         android:orientation="vertical"
         android:background="@color/white"
         android:layout_marginTop="30dp"/>
+    <ImageView
+        android:id="@+id/back_face1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
 
     <!-- Timer -->
     <TextView

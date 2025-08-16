@@ -37,6 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Random Workout"
+                    android:layout_marginStart="10dp"
                     style="@style/text"
                     android:textStyle="bold"/>
 
@@ -53,6 +54,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="320dp"
                             android:layout_height="200dp"
+                            android:layout_marginStart="10dp"
                             android:elevation="20dp"
                             app:cardCornerRadius="15dp">
                             <LinearLayout
@@ -184,6 +186,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Training Goal"
+                    android:layout_marginStart="10dp"
                     android:textStyle="bold"
                     android:layout_marginTop="20dp"
                     style="@style/text"/>
@@ -207,6 +210,7 @@
                                 android:id="@+id/training_goal1"
                                 android:layout_width="330dp"
                                 android:layout_height="90dp"
+                                android:layout_marginStart="10dp"
                                 app:cardCornerRadius="15dp"
                                 android:backgroundTint="@color/white">
 
@@ -249,6 +253,7 @@
                                 android:layout_width="330dp"
                                 android:layout_height="90dp"
                                 app:cardCornerRadius="15dp"
+                                android:layout_marginStart="10dp"
                                 android:layout_below="@id/training_goal1"
                                 android:layout_marginTop="10dp"
                                 android:backgroundTint="@color/white">
@@ -393,12 +398,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:text="@string/training_routin1"
                     android:layout_marginTop="20dp"
                     style="@style/text" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:text="@string/training_routin2"
                     android:layout_marginTop="3dp"
                     style="@style/text" />
@@ -409,6 +416,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Routines"
+                    android:layout_marginStart="10dp"
                     style="@style/text"
                     android:textStyle="bold"
                     android:layout_marginTop="20dp"/>
@@ -430,6 +438,7 @@
                                 android:id="@+id/training_routine1"
                                 android:layout_width="200dp"
                                 android:layout_height="140dp"
+                                android:layout_marginStart="10dp"
                                 app:cardCornerRadius="13dp">
                                 <ImageView
                                     android:id="@+id/routine1"
@@ -561,12 +570,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/training_yoga1"
                     android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
                     style="@style/text" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/training_yoga2"
                     android:layout_marginTop="3dp"
+                    android:layout_marginStart="10dp"
                     style="@style/text" />
 
                 <!--                    yoga-->
@@ -574,6 +585,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Yoga"
+                    android:layout_marginStart="10dp"
                     style="@style/text"
                     android:textStyle="bold"
                     android:layout_marginTop="15dp"/>
@@ -595,6 +607,7 @@
                                 android:id="@+id/training_yoga1"
                                 android:layout_width="250dp"
                                 android:layout_height="160dp"
+                                android:layout_marginStart="10dp"
                                 app:cardCornerRadius="13dp">
                                 <ImageView
                                     android:layout_width="match_parent"
@@ -713,6 +726,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:text="@string/training_health"
                     android:layout_marginTop="20dp"
                     style="@style/text" />
@@ -723,6 +737,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Health "
+                    android:layout_marginStart="10dp"
                     style="@style/text"
                     android:textStyle="bold"
                     android:layout_marginTop="15dp"/>
@@ -744,6 +759,7 @@
                                 android:id="@+id/training_health1"
                                 android:layout_width="250dp"
                                 android:layout_height="160dp"
+                                android:layout_marginStart="10dp"
                                 app:cardCornerRadius="13dp">
                                 <ImageView
                                     android:layout_width="match_parent"

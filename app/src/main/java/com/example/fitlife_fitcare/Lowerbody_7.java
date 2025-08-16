@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class Lowerbody_7 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
+    private ImageView back;
     private ImageButton playPauseButton;
     ImageButton nextButton;
     private CountDownTimer countDownTimer;
@@ -35,6 +37,7 @@ public class Lowerbody_7 extends AppCompatActivity {
         progressBar = findViewById(R.id.lowerprogressBar7);
         playPauseButton = findViewById(R.id.lowerplayPauseButton7);
         nextButton = findViewById(R.id.lowerNextButton7);
+        back=findViewById(R.id.back_lowerb7);
         progressBar.setMax(30);
         startTimer();
 
@@ -53,6 +56,14 @@ public class Lowerbody_7 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Lowerbody_7.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
     private void startTimer() {

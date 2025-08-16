@@ -50,7 +50,7 @@ public class anglebooty_1 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(anglebooty_1.this, angle_booty.class);
+            Intent intent = new Intent(anglebooty_1.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

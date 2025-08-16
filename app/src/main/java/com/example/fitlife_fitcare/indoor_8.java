@@ -59,7 +59,7 @@ public class indoor_8 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(indoor_8.this, indoor_7.class);
+            Intent intent = new Intent(indoor_8.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

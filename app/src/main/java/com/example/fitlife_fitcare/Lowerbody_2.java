@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,11 +20,12 @@ public class Lowerbody_2 extends AppCompatActivity {
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
+    private ImageView back;
     ImageButton nextButton;
     private CountDownTimer countDownTimer;
     GifImageView img1;
     private boolean isRunning = true;
-    private long timeLeft = 30000; // 30 seconds
+    private long timeLeft = 30000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class Lowerbody_2 extends AppCompatActivity {
         progressBar = findViewById(R.id.lowerprogressBar2);
         playPauseButton = findViewById(R.id.lowerplayPauseButton2);
         nextButton = findViewById(R.id.lowerNextButton2);
+        back=findViewById(R.id.back_lowerb2);
         progressBar.setMax(30);
         startTimer();
 
@@ -46,12 +49,20 @@ public class Lowerbody_2 extends AppCompatActivity {
         });
         nextButton.setOnClickListener(v -> {
 
-            countDownTimer.cancel(); // ⛔ Stop the timer
+            countDownTimer.cancel();
             isRunning = false;
             Intent intent = new Intent(Lowerbody_2.this, Lowerbody_3.class);
             startActivity(intent);
-            finish(); // Optional: Finish current activity so user can't go back
+            finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Lowerbody_2.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
     private void startTimer() {

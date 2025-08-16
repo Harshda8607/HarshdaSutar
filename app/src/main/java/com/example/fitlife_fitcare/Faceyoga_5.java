@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -20,9 +21,9 @@ public class Faceyoga_5 extends AppCompatActivity {
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
-    ImageButton nextButton;
+    private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    GifImageView img1;
+    private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -35,6 +36,7 @@ public class Faceyoga_5 extends AppCompatActivity {
         progressBar = findViewById(R.id.FaceyogaprogressBar5);
         playPauseButton = findViewById(R.id.FaceyogaplayPauseButton5);
         nextButton = findViewById(R.id.FaceyogaNextButton5);
+        back=findViewById(R.id.back_face5);
         progressBar.setMax(30);
         startTimer();
         playPauseButton.setOnClickListener(v -> {
@@ -53,6 +55,14 @@ public class Faceyoga_5 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Faceyoga_5.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
     private void startTimer() {

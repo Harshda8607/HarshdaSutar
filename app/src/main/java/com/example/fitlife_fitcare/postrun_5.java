@@ -58,7 +58,7 @@ public class postrun_5 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(postrun_5.this, postrun_4.class);
+            Intent intent = new Intent(postrun_5.this, Dashboard.class);
             startActivity(intent);
             finish();
         });
@@ -94,5 +94,6 @@ public class postrun_5 extends AppCompatActivity {
 
     private void resumeTimer() {
         startTimer();
+
     }
 }

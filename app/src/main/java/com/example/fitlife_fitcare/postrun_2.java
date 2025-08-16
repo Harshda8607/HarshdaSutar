@@ -58,7 +58,7 @@ public class postrun_2 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(postrun_2.this, postrun_1.class);
+            Intent intent = new Intent(postrun_2.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

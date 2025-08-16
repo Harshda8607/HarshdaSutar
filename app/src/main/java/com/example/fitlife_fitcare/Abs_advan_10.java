@@ -22,7 +22,7 @@ public class Abs_advan_10 extends AppCompatActivity {
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    ImageView backbutton;
+    private ImageView backbutton;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -57,10 +57,9 @@ public class Abs_advan_10 extends AppCompatActivity {
             finish();
         });
         backbutton.setOnClickListener(v -> {
-
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_advan_10.this, Abs_advan_9.class);
+            Intent intent = new Intent(Abs_advan_10.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

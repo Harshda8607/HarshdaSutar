@@ -25,8 +25,8 @@
     <LinearLayout
         android:layout_width="70dp"
         android:layout_height="60dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginStart="340dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="330dp"
         android:background="@color/white"
         android:orientation="vertical"/>
 

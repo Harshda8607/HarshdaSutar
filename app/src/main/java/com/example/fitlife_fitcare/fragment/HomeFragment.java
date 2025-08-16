@@ -46,9 +46,6 @@ public class HomeFragment extends Fragment {
         carm1 = view.findViewById(R.id.arm_workout1);
         carm2 = view.findViewById(R.id.arm_workout2);
         carm3 = view.findViewById(R.id.arm_workout3);
-        cbutt1 = view.findViewById(R.id.butt_workout1);
-        cbutt2 = view.findViewById(R.id.butt_workout2);
-        cbutt3 = view.findViewById(R.id.butt_workout3);
         cchest1 = view.findViewById(R.id.chest_workout1);
         cchest2 = view.findViewById(R.id.chest_workout2);
         cchest3 = view.findViewById(R.id.chest_workout3);
@@ -122,21 +119,6 @@ public class HomeFragment extends Fragment {
             startActivity(new Intent(getActivity(), arm_advanced.class));
         });
 
-        // Butt Workouts
-        cbutt1.setOnClickListener(v -> {
-            sendCourseToServer("Butt Beginner");
-            startActivity(new Intent(getActivity(), Butt_begin.class));
-        });
-
-        cbutt2.setOnClickListener(v -> {
-            sendCourseToServer("Butt Intermediate");
-            startActivity(new Intent(getActivity(), Butt_inter.class));
-        });
-
-        cbutt3.setOnClickListener(v -> {
-            sendCourseToServer("Butt Advanced");
-            startActivity(new Intent(getActivity(), Butt_advan.class));
-        });
 
         // Chest Workouts
         cchest1.setOnClickListener(v -> {

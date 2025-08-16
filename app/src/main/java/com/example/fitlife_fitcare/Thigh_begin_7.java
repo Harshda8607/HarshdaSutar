@@ -21,7 +21,7 @@ public class Thigh_begin_7 extends AppCompatActivity {
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
-    ImageView backbutton;
+    private ImageView backbutton;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
     private long timeLeft = 30000;
@@ -60,7 +60,7 @@ public class Thigh_begin_7 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Thigh_begin_7.this, Thigh_begin_6.class);
+            Intent intent = new Intent(Thigh_begin_7.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

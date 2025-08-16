@@ -16,6 +16,14 @@
         android:layout_marginTop="-20dp"
         android:padding="50dp"
         android:src="@drawable/squat_side_kick"/>
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="430dp"
+        android:layout_marginStart="320dp"/>
+
     <ImageView
         android:id="@+id/back_slim8"
         android:layout_width="40dp"

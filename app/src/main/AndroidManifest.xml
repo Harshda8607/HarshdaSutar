@@ -16,6 +16,63 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".recycle"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_12"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_11"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_10"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_9"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_8"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_7"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_6"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_5"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_4"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_3"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_2"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_7"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_6"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_5"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_4"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_3"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_2"
+            android:exported="false" />
+        <activity
+            android:name=".break_rest"
+            android:exported="false" />
+        <activity
             android:name=".postrun_7"
             android:exported="false" />
         <activity
@@ -520,11 +577,16 @@
             android:name=".Abs_beginner_4"
             android:exported="false" />
         <activity
+            android:name=".FullBody"
+            android:exported="false" />
+
+        <activity
             android:name=".Dashboard"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.FitLife_FitCare">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -532,5 +594,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>

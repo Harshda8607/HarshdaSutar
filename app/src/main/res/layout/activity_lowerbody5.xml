@@ -16,6 +16,12 @@
         android:layout_marginTop="-20dp"
         android:padding="50dp"
         android:src="@drawable/curtsy_lunge"/>
+    <ImageView
+        android:id="@+id/back_lowerb5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
 
 
     <!-- Timer -->

@@ -34,9 +34,11 @@
         app:hintTextColor="@color/green_icon"
         android:layout_below="@id/Sign_In"
         app:counterMaxLength="20"
+        app:counterTextColor="@color/green_icon"
         app:counterEnabled="true"
         android:layout_marginTop="20dp"
         app:endIconMode="clear_text"
+        app:endIconTint="@color/green_icon"
         app:boxCornerRadiusBottomEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
         app:boxStrokeErrorColor="@color/red"
@@ -51,6 +53,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/baseline_person_24"
             android:drawablePadding="15dp"
+            android:textColor="@color/black"
             style="@style/EditText" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,6 +82,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/baseline_lock_24"
             android:drawablePadding="15dp"
+            android:textColor="@color/black"
             style="@style/EditText"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -106,6 +110,7 @@
         android:textSize="17sp"
         android:layout_below="@id/in_Button"
         android:layout_marginTop="20dp"
+        android:textColor="@color/black"
         android:layout_marginStart="20dp"/>
     <TextView
         android:id="@+id/in_signup"

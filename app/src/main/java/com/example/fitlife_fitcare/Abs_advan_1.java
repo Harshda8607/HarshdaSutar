@@ -24,7 +24,7 @@ public class Abs_advan_1 extends AppCompatActivity {
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    ImageView backbutton;
+    private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -37,7 +37,7 @@ public class Abs_advan_1 extends AppCompatActivity {
         progressBar = findViewById(R.id.abs_advprogressBar1);
         playPauseButton = findViewById(R.id.abs_advPauseButton1);
         nextButton = findViewById(R.id.abs_advNextButton1);
-        backbutton=findViewById(R.id.back_abs_adv1);
+        back=findViewById(R.id.back_abs_adv1);
         progressBar.setMax(30);
         startTimer();
 
@@ -57,11 +57,10 @@ public class Abs_advan_1 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-        backbutton.setOnClickListener(v -> {
-
+        back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_advan_1.this, abs_advanced.class);
+            Intent intent = new Intent(Abs_advan_1.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

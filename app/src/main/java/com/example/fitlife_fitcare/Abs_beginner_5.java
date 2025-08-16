@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class Abs_beginner_5 extends AppCompatActivity {
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
+    private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -34,6 +36,7 @@ public class Abs_beginner_5 extends AppCompatActivity {
         progressBar = findViewById(R.id.abs_beginprogressBar5);
         playPauseButton = findViewById(R.id.abs_beginPauseButton5);
         nextButton = findViewById(R.id.abs_beginNextButton5);
+        back=findViewById(R.id.back_abs_b5);
         progressBar.setMax(30);
         startTimer();
 
@@ -44,12 +47,20 @@ public class Abs_beginner_5 extends AppCompatActivity {
                 resumeTimer();
             }
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Abs_beginner_5.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
 
         nextButton.setOnClickListener(v -> {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_beginner_5.this, Abs_beginner_6.class);
+            Intent intent = new Intent(Abs_beginner_5.this, break_rest.class);
             startActivity(intent);
             finish();
         });
@@ -67,7 +78,7 @@ public class Abs_beginner_5 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Abs_beginner_5.this, Abs_beginner_6.class);
+                Intent intent1 = new Intent(Abs_beginner_5.this, break_rest.class);
                 startActivity(intent1);
 
             }

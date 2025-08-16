@@ -59,7 +59,7 @@ public class flatbelly_5 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(flatbelly_5.this, flatbelly_4.class);
+            Intent intent = new Intent(flatbelly_5.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

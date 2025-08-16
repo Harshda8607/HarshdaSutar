@@ -59,7 +59,7 @@ public class office_3 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(office_3.this, office_2.class);
+            Intent intent = new Intent(office_3.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

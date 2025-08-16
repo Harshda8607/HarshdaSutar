@@ -23,7 +23,7 @@ public class arm_beginner extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(arm_beginner.this, arm_beg_1.class);
+                Intent intent=new Intent(arm_beginner.this, Arm_begin_1.class);
                 startActivity(intent);
             }
         });

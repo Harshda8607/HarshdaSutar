@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class Abs_beginner_1 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class Abs_beginner_1 extends AppCompatActivity {
         progressBar = findViewById(R.id.abs_beginprogressBar1);
         playPauseButton = findViewById(R.id.abs_beginPauseButton1);
         nextButton = findViewById(R.id.abs_beginNextButton1);
+        back=findViewById(R.id.back_abs_b1);
         progressBar.setMax(30);
         startTimer();
 
@@ -50,6 +53,13 @@ public class Abs_beginner_1 extends AppCompatActivity {
             countDownTimer.cancel();
             isRunning = false;
             Intent intent = new Intent(Abs_beginner_1.this, Abs_beginner_2.class);
+            startActivity(intent);
+            finish();
+        });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Abs_beginner_1.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

@@ -17,6 +17,20 @@
         android:layout_marginTop="10dp"
         android:padding="50dp"
         android:src="@drawable/brid_dog"/>
+    <ImageView
+        android:id="@+id/back_fullb6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="350dp"
+        android:background="@color/white"
+        android:layout_marginTop="490dp"
+        android:orientation="vertical" />
 
     <!-- Timer -->
     <TextView

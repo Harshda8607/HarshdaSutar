@@ -59,7 +59,7 @@ public class lazybed_7 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(lazybed_7.this, lazybed_6.class);
+            Intent intent = new Intent(lazybed_7.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

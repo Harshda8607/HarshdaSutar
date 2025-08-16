@@ -17,6 +17,12 @@
         android:layout_marginTop="-60dp"
         android:padding="50dp"
         android:src="@drawable/sumo_squat"/>
+    <ImageView
+        android:id="@+id/back_fullb13"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
 
     <!-- Timer -->
     <TextView

@@ -58,7 +58,7 @@ public class morning_6 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(morning_6.this, morning_5.class);
+            Intent intent = new Intent(morning_6.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

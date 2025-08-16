@@ -17,7 +17,7 @@
         android:padding="50dp"
         android:src="@drawable/advanced_bridge"/>
     <ImageView
-        android:id="@+id/back_abs_b1"
+        android:id="@+id/back_lowerb10"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/back"

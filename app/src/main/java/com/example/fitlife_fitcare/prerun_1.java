@@ -58,7 +58,7 @@ public class prerun_1 extends AppCompatActivity {
         back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(prerun_1.this, prerun_warmup.class);
+            Intent intent = new Intent(prerun_1.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

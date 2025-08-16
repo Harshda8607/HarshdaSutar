@@ -60,7 +60,7 @@ public class Abs_inter_7 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_inter_7.this, Abs_inter_6.class);
+            Intent intent = new Intent(Abs_inter_7.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

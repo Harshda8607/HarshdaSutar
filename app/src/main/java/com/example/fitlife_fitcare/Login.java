@@ -2,6 +2,7 @@
 package com.example.fitlife_fitcare;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -49,6 +50,14 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(Login.this, Register.class);
             startActivity(intent);
         });
+
+        SharedPreferences sharedPreferences = getSharedPreferences("loggedcheck", MODE_PRIVATE);
+
+        if (sharedPreferences.getBoolean("isLoggedIn", false)) {
+            startActivity(new Intent(Login.this, Welcome.class));
+            finish();
+            return;
+        }
     }
 
     private void validateAndLogin() {
@@ -93,3 +102,5 @@ public class Login extends AppCompatActivity {
         }
     }
 }
+
+
