@@ -16,6 +16,90 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".stand_3"
+            android:exported="false" />
+        <activity
+            android:name=".stand_2"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_12"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_11"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_10"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_9"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_8"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_7"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_6"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_5"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_4"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_3"
+            android:exported="false" />
+        <activity
+            android:name=".sitting2"
+            android:exported="false" />
+        <activity
+            android:name=".sitting_1"
+            android:exported="false" />
+        <activity
+            android:name=".sun_12"
+            android:exported="false" />
+        <activity
+            android:name=".sun_11"
+            android:exported="false" />
+        <activity
+            android:name=".sun_10"
+            android:exported="false" />
+        <activity
+            android:name=".sun_9"
+            android:exported="false" />
+        <activity
+            android:name=".sun_8"
+            android:exported="false" />
+        <activity
+            android:name=".sun_7"
+            android:exported="false" />
+        <activity
+            android:name=".sun_6"
+            android:exported="false" />
+        <activity
+            android:name=".sun_5"
+            android:exported="false" />
+        <activity
+            android:name=".sun_4"
+            android:exported="false" />
+        <activity
+            android:name=".sun_3"
+            android:exported="false" />
+        <activity
+            android:name=".sun_2"
+            android:exported="false" />
+        <activity
+            android:name=".sun_1"
+            android:exported="false" />
+        <activity
+            android:name=".password_email"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".recycle"
             android:exported="false" />
         <activity
@@ -129,6 +213,8 @@
         <activity
             android:name=".Arm_begin_8"
             android:exported="false" />
+        <activity android:name=".arm_beginner"
+            android:exported="false"/>
         <activity
             android:name=".Arm_begin_7"
             android:exported="false" />
@@ -579,12 +665,14 @@
         <activity
             android:name=".FullBody"
             android:exported="false" />
-
         <activity
-            android:name=".Dashboard"
+            android:name=".flatstomach"
+            android:exported="false" />
+        <activity
+            android:name=".height_weight"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Dashboard"
             android:exported="true"
             android:theme="@style/Theme.FitLife_FitCare">
             <intent-filter>
@@ -594,6 +682,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>

@@ -1,15 +1,18 @@
 package com.example.fitlife_fitcare.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CalendarView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.applandeo.materialcalendarview.CalendarView;
 import com.example.fitlife_fitcare.R;
+import com.example.fitlife_fitcare.recycle;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -18,6 +21,7 @@ public class ReportFragment extends Fragment {
 
     private CalendarView calendarView;
     private TextView textMonthYear;
+    Button mark;
 
 
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,12 +30,22 @@ public class ReportFragment extends Fragment {
 
             calendarView = view.findViewById(R.id.calendarView);
             textMonthYear = view.findViewById(R.id.textMonthYear);
+            mark = view.findViewById(R.id.btnMarkWorkout);
 
-            long currentDate = calendarView.getDate();
+            long currentDate = calendarView.getSelectedDates();
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
-            String monthYear = dateFormat.format(currentDate);
+            String monthYear = dateFormat.format(selectedDate.getTime());
             textMonthYear.setText(monthYear);
+
+
+            mark.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(getActivity(), recycle.class);
+                    startActivity(intent);
+                }
+            });
 
             return view;
         }

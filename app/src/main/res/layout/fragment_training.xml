@@ -8,12 +8,19 @@
     tools:context=".fragment.training"
     android:background="@color/white">
 
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/training_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:background="#F2FBFB"
         app:title="Training"
-        app:titleTextAppearance="@style/Title"/>
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        app:titleTextAppearance="@style/Title"
+        android:elevation="30dp"/>
+
 
     <FrameLayout
         android:id="@+id/training_frame"
@@ -31,13 +38,14 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <!--                    random workout-->
+                <!-- random workout-->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Random Workout"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
                     style="@style/text"
                     android:textStyle="bold"/>
 

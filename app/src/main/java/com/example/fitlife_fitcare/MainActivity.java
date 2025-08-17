@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
 //        },4000);
 
         new Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
-//            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale);
-//            logo.startAnimation(animation);
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation1);
+            logo.startAnimation(animation);
 
             SharedPreferences sharedPreferences = getSharedPreferences("loggedcheck", MODE_PRIVATE);
             boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
             startActivity(new Intent(MainActivity.this, nextActivity));
             finish();
+
 
         }, 3000);
 

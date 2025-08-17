@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/white"
     tools:context=".fragment.Profile">
 
 <RelativeLayout
@@ -18,33 +18,34 @@
         android:id="@+id/profile_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MINE"
+        android:text="MY PROFILE"
         style="@style/Title"
         android:textColor="@color/black"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp" />
 
     <ImageView
         android:id="@+id/setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_setting"
-        android:layout_marginStart="340dp"
+        android:layout_marginStart="300dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        android:layout_marginTop="45dp"/>
+        android:layout_marginTop="70dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="18dp"
-        android:layout_marginTop="-130dp"
+        android:layout_marginTop="-100dp"
         android:layout_below="@id/backprofile">
         <androidx.cardview.widget.CardView
             android:id="@+id/abc1"
             android:layout_width="match_parent"
-            android:layout_height="530dp"
-            app:cardCornerRadius="15dp">
+            android:layout_height="460dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/white">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -184,39 +185,23 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp" />
 
-                <TextView
-                    android:id="@+id/profile_t_weight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Target Weight"
-                    android:drawableStart="@drawable/ic_weight"
-                    android:drawablePadding="10dp"
-                    android:textSize="18sp"
-                    android:textColor="@color/green_icon"
-                    android:textStyle="bold"
-                    android:layout_below="@id/profile_weight"
-                    android:layout_marginTop="25dp" />
-
-                <TextView
-                    android:id="@+id/value_t_weight"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="JohnDoe"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"
-                    android:background="@drawable/text_bg"
-                    android:padding="10dp"
-                    android:layout_below="@id/profile_t_weight"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp" />
-
-
-
 
             </RelativeLayout>
 
 
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:layout_below="@id/abc1"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
     </RelativeLayout>
 

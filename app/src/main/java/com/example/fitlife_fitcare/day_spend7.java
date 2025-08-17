@@ -63,7 +63,7 @@ public class day_spend7 extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(day_spend7.this,Dashboard.class);
+                Intent intent=new Intent(day_spend7.this,height_weight.class);
                 startActivity(intent);
             }
         },1000);

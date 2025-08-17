@@ -36,7 +36,7 @@ public class Register extends AppCompatActivity {
 
     private static final String  Mobile_Pattern="\\d{10}";
     private static final String Password_Pattern =
-            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$";
+            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!_-]).{8,}$";
 
     int no;
     private RequestQueue requestQueue;
@@ -98,8 +98,8 @@ public class Register extends AppCompatActivity {
                 if (!password.matches(".*\\d.*")) {
                     errorBuilder.append("• At least 1 digit\n");
                 }
-                if (!password.matches(".*[@#$%^&+=!].*")) {
-                    errorBuilder.append("• At least 1 special character (@#$%^&+=!)\n");
+                if (!password.matches(".*[@#$%^&+=!_-].*")) {
+                    errorBuilder.append("• At least 1 special character (@#$%^&+=!_-)\n");
                 }
 
                 if (errorBuilder.length() > 0) {
@@ -108,6 +108,12 @@ public class Register extends AppCompatActivity {
                     registerUser(name, email, phone, password);
                 }
             }
+//            getSharedPreferences("updatedDetails", MODE_PRIVATE)
+//                    .edit()
+//                    .putString("id", String.valueOf(id))
+//                    .putBoolean("isLoggedIn", true)
+//                    .putString("userRole", name)
+//                    .apply();
 
         });
     }

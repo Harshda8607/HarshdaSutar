@@ -7,20 +7,19 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".Dashboard">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F2FBFB"
-        app:title="Fit Life Fit Health"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        app:titleTextAppearance="@style/Title"
-        android:elevation="30dp"/>
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#F2FBFB"-->
+<!--        app:title="Fit Life Fit Health"-->
+<!--        android:paddingTop="20dp"-->
+<!--        android:paddingBottom="20dp"-->
+<!--        app:titleTextAppearance="@style/Title"-->
+<!--        android:elevation="30dp"/>-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
         android:layout_above="@id/bottom_nav"
         android:id="@+id/framelayiut"
         android:background="@color/white">

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workoutLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".sun_4"
+    android:padding="18dp">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:padding="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sun4"/>
+    <ImageView
+        android:id="@+id/back_sun4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="410dp"
+        android:background="@color/white" />
+
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/suntime4"
+        android:layout_above="@id/sunlinear4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:30"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp" />
+
+    <!-- Exercise Name -->
+    <TextView
+        android:id="@+id/sunexercise4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ASHWA SANCHALANASANA"
+        android:layout_above="@id/suntime4"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4/12"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_above="@id/sunlinear4"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="150dp"/>
+
+    <!-- Progress & Controls -->
+    <LinearLayout
+        android:id="@+id/sunlinear4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp">
+        <ImageButton
+            android:id="@+id/sunPauseButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_pause"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="Pause" />
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:id="@+id/sunprogressBar4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="2.5"
+            android:progressTint="#33ADA2"
+            android:max="30"
+            android:progressBackgroundTint="#DAEFEA"
+            android:progress="0" />
+        <ImageButton
+            android:id="@+id/sunNextButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_next"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="Next" />
+
+
+    </LinearLayout>
+</RelativeLayout>

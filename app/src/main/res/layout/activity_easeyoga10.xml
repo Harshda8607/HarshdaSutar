@@ -31,7 +31,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp" />
     <ImageView
-        android:id="@+id/back_ease1"
+        android:id="@+id/back_ease10"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
