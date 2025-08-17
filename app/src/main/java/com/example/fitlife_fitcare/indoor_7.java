@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class indoor_7 extends AppCompatActivity {
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
+    private ImageView back;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
@@ -34,6 +36,7 @@ public class indoor_7 extends AppCompatActivity {
         progressBar = findViewById(R.id.indoorprogressBar7);
         playPauseButton = findViewById(R.id.indoorPauseButton7);
         nextButton = findViewById(R.id.indoorNextButton7);
+        back=findViewById(R.id.back_indoor7);
         progressBar.setMax(30);
         startTimer();
 
@@ -53,6 +56,14 @@ public class indoor_7 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(indoor_7.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
 

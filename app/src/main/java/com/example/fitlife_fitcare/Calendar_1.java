@@ -1,5 +1,6 @@
 package com.example.fitlife_fitcare;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.EventDay;
+import com.example.fitlife_fitcare.adapter.workout_adapter;
 
 
 import java.util.ArrayList;
@@ -38,7 +40,9 @@ public class Calendar_1 extends AppCompatActivity {
         btnMarkWorkout.setOnClickListener(v -> {
             Calendar today = Calendar.getInstance();
             saveWorkoutDate(today);
-            loadWorkoutDays(); // Refresh calendar
+            loadWorkoutDays();// Refresh calendar
+            Intent intent=new Intent(Calendar_1.this, workout_adapter.class);
+            startActivity(intent);
         });
     }
 
@@ -67,7 +71,7 @@ public class Calendar_1 extends AppCompatActivity {
             if ((boolean) allDates.get(dateStr)) {
                 String[] parts = dateStr.split("-");
                 int year = Integer.parseInt(parts[0]);
-                int month = Integer.parseInt(parts[1]) - 1; // Month is 0-based
+                int month = Integer.parseInt(parts[1]) - 1;
                 int day = Integer.parseInt(parts[2]);
 
                 Calendar cal = Calendar.getInstance();
@@ -75,6 +79,7 @@ public class Calendar_1 extends AppCompatActivity {
                 mon.setText(month);
                 yr.setText(year);
                 events.add(new EventDay(cal, R.drawable.ic_dot));
+                events.add(new EventDay(cal, R.drawable.baseline_circle_24));
             }
         }
 

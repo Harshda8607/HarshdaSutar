@@ -8,7 +8,6 @@
     tools:context=".Flatstomach_4"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="600dp"
@@ -17,6 +16,12 @@
         android:layout_marginTop="-60dp"
         android:padding="50dp"
         android:src="@drawable/slow_mountain_climber"/>
+    <ImageView
+        android:id="@+id/back_stomach4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
 
     <!-- Timer -->
     <TextView

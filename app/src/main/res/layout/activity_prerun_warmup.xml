@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".prerun_warmup"
-    android:padding="18dp"
     android:background="@color/white">
 
     <LinearLayout
@@ -14,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/training_prerun">
     </LinearLayout>
     <RelativeLayout
@@ -54,7 +53,7 @@
             android:id="@+id/minutes_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6 minutes"
+            android:text="4 minutes"
             android:textColor="@color/black"
             android:layout_below="@id/fullbody_desc"
             android:textSize="20sp"
@@ -74,7 +73,7 @@
             android:id="@+id/workouts_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10 Workouts"
+            android:text="7 Workouts"
             android:textColor="@color/black"
             android:layout_below="@id/minutes_1"
             android:textSize="20sp"

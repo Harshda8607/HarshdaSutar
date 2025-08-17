@@ -8,19 +8,23 @@
     tools:context=".lazybed_9"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
 
-
-    <!-- Timer -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="420dp"
         android:layout_height="580dp"
-        android:layout_marginTop="-50dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:padding="40dp"
         android:scaleType="centerCrop"
         android:src="@drawable/windshield_wipers" />
+    <ImageView
+        android:id="@+id/back_lazybed9"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
 
+    <!-- Timer -->
     <TextView
         android:id="@+id/lazytime9"
         android:layout_above="@id/lazylinear9"

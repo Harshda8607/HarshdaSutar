@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workoutLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".slim_3"
+    android:padding="18dp">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
+        android:padding="50dp"
+        android:src="@drawable/bottom_leg_lift"/>
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="460dp"
+        android:layout_marginStart="310dp"/>
+    <ImageView
+        android:id="@+id/back_slim3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/slimtime3"
+        android:layout_above="@id/slimlinear3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:30"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp" />
+
+    <!-- Exercise Name -->
+    <TextView
+        android:id="@+id/slimexercise3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INNER LEG LIFT LEFT"
+        android:layout_above="@id/slimtime3"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3/8"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_above="@id/slimlinear3"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="150dp"/>
+
+    <!-- Progress & Controls -->
+    <LinearLayout
+        android:id="@+id/slimlinear3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp">
+        <ImageButton
+            android:id="@+id/slimPauseButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_pause"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="Pause" />
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:id="@+id/slimprogressBar3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="2.5"
+            android:progressTint="#33ADA2"
+            android:max="30"
+            android:progressBackgroundTint="#DAEFEA"
+            android:progress="0" />
+        <ImageButton
+            android:id="@+id/slimNextButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_next"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="Next" />
+
+
+    </LinearLayout>
+</RelativeLayout>

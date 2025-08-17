@@ -5,6 +5,7 @@ import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -34,6 +35,9 @@ public class Register extends AppCompatActivity {
     private static final String BASE_URL = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/insert.php";
 
     private static final String  Mobile_Pattern="\\d{10}";
+    private static final String Password_Pattern =
+            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$";
+
     int no;
     private RequestQueue requestQueue;
 
@@ -79,13 +83,32 @@ public class Register extends AppCompatActivity {
             {
                 Toast.makeText(Register.this, "Password do not match ", LENGTH_SHORT).show();
             }
-            else if (no<8)
-            {
-                Toast.makeText(Register.this,"Password contains must be 8 characters",LENGTH_LONG).show();
-            } else
-            {
-                registerUser(name, email, phone, password);
+            else {
+                StringBuilder errorBuilder = new StringBuilder();
+
+                if (password.length() < 8) {
+                    errorBuilder.append("• At least 8 characters\n");
+                }
+                if (!password.matches(".*[A-Z].*")) {
+                    errorBuilder.append("• At least 1 uppercase letter\n");
+                }
+                if (!password.matches(".*[a-z].*")) {
+                    errorBuilder.append("• At least 1 lowercase letter\n");
+                }
+                if (!password.matches(".*\\d.*")) {
+                    errorBuilder.append("• At least 1 digit\n");
+                }
+                if (!password.matches(".*[@#$%^&+=!].*")) {
+                    errorBuilder.append("• At least 1 special character (@#$%^&+=!)\n");
+                }
+
+                if (errorBuilder.length() > 0) {
+                    Toast.makeText(Register.this, "" + errorBuilder.toString(), LENGTH_LONG).show();
+                } else {
+                    registerUser(name, email, phone, password);
+                }
             }
+
         });
     }
 
@@ -102,7 +125,18 @@ public class Register extends AppCompatActivity {
             StringRequest request = new StringRequest(Request.Method.GET, url,
                     response -> {
                         Log.d("Server Response: " ,response);
-                        Toast.makeText(Register.this,response,LENGTH_LONG).show();
+                        if (response.contains("Username already exists")) {
+                            Toast.makeText(this, "Username already exists. Choose another one.", LENGTH_LONG).show();
+                        } else if (response.contains("Email already exists")) {
+                            Toast.makeText(this, "Email already registered. Try logging in.", LENGTH_LONG).show();
+                        } else if (response.contains("Registered successfully")) {
+                            Toast.makeText(this, "Registration successful!", LENGTH_SHORT).show();
+                            Intent intent = new Intent(Register.this, Welcome.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(this, "Server Response: " + response, LENGTH_LONG).show();
+                        }
                     },
                     error -> {
                         String errorMSG= Boolean.parseBoolean(String.valueOf((error.networkResponse!=null)))

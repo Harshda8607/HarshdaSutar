@@ -146,13 +146,7 @@ public class training extends Fragment {
             }
         });
 
-        g4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i3=new Intent(getActivity(), slim_legss.class);
-                startActivity(i3);
-            }
-        });
+
 
         r1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -216,7 +210,6 @@ public class training extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_training, container, false);
     }
 }

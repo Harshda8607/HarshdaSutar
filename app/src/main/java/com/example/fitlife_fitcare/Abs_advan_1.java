@@ -1,5 +1,6 @@
 package com.example.fitlife_fitcare;
 
+import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -17,12 +18,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Abs_advan_1 extends AppCompatActivity {
 
+
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    ImageView backbutton;
+    private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -31,12 +33,11 @@ public class Abs_advan_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_advan1);
-
-        timerText = findViewById(R.id.abs_advantime1);
-        progressBar = findViewById(R.id.abs_advanprogressBar1);
-        playPauseButton = findViewById(R.id.abs_advanPauseButton1);
-        nextButton = findViewById(R.id.abs_advanNextButton1);
-        backbutton=findViewById(R.id.back_abs_adv1);
+        timerText = findViewById(R.id.abs_advtime1);
+        progressBar = findViewById(R.id.abs_advprogressBar1);
+        playPauseButton = findViewById(R.id.abs_advPauseButton1);
+        nextButton = findViewById(R.id.abs_advNextButton1);
+        back=findViewById(R.id.back_abs_adv1);
         progressBar.setMax(30);
         startTimer();
 
@@ -56,17 +57,14 @@ public class Abs_advan_1 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-        backbutton.setOnClickListener(v -> {
-
+        back.setOnClickListener(v -> {
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_advan_1.this, abs_advanced.class);
+            Intent intent = new Intent(Abs_advan_1.this, Dashboard.class);
             startActivity(intent);
             finish();
         });
-
     }
-
     private void startTimer() {
         countDownTimer = new CountDownTimer(timeLeft, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -97,3 +95,4 @@ public class Abs_advan_1 extends AppCompatActivity {
         startTimer();
     }
 }
+

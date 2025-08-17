@@ -23,8 +23,8 @@ public class morning_warmup extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(morning_warmup.this,morning_1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(morning_warmup.this,morning_1.class);
+                startActivity(intent);
             }
         });
     }

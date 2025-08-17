@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
     android:background="@color/white"
     tools:context=".Butt_advan">
     <LinearLayout
         android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="210dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:background="#5476A2">
         <ImageView
@@ -98,7 +98,7 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/workouts_1"
             android:textStyle="bold"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="150dp"
             android:backgroundTint="#2B9BA8"/>
     </RelativeLayout>
 </RelativeLayout>

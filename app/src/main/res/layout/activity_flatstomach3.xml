@@ -8,15 +8,21 @@
     tools:context=".Flatstomach_3"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="-60dp"
+        android:layout_marginStart="10dp"
         android:padding="50dp"
         android:src="@drawable/bivyvle_crunch"/>
+    <ImageView
+        android:id="@+id/back_stomach3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
 
     <!-- Timer -->
     <TextView

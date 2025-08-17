@@ -8,7 +8,6 @@
     tools:context=".Faceyoga_2"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="500dp"
@@ -23,6 +22,13 @@
         android:orientation="vertical"
         android:background="@color/white"
         android:layout_marginTop="30dp"/>
+    <ImageView
+        android:id="@+id/back_face2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
+
 
     <!-- Timer -->
     <TextView

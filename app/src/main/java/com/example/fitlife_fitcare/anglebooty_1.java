@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ public class anglebooty_1 extends AppCompatActivity {
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
+    private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -33,6 +35,7 @@ public class anglebooty_1 extends AppCompatActivity {
         progressBar = findViewById(R.id.bootyprogressBar1);
         playPauseButton = findViewById(R.id.bootyPauseButton1);
         nextButton = findViewById(R.id.bootyNextButton1);
+        back=findViewById(R.id.back_booty1);
         progressBar.setMax(30);
         startTimer();
 
@@ -42,6 +45,14 @@ public class anglebooty_1 extends AppCompatActivity {
             } else {
                 resumeTimer();
             }
+        });
+
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(anglebooty_1.this, Dashboard.class);
+            startActivity(intent);
+            finish();
         });
 
         nextButton.setOnClickListener(v -> {

@@ -9,10 +9,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
-import com.example.fitness.R;
-import com.example.fitness.fragment.HomeFragment;
-import com.example.fitness.fragment.ReportFragment;
-import com.example.fitness.fragment.TrainingFragment;
+import com.example.fitlife_fitcare.R;
+import com.example.fitlife_fitcare.fragment.HomeFragment;
+import com.example.fitlife_fitcare.fragment.Profile;
+import com.example.fitlife_fitcare.fragment.ReportFragment;
+import com.example.fitlife_fitcare.fragment.training;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Dashboard extends AppCompatActivity {
@@ -35,9 +36,11 @@ public class Dashboard extends AppCompatActivity {
             if (id == R.id.home) {
                 selectedFragment = new HomeFragment();
             } else if (id == R.id.training) {
-                selectedFragment = new TrainingFragment();
+                selectedFragment = new training();
             } else if (id == R.id.report) {
                 selectedFragment = new ReportFragment();
+            }else if (id == R.id.profile) {
+                selectedFragment = new Profile();
             }
 
             return loadFragment(selectedFragment);

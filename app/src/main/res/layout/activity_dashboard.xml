@@ -5,16 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
     android:background="@color/white"
     tools:context=".Dashboard">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="#F2FBFB"
         app:title="Fit Life Fit Health"
-        app:titleTextAppearance="@style/Toolbar"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:titleTextAppearance="@style/Title"
         android:elevation="30dp"/>
     <FrameLayout
         android:layout_width="match_parent"
@@ -28,10 +29,12 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:id="@+id/bottom_nav"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:background="@color/white"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_navigation"
         app:itemIconTint="#009688"
+        app:itemTextColor="@color/black"
         app:itemIconSize="28dp"
         app:labelVisibilityMode="labeled"
         />

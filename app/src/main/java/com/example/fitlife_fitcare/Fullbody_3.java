@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -18,10 +19,11 @@ public class Fullbody_3 extends AppCompatActivity {
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
-    ImageButton nextButton;
+    private ImageButton nextButton;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
-    private long timeLeft = 30000; // 30 seconds
+    private long timeLeft = 30000;
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class Fullbody_3 extends AppCompatActivity {
         progressBar = findViewById(R.id.fullprogressBar3);
         playPauseButton = findViewById(R.id.fullplayPauseButton3);
         nextButton=findViewById(R.id.fullNextButton3);
+        back=findViewById(R.id.back_fullb3);
         progressBar.setMax(30);
         startTimer();
 
@@ -50,6 +53,14 @@ public class Fullbody_3 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Fullbody_3.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
     }
 
 

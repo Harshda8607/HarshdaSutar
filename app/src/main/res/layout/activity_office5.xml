@@ -8,7 +8,6 @@
     tools:context=".office_5"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="350dp"
         android:layout_height="580dp"
@@ -17,7 +16,12 @@
         android:layout_marginTop="-50dp"
         android:padding="50dp"
         android:src="@drawable/punches"/>
-
+    <ImageView
+        android:id="@+id/back_office5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
 
     <!-- Timer -->
     <TextView

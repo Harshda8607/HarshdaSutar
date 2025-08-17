@@ -32,6 +32,7 @@ public class Abs_inter_10 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_inter10);
 
+
         timerText = findViewById(R.id.abs_intertime10);
         progressBar = findViewById(R.id.abs_interprogressBar10);
         playPauseButton = findViewById(R.id.abs_interPauseButton10);
@@ -60,7 +61,7 @@ public class Abs_inter_10 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_inter_10.this, Abs_inter_9.class);
+            Intent intent = new Intent(Abs_inter_10.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class abs_advanced extends AppCompatActivity {
+    Button btn;
     Button bt1;
 
     @Override
@@ -19,8 +20,8 @@ public class abs_advanced extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_advanced);
-        bt1=findViewById(R.id.start_ABS_advanced);
-        bt1.setOnClickListener(new View.OnClickListener() {
+        btn=findViewById(R.id.start_ABS_advanced);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(abs_advanced.this,Abs_advan_1.class);

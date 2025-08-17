@@ -22,7 +22,7 @@ public class Abs_advan_7 extends AppCompatActivity {
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    ImageView backbutton;
+    private ImageView backbutton;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -32,10 +32,10 @@ public class Abs_advan_7 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_advan7);
 
-        timerText = findViewById(R.id.abs_advantime7);
-        progressBar = findViewById(R.id.abs_advanprogressBar7);
-        playPauseButton = findViewById(R.id.abs_advanPauseButton7);
-        nextButton = findViewById(R.id.abs_advanNextButton7);
+        timerText = findViewById(R.id.abs_advtime7);
+        progressBar = findViewById(R.id.abs_advprogressBar7);
+        playPauseButton = findViewById(R.id.abs_advPauseButton7);
+        nextButton = findViewById(R.id.abs_advNextButton7);
         backbutton=findViewById(R.id.back_abs_adv7);
         progressBar.setMax(30);
         startTimer();
@@ -60,7 +60,7 @@ public class Abs_advan_7 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_advan_7.this, Abs_advan_6.class);
+            Intent intent = new Intent(Abs_advan_7.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

@@ -8,20 +8,30 @@
     tools:context=".lazybed_4"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
-
-
-
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/img"
         android:layout_width="350dp"
         android:layout_height="470dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="20dp"
         android:background="@color/white"
         android:padding="60dp"
         android:layout_centerHorizontal="true"
         android:scaleType="centerCrop"
         android:src="@drawable/superman" />
+    <ImageView
+        android:id="@+id/back_lazybed4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="370dp">
+
+    </LinearLayout>
+
 
 
 
@@ -61,13 +71,6 @@
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:layout_marginTop="350dp">
-
-    </LinearLayout>
 
     <!-- Progress & Controls -->
     <LinearLayout

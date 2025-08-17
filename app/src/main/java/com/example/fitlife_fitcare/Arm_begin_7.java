@@ -60,7 +60,7 @@ public class Arm_begin_7 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Arm_begin_7.this, Arm_begin_6.class);
+            Intent intent = new Intent(Arm_begin_7.this, Dashboard.class);
             startActivity(intent);
             finish();
         });

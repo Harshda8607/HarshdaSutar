@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,11 +20,11 @@ public class Flatstomach_4 extends AppCompatActivity {
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
-    ImageButton nextButton;
+    private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    GifImageView img1;
     private boolean isRunning = true;
-    private long timeLeft = 30000; // 30 seconds
+    private long timeLeft = 30000;
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class Flatstomach_4 extends AppCompatActivity {
         progressBar = findViewById(R.id.FlatstomachprogressBar4);
         playPauseButton = findViewById(R.id.FlatstomachplayPauseButton4);
         nextButton = findViewById(R.id.FlatstomachNextButton4);
+        back=findViewById(R.id.back_stomach4);
         progressBar.setMax(30);
         startTimer();
 
@@ -52,6 +54,14 @@ public class Flatstomach_4 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Flatstomach_4.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
     private void startTimer() {

@@ -13,7 +13,7 @@
         android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="-70dp"
         android:padding="60dp"
         android:src="@drawable/side_hop"/>
     <ImageView
@@ -25,7 +25,7 @@
     <LinearLayout
         android:layout_width="70dp"
         android:layout_height="60dp"
-        android:layout_marginTop="490dp"
+        android:layout_marginTop="420dp"
         android:layout_marginStart="340dp"
         android:background="@color/white"
         android:orientation="vertical"/>

@@ -17,7 +17,7 @@
         android:padding="60dp"
         android:src="@drawable/circles_in_the_sky"/>
     <ImageView
-        android:id="@+id/back_thigh_b5"
+        android:id="@+id/back_thigh_b8"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/back"

@@ -22,7 +22,7 @@ public class Abs_advan_5 extends AppCompatActivity {
     private ImageButton playPauseButton;
     private ImageButton nextButton;
     private CountDownTimer countDownTimer;
-    ImageView backbutton;
+    private ImageView backbutton;
     private boolean isRunning = true;
     private long timeLeft = 30000;
 
@@ -32,10 +32,10 @@ public class Abs_advan_5 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_abs_advan5);
 
-        timerText = findViewById(R.id.abs_advantime5);
-        progressBar = findViewById(R.id.abs_advanprogressBar5);
-        playPauseButton = findViewById(R.id.abs_advanPauseButton5);
-        nextButton = findViewById(R.id.abs_advanNextButton5);
+        timerText = findViewById(R.id.abs_advtime5);
+        progressBar = findViewById(R.id.abs_advprogressBar5);
+        playPauseButton = findViewById(R.id.abs_advPauseButton5);
+        nextButton = findViewById(R.id.abs_advNextButton5);
         backbutton=findViewById(R.id.back_abs_adv5);
         progressBar.setMax(30);
         startTimer();
@@ -52,7 +52,7 @@ public class Abs_advan_5 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_advan_5.this, Abs_advan_6.class);
+            Intent intent = new Intent(Abs_advan_5.this, break_rest.class);
             startActivity(intent);
             finish();
         });
@@ -60,7 +60,7 @@ public class Abs_advan_5 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Abs_advan_5.this, Abs_advan_4.class);
+            Intent intent = new Intent(Abs_advan_5.this, Dashboard.class);
             startActivity(intent);
             finish();
         });
@@ -78,7 +78,7 @@ public class Abs_advan_5 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Abs_advan_5.this, Abs_advan_6.class);
+                Intent intent1 = new Intent(Abs_advan_5.this, break_rest.class);
                 startActivity(intent1);
 
             }

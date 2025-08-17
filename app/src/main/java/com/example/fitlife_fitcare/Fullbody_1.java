@@ -20,7 +20,8 @@ public class Fullbody_1 extends AppCompatActivity {
     ImageButton nextButton;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
-    private long timeLeft = 30000; // 30 seconds
+    private long timeLeft = 30000;
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class Fullbody_1 extends AppCompatActivity {
         progressBar = findViewById(R.id.fullprogressBar1);
         playPauseButton = findViewById(R.id.fullplayPauseButton1);
         nextButton=findViewById(R.id.fullNextButton1);
+        back=findViewById(R.id.back_full_b1);
         progressBar.setMax(30);
         startTimer();
 
@@ -49,6 +51,14 @@ public class Fullbody_1 extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        back.setOnClickListener(v -> {
+            countDownTimer.cancel();
+            isRunning = false;
+            Intent intent = new Intent(Fullbody_1.this, Dashboard.class);
+            startActivity(intent);
+            finish();
+        });
+
 
     }
 

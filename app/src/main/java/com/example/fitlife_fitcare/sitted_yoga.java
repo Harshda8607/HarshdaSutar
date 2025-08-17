@@ -23,8 +23,8 @@ public class sitted_yoga extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(sitted_yoga.this,sitting_1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(sitted_yoga.this,sitting_1.class);
+                startActivity(intent);
             }
         });
     }

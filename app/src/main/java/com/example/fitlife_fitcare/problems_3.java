@@ -18,7 +18,7 @@ public class problems_3 extends AppCompatActivity {
 
     ProgressBar ps;
     ImageView back;
-    LinearLayout l1, l2, l3, l4;
+    LinearLayout l1, l2, l3, l4,l5,l6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,8 @@ public class problems_3 extends AppCompatActivity {
         l2 = findViewById(R.id.problem3_l2);
         l3 = findViewById(R.id.problem3_l3);
         l4 = findViewById(R.id.problem3_l4);
+        l5 = findViewById(R.id.problem3_l5);
+        l6 = findViewById(R.id.problem3_l6);
         back=findViewById(R.id.back3);
 
         ps = findViewById(R.id.progress_3);
@@ -39,6 +41,8 @@ public class problems_3 extends AppCompatActivity {
         l2.setOnClickListener(v -> selectOption(l2));
         l3.setOnClickListener(v -> selectOption(l3));
         l4.setOnClickListener(v -> selectOption(l4));
+        l5.setOnClickListener(v -> selectOption(l5));
+        l6.setOnClickListener(v -> selectOption(l6));
 
         back.setOnClickListener(new View.OnClickListener()
         {
@@ -57,6 +61,8 @@ public class problems_3 extends AppCompatActivity {
         l2.setBackgroundResource(R.drawable.option_background);
         l3.setBackgroundResource(R.drawable.option_background);
         l4.setBackgroundResource(R.drawable.option_background);
+        l5.setBackgroundResource(R.drawable.option_background);
+        l6.setBackgroundResource(R.drawable.option_background);
 
 
         selectedLayout.setBackgroundResource(R.drawable.option_background2);

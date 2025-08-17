@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".fragment.ReportFragment">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+
+    <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:abbreviationsBarColor="@color/white"
+            app:headerColor="@color/white"
+            app:selectionColor="#CEF4F1"
+            android:layout_marginTop="40dp"
+            app:todayLabelColor="@color/green_icon" />
+    <TextView
+        android:id="@+id/textMonthYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="August  2025"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="-290dp"/>
+
+    <Button
+        android:id="@+id/btnMarkWorkout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Mark Today's Workout"
+        android:layout_marginTop="170dp"/>
+
+</FrameLayout>

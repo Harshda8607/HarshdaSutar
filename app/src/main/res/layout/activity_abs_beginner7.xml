@@ -8,13 +8,13 @@
     tools:context=".Abs_beginner_7"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
+
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="7000dp"
         android:layout_height="700dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-40dp"
+        android:layout_marginTop="-90dp"
         android:padding="60dp"
         android:src="@drawable/plank_kick"/>
     <LinearLayout
@@ -24,6 +24,12 @@
         android:layout_marginStart="340dp"
         android:background="@color/white"
         android:orientation="vertical"/>
+    <ImageView
+        android:id="@+id/back_abs_b7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back" />
 
 
     <!-- Timer -->

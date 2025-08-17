@@ -16,6 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+
             android:name=".Chest_begin_5"
             android:exported="false" />
         <activity
@@ -83,6 +84,115 @@
             android:exported="false" />
         <activity
             android:name=".flat_belly"
+            android:name=".recycle"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_12"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_11"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_10"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_9"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_8"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_7"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_6"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_5"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_4"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_3"
+            android:exported="false" />
+        <activity
+            android:name=".easeyoga_2"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_7"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_6"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_5"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_4"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_3"
+            android:exported="false" />
+        <activity
+            android:name=".sleep_2"
+            android:exported="false" />
+        <activity
+            android:name=".break_rest"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_7"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_6"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_5"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_4"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_3"
+            android:exported="false" />
+        <activity
+            android:name=".postrun_2"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_7"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_6"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_5"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_4"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_3"
+            android:exported="false" />
+        <activity
+            android:name=".prerun_2"
+            android:exported="false" />
+        <activity
+            android:name=".morning_7"
+            android:exported="false" />
+        <activity
+            android:name=".morning_6"
+            android:exported="false" />
+        <activity
+            android:name=".morning_5"
+            android:exported="false" />
+        <activity
+            android:name=".morning_4"
+            android:exported="false" />
+        <activity
+            android:name=".morning_3"
+            android:exported="false" />
+        <activity
+            android:name=".morning_2"
             android:exported="false" />
         <activity
             android:name=".Arm_begin_8"
@@ -316,7 +426,7 @@
             android:name=".Faceyoga"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".Fullbody_1"
             android:exported="false" />
         <activity
             android:name=".Chest_inter"
@@ -484,7 +594,7 @@
             android:name=".lazy_bed"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Calendar_1"
             android:exported="false" />
         <activity
             android:name=".workout_5"
@@ -523,8 +633,32 @@
             android:name=".Register"
             android:exported="false" />
         <activity
+
             android:name=".Break"
-            android:exported="true">
+            android:exported="true"/>
+          <activity
+            android:name=".flat_belly"
+            android:exported="false" />
+        <activity
+            android:name=".abs_advanced"
+            android:exported="false" />
+        <activity
+            android:name=".abs_beginner"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_4"
+            android:exported="false" />
+        <activity
+            android:name=".FullBody"
+            android:exported="false" />
+
+        <activity
+            android:name=".Dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FitLife_FitCare">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,17 +8,16 @@
     tools:context=".Lowerbody_10"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-10dp"
         android:padding="50dp"
         android:src="@drawable/advanced_bridge"/>
     <ImageView
-        android:id="@+id/back_abs_b1"
+        android:id="@+id/back_lowerb10"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/back"
@@ -54,7 +53,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="9/17"
+        android:text="10/17"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"

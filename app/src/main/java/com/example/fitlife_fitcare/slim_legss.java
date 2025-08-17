@@ -23,8 +23,8 @@ public class slim_legss extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(slim_legss.this,slim_1.class);
-//                startActivity(intent);
+                Intent intent=new Intent(slim_legss.this,slim_1.class);
+                startActivity(intent);
             }
         });
     }

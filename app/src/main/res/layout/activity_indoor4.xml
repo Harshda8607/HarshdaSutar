@@ -8,7 +8,7 @@
     tools:context=".indoor_4"
     android:padding="18dp">
 
-    <!-- GIF or Lottie animation -->
+
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="380dp"
         android:layout_height="600dp"
@@ -18,9 +18,22 @@
         android:layout_marginStart="-40dp"
         android:padding="50dp"
         android:src="@drawable/fingertip_to_toe_jacks"/>
+    <ImageView
+        android:id="@+id/back_indoor4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
 
 
     <!-- Timer -->
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="380dp"
+        android:background="@color/white" />
+
     <TextView
         android:id="@+id/indoortime4"
         android:layout_above="@id/indoorlinear4"
