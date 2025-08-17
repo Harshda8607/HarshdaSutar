@@ -5,21 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Arm_begin_8"
+    tools:context=".Arm_advan_1"
     android:padding="18dp">
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="5000dp"
         android:layout_height="500dp"
-        android:layout_height="600dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="10dp"
         android:padding="60dp"
-        android:src="@drawable/plank"/>
-        android:src="@drawable/pick_puchups"/>
+        android:src="@drawable/tricep_dips"/>
     <ImageView
-        android:id="@+id/back_arm_b8"
+        android:id="@+id/back_arm_a1"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/back"
@@ -27,16 +25,16 @@
     <LinearLayout
         android:layout_width="70dp"
         android:layout_height="60dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginStart="340dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="320dp"
         android:background="@color/white"
         android:orientation="vertical"/>
 
 
     <!-- Timer -->
     <TextView
-        android:id="@+id/arm_begtime8"
-        android:layout_above="@id/arm_beglinear8"
+        android:id="@+id/arm_advtime1"
+        android:layout_above="@id/arm_advlinear1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:30"
@@ -49,12 +47,11 @@
 
     <!-- Exercise Name -->
     <TextView
-        android:id="@+id/arm_begexercise8"
+        android:id="@+id/arm_advexercise1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PLANK"
-        android:text="PICK_PUSHUPS"
-        android:layout_above="@id/arm_begtime8"
+        android:text="TRICEPS DIPS"
+        android:layout_above="@id/arm_advtime1"
         android:textColor="#000000"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
@@ -62,17 +59,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="8/8"
+        android:text="1/8"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_above="@id/arm_beglinear8"
+        android:layout_above="@id/arm_advlinear1"
         android:layout_marginStart="280dp"
         android:layout_marginBottom="150dp"/>
 
     <!-- Progress & Controls -->
     <LinearLayout
-        android:id="@+id/arm_beglinear8"
+        android:id="@+id/arm_advlinear1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
@@ -81,7 +78,7 @@
         android:layout_marginBottom="30dp"
         android:padding="10dp">
         <ImageButton
-            android:id="@+id/arm_begPauseButton8"
+            android:id="@+id/arm_advPauseButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_pause"
@@ -90,7 +87,7 @@
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:id="@+id/arm_begprogressBar8"
+            android:id="@+id/arm_advprogressBar1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -100,7 +97,7 @@
             android:progressBackgroundTint="#DAEFEA"
             android:progress="0" />
         <ImageButton
-            android:id="@+id/arm_begNextButton8"
+            android:id="@+id/arm_advNextButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_next"
