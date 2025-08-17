@@ -15,7 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Arm_inter_1 extends AppCompatActivity {
+public class Arm_inter_2 extends AppCompatActivity {
 
     private TextView timerText;
     private ProgressBar progressBar;
@@ -30,13 +30,13 @@ public class Arm_inter_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_arm_inter1);
+        setContentView(R.layout.activity_arm_inter2);
 
-        timerText = findViewById(R.id.arm_intertime1);
-        progressBar = findViewById(R.id.arm_interprogressBar1);
-        playPauseButton = findViewById(R.id.arm_interPauseButton1);
-        nextButton = findViewById(R.id.arm_interNextButton1);
-        backbutton=findViewById(R.id.back_arm_i1);
+        timerText = findViewById(R.id.arm_intertime2);
+        progressBar = findViewById(R.id.arm_interprogressBar2);
+        playPauseButton = findViewById(R.id.arm_interPauseButton2);
+        nextButton = findViewById(R.id.arm_interNextButton2);
+        backbutton=findViewById(R.id.back_arm_i2);
         progressBar.setMax(30);
         startTimer();
 
@@ -52,7 +52,7 @@ public class Arm_inter_1 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Arm_inter_1.this, Arm_inter_2.class);
+            Intent intent = new Intent(Arm_inter_2.this, Arm_inter_3.class);
             startActivity(intent);
             finish();
         });
@@ -60,7 +60,7 @@ public class Arm_inter_1 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Arm_inter_1.this, arm_intermediate.class);
+            Intent intent = new Intent(Arm_inter_2.this, Arm_inter_1.class);
             startActivity(intent);
             finish();
         });
@@ -79,7 +79,7 @@ public class Arm_inter_1 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Arm_inter_1.this, Arm_inter_2.class);
+                Intent intent1 = new Intent(Arm_inter_2.this, Arm_inter_3.class);
                 startActivity(intent1);
 
             }

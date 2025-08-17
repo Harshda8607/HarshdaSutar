@@ -3,10 +3,7 @@ package com.example.fitlife_fitcare;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,30 +12,22 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Arm_inter_1 extends AppCompatActivity {
-
-    private TextView timerText;
-    private ProgressBar progressBar;
-    private ImageButton playPauseButton;
-    private ImageButton nextButton;
-    ImageView backbutton;
+public class Break extends AppCompatActivity {
+    TextView timertext;
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
+    private ImageButton playPauseButton;
     private long timeLeft = 30000;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_arm_inter1);
-
-        timerText = findViewById(R.id.arm_intertime1);
-        progressBar = findViewById(R.id.arm_interprogressBar1);
-        playPauseButton = findViewById(R.id.arm_interPauseButton1);
-        nextButton = findViewById(R.id.arm_interNextButton1);
-        backbutton=findViewById(R.id.back_arm_i1);
-        progressBar.setMax(30);
-        startTimer();
+        setContentView(R.layout.activity_break);
+        timertext=findViewById(R.id.timer);
+        playPauseButton=findViewById(R.id.play);
 
         playPauseButton.setOnClickListener(v -> {
             if (isRunning) {
@@ -48,38 +37,20 @@ public class Arm_inter_1 extends AppCompatActivity {
             }
         });
 
-        nextButton.setOnClickListener(v -> {
-
-            countDownTimer.cancel();
-            isRunning = false;
-            Intent intent = new Intent(Arm_inter_1.this, Arm_inter_2.class);
-            startActivity(intent);
-            finish();
-        });
-        backbutton.setOnClickListener(v -> {
-
-            countDownTimer.cancel();
-            isRunning = false;
-            Intent intent = new Intent(Arm_inter_1.this, arm_intermediate.class);
-            startActivity(intent);
-            finish();
-        });
 
 
     }
-
     private void startTimer() {
         countDownTimer = new CountDownTimer(timeLeft, 1000) {
             public void onTick(long millisUntilFinished) {
                 timeLeft = millisUntilFinished;
                 int seconds = (int) millisUntilFinished / 1000;
-                timerText.setText("00:" + String.format("%02d", seconds));
-                progressBar.setProgress(30 - seconds);
+                timertext.setText("00:" + String.format("%02d", seconds));
             }
 
             public void onFinish() {
-                timerText.setText("00:00");
-                Intent intent1 = new Intent(Arm_inter_1.this, Arm_inter_2.class);
+                timertext.setText("00:00");
+                Intent intent1 = new Intent(Break.this, Arm_begin_2.class);
                 startActivity(intent1);
 
             }
@@ -87,7 +58,6 @@ public class Arm_inter_1 extends AppCompatActivity {
         isRunning = true;
         playPauseButton.setImageResource(android.R.drawable.ic_media_pause);
     }
-
     private void pauseTimer() {
         countDownTimer.cancel();
         isRunning = false;
