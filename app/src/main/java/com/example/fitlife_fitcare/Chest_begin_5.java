@@ -32,69 +32,69 @@ public class Chest_begin_5 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_chest_begin5);
 
-        timerText = findViewById(R.id.chest_begtime5);
-        progressBar = findViewById(R.id.chest_begprogressBar5);
-        playPauseButton = findViewById(R.id.chest_begPauseButton5);
-        nextButton = findViewById(R.id.chest_begNextButton5);
-        backbutton=findViewById(R.id.back_chest_b5);
-        progressBar.setMax(30);
-        startTimer();
-
-        playPauseButton.setOnClickListener(v -> {
-            if (isRunning) {
-                pauseTimer();
-            } else {
-                resumeTimer();
-            }
-        });
-
-        nextButton.setOnClickListener(v -> {
-
-            countDownTimer.cancel();
-            isRunning = false;
-            Intent intent = new Intent(Chest_begin_5.this, Finish.class);
-            startActivity(intent);
-            finish();
-        });
-        backbutton.setOnClickListener(v -> {
-
-            countDownTimer.cancel();
-            isRunning = false;
-            Intent intent = new Intent(Chest_begin_5.this, Chest_begin_4.class);
-            startActivity(intent);
-            finish();
-        });
-
-
-    }
-
-    private void startTimer() {
-        countDownTimer = new CountDownTimer(timeLeft, 1000) {
-            public void onTick(long millisUntilFinished) {
-                timeLeft = millisUntilFinished;
-                int seconds = (int) millisUntilFinished / 1000;
-                timerText.setText("00:" + String.format("%02d", seconds));
-                progressBar.setProgress(30 - seconds);
-            }
-
-            public void onFinish() {
-                timerText.setText("00:00");
-                Intent intent1 = new Intent(Chest_begin_5.this, Finish.class);
-                startActivity(intent1);
-
-            }
-        }.start();
-        isRunning = true;
-        playPauseButton.setImageResource(android.R.drawable.ic_media_pause);
-    }
-
-    private void pauseTimer() {
-        countDownTimer.cancel();
-        isRunning = false;
-        playPauseButton.setImageResource(android.R.drawable.ic_media_play);
-    }
-
-    private void resumeTimer() {
-        startTimer();
+//        timerText = findViewById(R.id.chest_begtime5);
+//        progressBar = findViewById(R.id.chest_begprogressBar5);
+//        playPauseButton = findViewById(R.id.chest_begPauseButton5);
+//        nextButton = findViewById(R.id.chest_begNextButton5);
+//        backbutton=findViewById(R.id.back_chest_b5);
+//        progressBar.setMax(30);
+//        startTimer();
+//
+//        playPauseButton.setOnClickListener(v -> {
+//            if (isRunning) {
+//                pauseTimer();
+//            } else {
+//                resumeTimer();
+//            }
+//        });
+//
+//        nextButton.setOnClickListener(v -> {
+//
+//            countDownTimer.cancel();
+//            isRunning = false;
+//            Intent intent = new Intent(Chest_begin_5.this, Finish.class);
+//            startActivity(intent);
+//            finish();
+//        });
+//        backbutton.setOnClickListener(v -> {
+//
+//            countDownTimer.cancel();
+//            isRunning = false;
+//            Intent intent = new Intent(Chest_begin_5.this, Chest_begin_4.class);
+//            startActivity(intent);
+//            finish();
+//        });
+//
+//
+//    }
+//
+//    private void startTimer() {
+//        countDownTimer = new CountDownTimer(timeLeft, 1000) {
+//            public void onTick(long millisUntilFinished) {
+//                timeLeft = millisUntilFinished;
+//                int seconds = (int) millisUntilFinished / 1000;
+//                timerText.setText("00:" + String.format("%02d", seconds));
+//                progressBar.setProgress(30 - seconds);
+//            }
+//
+//            public void onFinish() {
+//                timerText.setText("00:00");
+//                Intent intent1 = new Intent(Chest_begin_5.this, Finish.class);
+//                startActivity(intent1);
+//
+//            }
+//        }.start();
+//        isRunning = true;
+//        playPauseButton.setImageResource(android.R.drawable.ic_media_pause);
+//    }
+//
+//    private void pauseTimer() {
+//        countDownTimer.cancel();
+//        isRunning = false;
+//        playPauseButton.setImageResource(android.R.drawable.ic_media_play);
+//    }
+//
+//    private void resumeTimer() {
+//        startTimer();
     }
 }

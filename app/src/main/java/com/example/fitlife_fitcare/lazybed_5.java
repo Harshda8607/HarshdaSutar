@@ -25,6 +25,7 @@ public class lazybed_5 extends AppCompatActivity {
     private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    public static final int LAZYBED_WORKOUT = 17;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,8 @@ public class lazybed_5 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(lazybed_5.this, lazybed_6.class);
+            Intent intent = new Intent(lazybed_5.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", LAZYBED_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -79,7 +81,8 @@ public class lazybed_5 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1=new Intent(lazybed_5.this,lazybed_6.class);
+                Intent intent1=new Intent(lazybed_5.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", LAZYBED_WORKOUT);
                 startActivity(intent1);
             }
         }.start();

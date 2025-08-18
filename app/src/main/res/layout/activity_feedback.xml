@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="@color/white"
+    tools:context=".Feedback">
+    <ImageView
+        android:id="@+id/feedback_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"/>
+    <TextView
+        android:id="@+id/feed_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="55dp"/>
+    <ImageView
+        android:id="@+id/img_feed"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/feedback"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textfeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please tell us how is our app and where we can improve."
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="-40dp"
+        android:layout_below="@id/img_feed"/>
+
+    <EditText
+        android:id="@+id/editfeedback"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/textfeed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:hint="Please tell us more details about yout feedback or suggestion"
+        android:textColorHint="#736A6A"
+        android:gravity="top"/>
+    <Button
+        android:id="@+id/send"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="SEND"
+        android:backgroundTint="@color/green_icon"
+        android:textSize="27dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

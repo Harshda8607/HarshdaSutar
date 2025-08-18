@@ -25,6 +25,7 @@ public class Thigh_begin_5 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    public static final int THIGH_BEG_WORKOUT = 8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,8 @@ public class Thigh_begin_5 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Thigh_begin_5.this, Thigh_begin_6.class);
+            Intent intent = new Intent(Thigh_begin_5.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", THIGH_BEG_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -79,7 +81,8 @@ public class Thigh_begin_5 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Thigh_begin_5.this, Thigh_begin_6.class);
+                Intent intent1 = new Intent(Thigh_begin_5.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", THIGH_BEG_WORKOUT);
                 startActivity(intent1);
 
             }

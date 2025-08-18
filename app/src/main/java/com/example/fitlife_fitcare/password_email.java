@@ -37,9 +37,10 @@ public class password_email extends AppCompatActivity {
                 Toast.makeText(this, "Enter your registered email", Toast.LENGTH_SHORT).show();
             } else {
                 verifyEmail(email);
+                Intent intent=new Intent(password_email.this,Forget_Password.class );
+                startActivity(intent);
             }
         });
-
     }
 
     private void verifyEmail(String email) {
@@ -66,7 +67,6 @@ public class password_email extends AppCompatActivity {
                     dialog.dismiss();
                     Toast.makeText(this, "Error: " + error.toString(), Toast.LENGTH_LONG).show();
                 });
-
         Volley.newRequestQueue(this).add(request);
     }
 }

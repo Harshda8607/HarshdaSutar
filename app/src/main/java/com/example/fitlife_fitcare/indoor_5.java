@@ -25,6 +25,7 @@ public class indoor_5 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    public static final int INDOOR_WORKOUT = 19;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,8 @@ public class indoor_5 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(indoor_5.this, indoor_6.class);
+            Intent intent = new Intent(indoor_5.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", INDOOR_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -78,7 +80,8 @@ public class indoor_5 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(indoor_5.this, indoor_6.class);
+                Intent intent1 = new Intent(indoor_5.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", INDOOR_WORKOUT);
                 startActivity(intent1);
 
             }

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="@color/white"
+    tools:context=".My_Profile">
+    <ImageView
+        android:id="@+id/progile_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"/>
+    <TextView
+        android:id="@+id/My_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="55dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="375dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/My_profile"
+        android:layout_marginTop="35dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"/>
+            <TextView
+                android:id="@+id/tvheaight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120.2 cm"
+                android:textColor="@color/green_icon"
+                android:layout_alignBaseline="@id/height"
+                android:layout_marginStart="250dp"
+                android:textSize="25sp"/>
+            <ImageView
+                android:id="@+id/line_h"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/height"
+                android:src="@drawable/straight_line"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/line_h"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"/>
+            <TextView
+                android:id="@+id/tvweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120.2 kg"
+                android:textColor="@color/green_icon"
+                android:layout_alignBaseline="@id/weight"
+                android:layout_marginStart="250dp"
+                android:textSize="25sp"/>
+            <ImageView
+                android:id="@+id/line_w"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/weight"
+                android:src="@drawable/straight_line"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/target_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Target Weight"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_below="@id/line_w"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"/>
+            <EditText
+                android:id="@+id/tvtargetweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="120.2 kg"
+                android:textColor="@color/green_icon"
+                android:layout_alignBaseline="@id/target_weight"
+                android:layout_marginStart="250dp"
+                android:textSize="25sp"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

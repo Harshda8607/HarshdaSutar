@@ -24,6 +24,7 @@ public class easeyoga_6 extends AppCompatActivity {
     private boolean isRunning = true;
     private long timeLeft = 30000;
     private ImageView back;
+    public static final int EASE_WORKOUT = 28;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,8 @@ public class easeyoga_6 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(easeyoga_6.this, easeyoga_7.class);
+            Intent intent = new Intent(easeyoga_6.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", EASE_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -77,7 +79,8 @@ public class easeyoga_6 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(easeyoga_6.this, easeyoga_7.class);
+                Intent intent1 = new Intent(easeyoga_6.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", EASE_WORKOUT);
                 startActivity(intent1);
 
             }

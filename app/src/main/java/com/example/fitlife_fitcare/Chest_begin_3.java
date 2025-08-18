@@ -25,6 +25,7 @@ public class Chest_begin_3 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    public static final int CHEST_BEG_WORKOUT = 14;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,69 +33,71 @@ public class Chest_begin_3 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_chest_begin3);
 
-        timerText = findViewById(R.id.chest_begtime3);
-        progressBar = findViewById(R.id.chest_begprogressBar3);
-        playPauseButton = findViewById(R.id.chest_begPauseButton3);
-        nextButton = findViewById(R.id.chest_begNextButton3);
-        backbutton=findViewById(R.id.back_chest_b3);
-        progressBar.setMax(30);
-        startTimer();
-
-        playPauseButton.setOnClickListener(v -> {
-            if (isRunning) {
-                pauseTimer();
-            } else {
-                resumeTimer();
-            }
-        });
-
-        nextButton.setOnClickListener(v -> {
-
-            countDownTimer.cancel();
-            isRunning = false;
-            Intent intent = new Intent(Chest_begin_3.this, Chest_begin_4.class);
-            startActivity(intent);
-            finish();
-        });
-        backbutton.setOnClickListener(v -> {
-
-            countDownTimer.cancel();
-            isRunning = false;
-            Intent intent = new Intent(Chest_begin_3.this, Chest_begin_2.class);
-            startActivity(intent);
-            finish();
-        });
-
-
-    }
-
-    private void startTimer() {
-        countDownTimer = new CountDownTimer(timeLeft, 1000) {
-            public void onTick(long millisUntilFinished) {
-                timeLeft = millisUntilFinished;
-                int seconds = (int) millisUntilFinished / 1000;
-                timerText.setText("00:" + String.format("%02d", seconds));
-                progressBar.setProgress(30 - seconds);
-            }
-
-            public void onFinish() {
-                timerText.setText("00:00");
-                Intent intent1 = new Intent(Chest_begin_3.this, Chest_begin_4.class);
-                startActivity(intent1);
-
-            }
-        }.start();
-        isRunning = true;
-        playPauseButton.setImageResource(android.R.drawable.ic_media_pause);
-    }
-
-    private void pauseTimer() {
-        countDownTimer.cancel();
-        isRunning = false;
-        playPauseButton.setImageResource(android.R.drawable.ic_media_play);
-    }
-
-    private void resumeTimer() {
-        startTimer();
+//        timerText = findViewById(R.id.chest_begtime3);
+//        progressBar = findViewById(R.id.chest_begprogressBar3);
+//        playPauseButton = findViewById(R.id.chest_begPauseButton3);
+//        nextButton = findViewById(R.id.chest_begNextButton3);
+//        backbutton=findViewById(R.id.back_chest_b3);
+//        progressBar.setMax(30);
+//        startTimer();
+//
+//        playPauseButton.setOnClickListener(v -> {
+//            if (isRunning) {
+//                pauseTimer();
+//            } else {
+//                resumeTimer();
+//            }
+//        });
+//
+//        nextButton.setOnClickListener(v -> {
+//
+//            countDownTimer.cancel();
+//            isRunning = false;
+//            Intent intent = new Intent(Chest_begin_3.this, break_rest.class);
+//            intent.putExtra("NEXT_WORKOUT", CHEST_BEG_WORKOUT);
+//            startActivity(intent);
+//            finish();
+//        });
+//        backbutton.setOnClickListener(v -> {
+//
+//            countDownTimer.cancel();
+//            isRunning = false;
+//            Intent intent = new Intent(Chest_begin_3.this, Chest_begin_2.class);
+//            startActivity(intent);
+//            finish();
+//        });
+//
+//
+//    }
+//
+//    private void startTimer() {
+//        countDownTimer = new CountDownTimer(timeLeft, 1000) {
+//            public void onTick(long millisUntilFinished) {
+//                timeLeft = millisUntilFinished;
+//                int seconds = (int) millisUntilFinished / 1000;
+//                timerText.setText("00:" + String.format("%02d", seconds));
+//                progressBar.setProgress(30 - seconds);
+//            }
+//
+//            public void onFinish() {
+//                timerText.setText("00:00");
+//                Intent intent1 = new Intent(Chest_begin_3.this, break_rest.class);
+//                  intent1.putExtra("NEXT_WORKOUT", CHEST_BEG_WORKOUT);
+//                startActivity(intent1);
+//
+//            }
+//        }.start();
+//        isRunning = true;
+//        playPauseButton.setImageResource(android.R.drawable.ic_media_pause);
+//    }
+//
+//    private void pauseTimer() {
+//        countDownTimer.cancel();
+//        isRunning = false;
+//        playPauseButton.setImageResource(android.R.drawable.ic_media_play);
+//    }
+//
+//    private void resumeTimer() {
+//        startTimer();
     }
 }

@@ -16,7 +16,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
+            android:name=".chest_inter_5"
+            android:exported="false" />
+        <activity
+            android:name=".chest_inter_4"
+            android:exported="false" />
+        <activity
+            android:name=".chest_inter_3"
+            android:exported="false" />
+        <activity
+            android:name=".chest_inter_2"
+            android:exported="false" />
+        <activity
             android:name=".stand_3"
             android:exported="false" />
         <activity
@@ -98,11 +109,6 @@
             android:name=".password_email"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-=======
-
             android:name=".Chest_begin_5"
             android:exported="false" />
         <activity
@@ -115,7 +121,7 @@
             android:name=".Chest_begin_2"
             android:exported="false" />
         <activity
-            android:name=".Chest"
+            android:name=".Chest_begin_1"
             android:exported="false" />
         <activity
             android:name=".Arm_advan_8"
@@ -165,12 +171,8 @@
         <activity
             android:name=".Arm_inter_1"
             android:exported="false" />
+        <activity android:name=".flat_belly" />
         <activity
-            android:name=".Calendar_1"
-            android:exported="false" />
-        <activity
-            android:name=".flat_belly"
->>>>>>> 664b7eac57ce8a5c5158025eb4f19bd0560cd84c
             android:name=".recycle"
             android:exported="false" />
         <activity
@@ -284,8 +286,9 @@
         <activity
             android:name=".Arm_begin_8"
             android:exported="false" />
-        <activity android:name=".arm_beginner"
-            android:exported="false"/>
+        <activity
+            android:name=".arm_beginner"
+            android:exported="false" />
         <activity
             android:name=".Arm_begin_7"
             android:exported="false" />
@@ -458,6 +461,21 @@
             android:name=".Abs_inter_1"
             android:exported="false" />
         <activity
+            android:name=".Lowerbody_17"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_16"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_15"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_14"
+            android:exported="false" />
+        <activity
+            android:name=".Lowerbody_13"
+            android:exported="false" />
+        <activity
             android:name=".Lowerbody_12"
             android:exported="false" />
         <activity
@@ -513,6 +531,42 @@
             android:exported="false" />
         <activity
             android:name=".Faceyoga"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_13"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_12"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_11"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_10"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_9"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_8"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_7"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_6"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_5"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_4"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_3"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_2"
             android:exported="false" />
         <activity
             android:name=".Fullbody_1"
@@ -683,9 +737,6 @@
             android:name=".lazy_bed"
             android:exported="false" />
         <activity
-            android:name=".Calendar_1"
-            android:exported="false" />
-        <activity
             android:name=".workout_5"
             android:exported="false" />
         <activity
@@ -722,12 +773,8 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-
             android:name=".Break"
-            android:exported="true"/>
-          <activity
-            android:name=".flat_belly"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".abs_advanced"
             android:exported="false" />
@@ -744,10 +791,40 @@
             android:name=".flatstomach"
             android:exported="false" />
         <activity
+            android:name=".Flatstomach_5"
+            android:exported="false" />
+        <activity
+            android:name=".Flatstomach_4"
+            android:exported="false" />
+        <activity
+            android:name=".Flatstomach_3"
+            android:exported="false" />
+        <activity
+            android:name=".Flatstomach_2"
+            android:exported="false" />
+        <activity
             android:name=".height_weight"
             android:exported="true" />
         <activity
             android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Finish"
+            android:exported="false" />
+        <activity
+            android:name=".Privacy_Policy"
+            android:exported="false"/>
+        <activity
+            android:name=".Feedback"
+            android:exported="false"/>
+        <activity
+            android:name=".Settings"
+            android:exported="false"/>
+        <activity
+            android:name=".My_Profile"
+            android:exported="false"/>
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.FitLife_FitCare">
             <intent-filter>

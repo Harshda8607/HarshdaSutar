@@ -43,7 +43,7 @@ public class height_weight extends AppCompatActivity {
     Button btn;
     boolean isLbs = true;
     boolean isFeet = true;
-    private static final String BASE_URL = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/height_insert.php";
+    String url = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/height_insert.php?Height=" + tvHeight + "&Weight=" + tvWeight;
     private RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,20 +128,23 @@ public class height_weight extends AppCompatActivity {
     }
 
     private void hwinsert(int height, int weight) {
-        String url = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/height_insert.php=" + height + "&Weight=" + weight;
+        try {
+            String url = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/height_insert.php?Height="
+                    + URLEncoder.encode(String.valueOf(height), "UTF-8")
+                    + "&Weight="
+                    + URLEncoder.encode(String.valueOf(weight), "UTF-8");
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                response -> {
-                    // Response from PHP
-                    Toast.makeText(height_weight.this, "Updated successfully", Toast.LENGTH_SHORT).show();
-                },
-                error -> {
-                    Toast.makeText(height_weight.this, "Successful ", Toast.LENGTH_LONG).show();
-                });
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                    response -> Toast.makeText(height_weight.this, "Updated successfully", Toast.LENGTH_SHORT).show(),
+                    error -> Toast.makeText(height_weight.this, "Error occurred while updating", Toast.LENGTH_LONG).show());
 
-        RequestQueue queue = Volley.newRequestQueue(this);
-        queue.add(stringRequest);
+            requestQueue.add(stringRequest);
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
+
     private void updateWeightText(int value) {
         if (isLbs) {
             tvWeight.setText(value + " lbs");

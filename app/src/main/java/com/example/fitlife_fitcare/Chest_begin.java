@@ -23,7 +23,7 @@ public class Chest_begin extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Chest_begin.this, chest_beg_1.class);
+                Intent intent=new Intent(Chest_begin.this, Chest_begin_1.class);
                 startActivity(intent);
             }
         });

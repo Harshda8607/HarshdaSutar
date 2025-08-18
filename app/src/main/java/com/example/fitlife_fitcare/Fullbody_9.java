@@ -19,6 +19,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Fullbody_9 extends AppCompatActivity {
 
+    public static final int FULL_BODY_WORKOUT = 1;
     private TextView timerText;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
@@ -54,7 +55,8 @@ public class Fullbody_9 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Fullbody_9.this, Fullbody_10.class);
+            Intent intent = new Intent(Fullbody_9.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", FULL_BODY_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -79,7 +81,8 @@ public class Fullbody_9 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent=new Intent(Fullbody_9.this,Fullbody_10.class);
+                Intent intent=new Intent(Fullbody_9.this,break_rest.class);
+                intent.putExtra("NEXT_WORKOUT", FULL_BODY_WORKOUT);
                 startActivity(intent);
             }
         }.start();

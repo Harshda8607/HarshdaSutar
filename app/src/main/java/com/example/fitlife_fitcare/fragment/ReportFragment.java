@@ -15,6 +15,8 @@ import com.example.fitlife_fitcare.R;
 import com.example.fitlife_fitcare.recycle;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class ReportFragment extends Fragment {
@@ -32,9 +34,10 @@ public class ReportFragment extends Fragment {
             textMonthYear = view.findViewById(R.id.textMonthYear);
             mark = view.findViewById(R.id.btnMarkWorkout);
 
-            long currentDate = calendarView.getSelectedDates();
+            List<Calendar> currentDate = calendarView.getSelectedDates();
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
+            Calendar selectedDate = null;
             String monthYear = dateFormat.format(selectedDate.getTime());
             textMonthYear.setText(monthYear);
 

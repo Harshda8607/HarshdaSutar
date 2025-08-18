@@ -23,7 +23,7 @@ public class arm_intermediate extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(arm_intermediate.this, arm_inter_1.class);
+                Intent intent=new Intent(arm_intermediate.this, Arm_inter_1.class);
                 startActivity(intent);
             }
         });

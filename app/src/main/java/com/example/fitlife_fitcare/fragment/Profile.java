@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.fitlife_fitcare.Dashboard;
 import com.example.fitlife_fitcare.Login;
 import com.example.fitlife_fitcare.R;
+import com.example.fitlife_fitcare.Settings;
 import com.example.fitlife_fitcare.Welcome;
 
 import java.io.BufferedReader;
@@ -46,20 +47,30 @@ public class Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-
+        set=view.findViewById(R.id.setting);
         signout = view.findViewById(R.id.signout);
         signout.setOnClickListener(v -> {
-            requireActivity().getSharedPreferences("loggedcheck", MODE_PRIVATE)
+            requireActivity().getSharedPreferences("LoginCheck", MODE_PRIVATE)
                     .edit()
                     .clear()
                     .apply();
 
-            Toast.makeText(getActivity(), "Signed out successfully!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Signed out successfully !", Toast.LENGTH_SHORT).show();
 
+            // Redirect to login screen and clear activity stack
             Intent intent = new Intent(getActivity(), Login.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
+
         });
+        set.setOnClickListener(v->
+        {
+            Intent intent1=new Intent(getActivity(), Settings.class);
+            startActivity(intent1);
+        });
+
+
+
 
 
         return view;
@@ -86,7 +97,7 @@ public class Profile extends Fragment {
         }
 
         set.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Welcome.class);
+            Intent intent = new Intent(getActivity(),Settings.class);
             intent.putExtra("id", id);
             startActivityForResult(intent, 1001);
         });

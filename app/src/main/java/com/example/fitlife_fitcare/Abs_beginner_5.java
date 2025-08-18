@@ -25,6 +25,7 @@ public class Abs_beginner_5 extends AppCompatActivity {
     private ImageView back;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    public static final int ABS_BEG_WORKOUT = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,7 @@ public class Abs_beginner_5 extends AppCompatActivity {
             countDownTimer.cancel();
             isRunning = false;
             Intent intent = new Intent(Abs_beginner_5.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", ABS_BEG_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -79,6 +81,7 @@ public class Abs_beginner_5 extends AppCompatActivity {
             public void onFinish() {
                 timerText.setText("00:00");
                 Intent intent1 = new Intent(Abs_beginner_5.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", ABS_BEG_WORKOUT);
                 startActivity(intent1);
 
             }

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,19 +50,28 @@ public class Login extends AppCompatActivity
 
         login.setOnClickListener(v -> validateAndLogin());
 
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,password_email.class);
+                startActivity(intent);
+            }
+        });
+
         signup.setOnClickListener(v -> {
             Intent intent = new Intent(Login.this, Register.class);
             startActivity(intent);
         });
 
-        SharedPreferences prefs = getSharedPreferences("loggedcheck", MODE_PRIVATE);
-        boolean isLoggedIn = prefs.getBoolean("isLoggedIn", false);
+        sharedPreferences = getSharedPreferences("LoginCheck", MODE_PRIVATE);
 
-        if (isLoggedIn) {
-            Intent intent = new Intent(Login.this, Dashboard.class);
-            startActivity(intent);
+        // ✅ Skip login if already logged in
+        if (sharedPreferences.getBoolean("isLoggedIn", false)) {
+            startActivity(new Intent(Login.this, Dashboard.class));
             finish();
+            return;
         }
+
 
 
 //        SharedPreferences userPrefs = getSharedPreferences("fetch_", MODE_PRIVATE);
@@ -69,7 +79,7 @@ public class Login extends AppCompatActivity
 //        userEditor.putString("id", ID); // Replace with actual ID from response
 //        userEditor.apply();
 
-        }
+    }
 
 
 
@@ -99,7 +109,7 @@ public class Login extends AppCompatActivity
                     response -> {
                         if (response.contains("success")) {
                             Toast.makeText(Login.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(Login.this, Welcome.class));
+                            startActivity(new Intent(Login.this, Dashboard.class));
                             finish();
                         } else {
                             Toast.makeText(Login.this, "Invalid credentials", Toast.LENGTH_SHORT).show();

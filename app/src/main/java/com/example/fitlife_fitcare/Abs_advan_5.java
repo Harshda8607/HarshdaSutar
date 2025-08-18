@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Abs_advan_5 extends AppCompatActivity {
 
     private TextView timerText;
+    public static final int ABS_ADV_WORKOUT = 6;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
@@ -53,6 +54,7 @@ public class Abs_advan_5 extends AppCompatActivity {
             countDownTimer.cancel();
             isRunning = false;
             Intent intent = new Intent(Abs_advan_5.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", ABS_ADV_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -79,6 +81,7 @@ public class Abs_advan_5 extends AppCompatActivity {
             public void onFinish() {
                 timerText.setText("00:00");
                 Intent intent1 = new Intent(Abs_advan_5.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", ABS_ADV_WORKOUT);
                 startActivity(intent1);
 
             }

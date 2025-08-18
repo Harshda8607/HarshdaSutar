@@ -24,6 +24,7 @@ public class slim_4 extends AppCompatActivity {
     private boolean isRunning = true;
     private long timeLeft = 30000;
     private ImageView back;
+    public static final int SLIM_WORKOUT = 23;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,8 @@ public class slim_4 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(slim_4.this, slim_5.class);
+            Intent intent = new Intent(slim_4.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", SLIM_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -77,7 +79,8 @@ public class slim_4 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(slim_4.this, slim_5.class);
+                Intent intent1 = new Intent(slim_4.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", SLIM_WORKOUT);
                 startActivity(intent1);
 
             }

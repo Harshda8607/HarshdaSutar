@@ -18,6 +18,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Faceyoga_3 extends AppCompatActivity {
     private TextView timerText;
+    public static final int FACE_YOGA_WORKOUT = 4;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
@@ -50,7 +51,8 @@ public class Faceyoga_3 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Faceyoga_3.this, Faceyoga_4.class);
+            Intent intent = new Intent(Faceyoga_3.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", FACE_YOGA_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -75,7 +77,8 @@ public class Faceyoga_3 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent=new Intent(Faceyoga_3.this,Faceyoga_4.class);
+                Intent intent=new Intent(Faceyoga_3.this, break_rest.class);
+                intent.putExtra("NEXT_WORKOUT", FACE_YOGA_WORKOUT);
                 startActivity(intent);
             }
         }.start();

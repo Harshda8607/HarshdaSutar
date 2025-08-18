@@ -18,6 +18,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Flatstomach_3 extends AppCompatActivity {
     private TextView timerText;
+    public static final int FLAT_STOMACH_WORKOUT = 3;
     private ProgressBar progressBar;
     private ImageButton playPauseButton;
     private ImageButton nextButton;
@@ -50,7 +51,8 @@ public class Flatstomach_3 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Flatstomach_3.this, Flatstomach_4.class);
+            Intent intent = new Intent(Flatstomach_3.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", FLAT_STOMACH_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -75,7 +77,8 @@ public class Flatstomach_3 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent=new Intent(Flatstomach_3.this,Flatstomach_4.class);
+                Intent intent=new Intent(Flatstomach_3.this,break_rest.class);
+                intent.putExtra("NEXT_WORKOUT", FLAT_STOMACH_WORKOUT);
                 startActivity(intent);
             }
         }.start();

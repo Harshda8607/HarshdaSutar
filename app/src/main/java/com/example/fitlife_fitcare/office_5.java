@@ -24,6 +24,7 @@ public class office_5 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private ImageView back;
     private boolean isRunning = true;
+    public static final int OFFICE_WORKOUT = 18;
     private long timeLeft = 30000;
 
     @Override
@@ -52,7 +53,8 @@ public class office_5 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(office_5.this, office_6.class);
+            Intent intent = new Intent(office_5.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", OFFICE_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -78,7 +80,8 @@ public class office_5 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(office_5.this, office_6.class);
+                Intent intent1 = new Intent(office_5.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", OFFICE_WORKOUT);
                 startActivity(intent1);
 
             }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/bg_dialog">
+    <ImageView
+        android:id="@+id/imgEmoji"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_love_emoji"/>
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thanks For Your Feedback!"
+        android:textSize="30sp"
+        android:layout_below="@id/imgEmoji"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/thanksdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your responce will definitely help us and your changes will make app better. We will definitely solve your problems."
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@id/thanks"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="DONE"
+        android:textSize="23sp"
+        android:backgroundTint="@color/green_icon"
+        android:layout_below="@id/thanksdesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+
+</RelativeLayout>

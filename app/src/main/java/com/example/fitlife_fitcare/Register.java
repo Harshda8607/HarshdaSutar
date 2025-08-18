@@ -16,17 +16,21 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
-import org.json.JSONObject;
-
 import java.io.UnsupportedEncodingException;
+import java.net.CookieManager;
+import java.net.CookiePolicy;
+import java.net.HttpCookie;
 import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
@@ -40,6 +44,7 @@ public class Register extends AppCompatActivity {
 
     int no;
     private RequestQueue requestQueue;
+    private static CookieManager cookieManager;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -55,6 +60,11 @@ public class Register extends AppCompatActivity {
         btnRegister = findViewById(R.id.up_button);
 
         requestQueue=Volley.newRequestQueue(this);
+        if (cookieManager == null) {
+            cookieManager = new CookieManager();
+            cookieManager.setCookiePolicy(CookiePolicy.ACCEPT_ALL);
+            java.net.CookieHandler.setDefault(cookieManager);
+        }
 
         btnRegister.setOnClickListener(view ->
         {
@@ -65,8 +75,6 @@ public class Register extends AppCompatActivity {
             String confirmPassword = ConfirmPassword.getText().toString().trim();
             no=password.length();
 
-//            if (name.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty())
-//
             if (TextUtils.isEmpty(name)||TextUtils.isEmpty(email)||TextUtils.isEmpty(phone)||TextUtils.isEmpty(password)|| TextUtils.isEmpty(confirmPassword))
             {
                 Toast.makeText(this, "All fields must be required", LENGTH_SHORT).show();
@@ -150,7 +158,24 @@ public class Register extends AppCompatActivity {
                                 : "Error : " +error.getMessage();
                         Log.e( "Volley Error: " ,errorMSG);
                         Toast.makeText(Register.this, errorMSG , LENGTH_LONG).show();
-                    });
+                    }){
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+
+                    // Add cookies stored in CookieManager (to maintain session)
+                    List<HttpCookie> cookies = cookieManager.getCookieStore().getCookies();
+                    if (!cookies.isEmpty()) {
+                        StringBuilder cookieHeader = new StringBuilder();
+                        for (HttpCookie cookie : cookies) {
+                            cookieHeader.append(cookie.toString()).append("; ");
+                        }
+                        headers.put("Cookie", cookieHeader.toString());
+                    }
+                    return headers;
+                }
+
+            };
 
 
             requestQueue.add(request);
@@ -161,3 +186,4 @@ public class Register extends AppCompatActivity {
         }
     }
 }
+

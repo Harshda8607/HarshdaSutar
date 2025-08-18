@@ -24,6 +24,7 @@ public class postrun_4 extends AppCompatActivity {
     private boolean isRunning = true;
     private long timeLeft = 30000;
     private ImageView back;
+    public static final int POST_WORKOUT = 26;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,8 @@ public class postrun_4 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(postrun_4.this, postrun_5.class);
+            Intent intent = new Intent(postrun_4.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", POST_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -77,7 +79,8 @@ public class postrun_4 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(postrun_4.this, postrun_5.class);
+                Intent intent1 = new Intent(postrun_4.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", POST_WORKOUT);
                 startActivity(intent1);
 
             }

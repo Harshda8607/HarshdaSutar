@@ -25,6 +25,7 @@ public class Arm_inter_4 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean isRunning = true;
     private long timeLeft = 30000;
+    public static final int ARM_INT_WORKOUT = 12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,8 @@ public class Arm_inter_4 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Arm_inter_4.this, Arm_inter_5.class);
+            Intent intent = new Intent(Arm_inter_4.this, break_rest.class);
+            intent.putExtra("NEXT_WORKOUT", ARM_INT_WORKOUT);
             startActivity(intent);
             finish();
         });
@@ -79,7 +81,8 @@ public class Arm_inter_4 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Arm_inter_4.this, Arm_inter_5.class);
+                Intent intent1 = new Intent(Arm_inter_4.this, break_rest.class);
+                intent1.putExtra("NEXT_WORKOUT", ARM_INT_WORKOUT);
                 startActivity(intent1);
 
             }
