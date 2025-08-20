@@ -24,13 +24,14 @@ import com.example.fitlife_fitcare.Dashboard;
 import com.example.fitlife_fitcare.Login;
 import com.example.fitlife_fitcare.R;
 import com.example.fitlife_fitcare.Settings;
-import com.example.fitlife_fitcare.Welcome;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.BufferedWriter;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -38,7 +39,7 @@ import java.net.URLEncoder;
 
 public class Profile extends Fragment {
 
-    TextView user, email, mobile, hei, wei, signout;
+    TextView user, email, mobile, hei, wei;
     ImageView set;
     String id;
 
@@ -47,31 +48,18 @@ public class Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        set=view.findViewById(R.id.setting);
-        signout = view.findViewById(R.id.signout);
-        signout.setOnClickListener(v -> {
-            requireActivity().getSharedPreferences("LoginCheck", MODE_PRIVATE)
-                    .edit()
-                    .clear()
-                    .apply();
 
-            Toast.makeText(getActivity(), "Signed out successfully !", Toast.LENGTH_SHORT).show();
-
-            // Redirect to login screen and clear activity stack
-            Intent intent = new Intent(getActivity(), Login.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-
-        });
-        set.setOnClickListener(v->
-        {
-            Intent intent1=new Intent(getActivity(), Settings.class);
+        // Bind UI
+        user = view.findViewById(R.id.value_username);
+        email = view.findViewById(R.id.value_email);
+        mobile = view.findViewById(R.id.value_mobile);
+        hei = view.findViewById(R.id.value_height);
+        wei = view.findViewById(R.id.value_weight);
+        set = view.findViewById(R.id.setting);
+        set.setOnClickListener(v -> {
+            Intent intent1 = new Intent(getActivity(), Settings.class);
             startActivity(intent1);
         });
-
-
-
-
 
         return view;
     }
@@ -80,27 +68,14 @@ public class Profile extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        user = view.findViewById(R.id.value_username);
-        email = view.findViewById(R.id.value_email);
-        mobile = view.findViewById(R.id.value_mobile);
-        hei = view.findViewById(R.id.value_height);
-        wei = view.findViewById(R.id.value_weight);
-        set = view.findViewById(R.id.setting);
-
         SharedPreferences prefs = requireActivity().getSharedPreferences("fetch_profile", MODE_PRIVATE);
-        id = prefs.getString("id", null);
+        id = prefs.getString("Username", null);
 
         if (id != null) {
             new FetchProfile().execute(id);
         } else {
             Toast.makeText(getContext(), "User ID not found", Toast.LENGTH_SHORT).show();
         }
-
-        set.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(),Settings.class);
-            intent.putExtra("id", id);
-            startActivityForResult(intent, 1001);
-        });
 
         requireActivity().getOnBackPressedDispatcher().addCallback(
                 getViewLifecycleOwner(),
@@ -117,9 +92,9 @@ public class Profile extends Fragment {
     }
 
     // AsyncTask to fetch profile data
-    private class FetchProfile extends AsyncTask<String, Void, String[]> {
+    private class FetchProfile extends AsyncTask<String, Void, JSONObject> {
         @Override
-        protected String[] doInBackground(String... strings) {
+        protected JSONObject doInBackground(String... strings) {
             String userId = strings[0];
 
             try {
@@ -128,7 +103,7 @@ public class Profile extends Fragment {
                 conn.setRequestMethod("POST");
                 conn.setDoOutput(true);
 
-                String postData = "id=" + URLEncoder.encode(userId, "UTF-8");
+                String postData = "Username=" + URLEncoder.encode(userId, "UTF-8");
                 OutputStream os = conn.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
                 writer.write(postData);
@@ -138,17 +113,19 @@ public class Profile extends Fragment {
 
                 InputStream is = conn.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-                String response = reader.readLine();
+                StringBuilder response = new StringBuilder();
+                System.out.println("API Response: " + response.toString());
+
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
 
                 reader.close();
                 is.close();
                 conn.disconnect();
 
-                if (response != null && response.contains("|")) {
-                    return response.split("\\|");
-                } else {
-                    return null;
-                }
+                return new JSONObject(response.toString());
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -157,13 +134,22 @@ public class Profile extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(String[] data) {
-            if (data != null && data.length >= 5) {
-                user.setText(data[0]);    // username
-                mobile.setText(data[1]);  // mobile
-                email.setText(data[2]);   // email
-                hei.setText(data[3]);     // height
-                wei.setText(data[4]);     // weight
+        protected void onPostExecute(JSONObject json) {
+            if (json != null) {
+                try {
+                    if (json.getString("status").equals("success")) {
+                        user.setText(json.getString("username"));
+                        mobile.setText(json.getString("mobile"));
+                        email.setText(json.getString("email"));
+                        hei.setText(json.getString("height"));
+                        wei.setText(json.getString("weight"));
+                    } else {
+                        Toast.makeText(getContext(), json.getString("message"), Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(getContext(), "Error parsing data", Toast.LENGTH_SHORT).show();
+                }
             } else {
                 Toast.makeText(getContext(), "Failed to load profile", Toast.LENGTH_SHORT).show();
             }

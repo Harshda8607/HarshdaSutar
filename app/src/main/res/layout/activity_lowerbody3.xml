@@ -14,7 +14,9 @@
         android:layout_height="535dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
+        android:layout_marginEnd="-20dp"
         android:layout_marginTop="-60dp"
+        android:layout_marginStart="-15dp"
         android:padding="70dp"
         android:src="@drawable/side_lying_left"/>
     <ImageView

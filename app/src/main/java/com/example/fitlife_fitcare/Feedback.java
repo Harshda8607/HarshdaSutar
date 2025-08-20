@@ -1,97 +1,114 @@
 package com.example.fitlife_fitcare;
 
-import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Patterns;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Feedback extends AppCompatActivity {
 
     EditText feedback;
     Button send;
-    private static final String BASE_URL = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/insert.php";
+    ImageView feed_back;
+
+    private static final String BASE_URL = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/feedinsert.php";
 
     private RequestQueue requestQueue;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_feedback);
-        feedback=findViewById(R.id.editfeedback);
-        send=findViewById(R.id.send);
-        requestQueue=Volley.newRequestQueue(this);
+        EdgeToEdge.enable(this);
 
-        send.setOnClickListener(view ->
-        {
-            String feed = feedback.getText().toString().trim();
-
-
-//            if (name.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty())
-//
-            if (TextUtils.isEmpty(feed))
-            {
-                Toast.makeText(this, "Feedback must be filled", LENGTH_SHORT).show();
+        feedback = findViewById(R.id.editfeedback);
+        send = findViewById(R.id.send);
+        feed_back=findViewById(R.id.feedback_back);
+        feed_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Feedback.this, Settings.class);
+                startActivity(intent);
             }
-             else {
-                    registerUser(feed);
-                }
+        });
 
+        requestQueue = Volley.newRequestQueue(this);
+
+        send.setOnClickListener(view -> {
+            String feedText = feedback.getText().toString().trim();
+
+            if (TextUtils.isEmpty(feedText)) {
+                Toast.makeText(Feedback.this, "Feedback must be filled", Toast.LENGTH_SHORT).show();
+            } else {
+                sendFeedback(feedText);
+            }
         });
     }
 
-    private void registerUser(String feed) {
-        try {
-            String url = BASE_URL +
-                    "?Username=" + URLEncoder.encode(feed, "UTF-8");
+    private void sendFeedback(String feedText) {
+        // ✅ Get stored username from SharedPreferences (set during login)
+        SharedPreferences prefs = getSharedPreferences("fetch_profile", MODE_PRIVATE);
+        String username = prefs.getString("Username", null);
 
-            Log.d("RegisterURL: " , url);
-
-            StringRequest request = new StringRequest(Request.Method.GET, url,
-                    response -> {
-                        Log.d("Server Response: " ,response);
-                       {
-                            Toast.makeText(this, "Server Response: " + response, LENGTH_LONG).show();
-                        }
-                    },
-                    error -> {
-                        String errorMSG= Boolean.parseBoolean(String.valueOf((error.networkResponse!=null)))
-                                ? "HTTP Error Code : " + error.networkResponse.statusCode
-                                : "Error : " +error.getMessage();
-                        Log.e( "Volley Error: " ,errorMSG);
-                        Toast.makeText(Feedback.this, errorMSG , LENGTH_LONG).show();
-                    });
-
-
-            requestQueue.add(request);
-
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Encoding error " , LENGTH_LONG).show();
+        if (username == null) {
+            Toast.makeText(this, "No username found. Please login again.", Toast.LENGTH_LONG).show();
+            return;
         }
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, BASE_URL,
+                response -> {
+                    try {
+                        JSONObject obj = new JSONObject(response);
+                        String status = obj.optString("status");
+                        String message = obj.optString("message");
+
+                        if ("success".equalsIgnoreCase(status)) {
+                            Toast.makeText(Feedback.this, message, Toast.LENGTH_LONG).show();
+                            feedback.setText("");
+                        } else {
+                            Toast.makeText(Feedback.this, "Error: " + message, Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception e) {
+                        Log.e("JSONError", "Invalid JSON: " + response);
+                        Toast.makeText(Feedback.this, "Invalid server response", Toast.LENGTH_LONG).show();
+                    }
+                },
+                error -> {
+                    String errorMsg = (error.networkResponse != null)
+                            ? "HTTP Error Code : " + error.networkResponse.statusCode
+                            : "Error : " + error.getMessage();
+                    Log.e("VolleyError", errorMsg);
+                    Toast.makeText(Feedback.this, errorMsg, Toast.LENGTH_LONG).show();
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("Username", username);
+                params.put("Feedback", feedText);
+                return params;
+            }
+        };
+
+        requestQueue.add(stringRequest);
     }
 }

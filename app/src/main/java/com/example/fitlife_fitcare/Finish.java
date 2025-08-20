@@ -23,7 +23,7 @@ public class Finish extends AppCompatActivity {
         l2 = findViewById(R.id.finish_l2);
         l3 = findViewById(R.id.finish_l3);
         l4 = findViewById(R.id.finish_l4);
-        l4 = findViewById(R.id.finish_l5);
+        l5 = findViewById(R.id.finish_l5);
         btn=findViewById(R.id.finish_btn);
 
 

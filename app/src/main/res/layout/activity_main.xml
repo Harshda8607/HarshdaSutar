@@ -17,6 +17,17 @@
         android:src="@drawable/main_img" />
 
     <TextView
+        android:id="@+id/by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:text="Created by Harshda and Vaishnavi"
+        android:textColor="#5BD0C5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:textSize="17sp" />
+
+    <TextView
         android:id="@+id/fit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

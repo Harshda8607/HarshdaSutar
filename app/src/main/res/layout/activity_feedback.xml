@@ -12,6 +12,7 @@
         android:id="@+id/feedback_back"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/back"/>
     <TextView
         android:id="@+id/feed_back"
@@ -21,12 +22,14 @@
         android:textSize="30sp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="55dp"/>
     <ImageView
         android:id="@+id/img_feed"
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:src="@drawable/feedback"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/textfeed"
@@ -45,8 +48,10 @@
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:layout_below="@id/textfeed"
+        android:paddingStart="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:textColor="@color/black"
         android:background="@android:drawable/alert_light_frame"
         android:hint="Please tell us more details about yout feedback or suggestion"
         android:textColorHint="#736A6A"
@@ -58,6 +63,8 @@
         android:text="SEND"
         android:backgroundTint="@color/green_icon"
         android:textSize="27dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>

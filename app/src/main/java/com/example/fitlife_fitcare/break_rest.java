@@ -27,6 +27,7 @@ import static com.example.fitlife_fitcare.prerun_4.PRE_WORKOUT;
 import static com.example.fitlife_fitcare.sitting_6.SIT_WORKOUT;
 import static com.example.fitlife_fitcare.sleep_4.SLEEP_WORKOUT;
 import static com.example.fitlife_fitcare.slim_4.SLIM_WORKOUT;
+import static com.example.fitlife_fitcare.stand_6.STAND_WORKOUT;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -211,13 +212,12 @@ public class break_rest extends AppCompatActivity {
                 intent = new Intent(break_rest.this, easeyoga_7.class);
                 break;
             case SIT_WORKOUT:
-            default:
                 intent = new Intent(break_rest.this, sitting_7.class);
                 break;
-//            case STAND_WORKOUT:
-//            default:
-//                intent = new Intent(break_rest.this, stand_7.class);
-//                break;
+            case STAND_WORKOUT:
+            default:
+                intent = new Intent(break_rest.this, stand_7.class);
+                break;
         }
 
         startActivity(intent);

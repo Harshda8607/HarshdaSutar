@@ -9,15 +9,17 @@
     android:background="@color/white"
     tools:context=".My_Profile">
     <ImageView
-        android:id="@+id/progile_back"
+        android:id="@+id/profile_back"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/back"/>
     <TextView
         android:id="@+id/My_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Profile"
+        android:layout_marginTop="30dp"
         android:textSize="30sp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -27,6 +29,7 @@
         android:layout_height="250dp"
         app:cardCornerRadius="20dp"
         android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
         android:layout_below="@id/My_profile"
         android:layout_marginTop="35dp">
         <RelativeLayout
@@ -48,7 +51,7 @@
                 android:text="120.2 cm"
                 android:textColor="@color/green_icon"
                 android:layout_alignBaseline="@id/height"
-                android:layout_marginStart="250dp"
+                android:layout_marginStart="200dp"
                 android:textSize="25sp"/>
             <ImageView
                 android:id="@+id/line_h"
@@ -74,7 +77,7 @@
                 android:text="120.2 kg"
                 android:textColor="@color/green_icon"
                 android:layout_alignBaseline="@id/weight"
-                android:layout_marginStart="250dp"
+                android:layout_marginStart="200dp"
                 android:textSize="25sp"/>
             <ImageView
                 android:id="@+id/line_w"
@@ -100,7 +103,7 @@
                 android:hint="120.2 kg"
                 android:textColor="@color/green_icon"
                 android:layout_alignBaseline="@id/target_weight"
-                android:layout_marginStart="250dp"
+                android:layout_marginStart="200dp"
                 android:textSize="25sp"/>
 
 

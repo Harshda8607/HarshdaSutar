@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="390dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
@@ -46,7 +46,8 @@
         android:layout_height="wrap_content"
         android:text="The best we can get :)"
         android:textSize="18sp"
-        android:textColor="#FF9800"
+        android:textStyle="bold"
+        android:textColor="#04D7C6"
         android:layout_marginBottom="12dp" />
 
     <!-- Star Rating Row -->
@@ -94,12 +95,14 @@
 
     <!-- Rate Button -->
     <Button
-        android:id="@+id/btnRate"
+        android:id="@+id/Rate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Rate"
-        android:backgroundTint="#6C63FF"
-        android:textColor="#FFFFFF" />
+        android:text="RATE"
+        android:backgroundTint="@color/green_icon"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white" />
 
 </LinearLayout>

@@ -52,7 +52,7 @@ public class Arm_begin_5 extends AppCompatActivity {
 
             countDownTimer.cancel();
             isRunning = false;
-            Intent intent = new Intent(Arm_begin_5.this, Arm_begin_5.class);
+            Intent intent = new Intent(Arm_begin_5.this, Arm_begin_6.class);
             startActivity(intent);
             finish();
         });
@@ -79,7 +79,7 @@ public class Arm_begin_5 extends AppCompatActivity {
 
             public void onFinish() {
                 timerText.setText("00:00");
-                Intent intent1 = new Intent(Arm_begin_5.this, Arm_begin_6.class);
+                Intent intent1 = new Intent(Arm_begin_5.this, Arm_begin_4.class);
                 startActivity(intent1);
 
             }

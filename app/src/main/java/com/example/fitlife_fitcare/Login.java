@@ -1,4 +1,3 @@
-
 package com.example.fitlife_fitcare;
 
 import android.content.Intent;
@@ -30,7 +29,7 @@ public class Login extends AppCompatActivity
     private AppCompatButton login;
     private TextView signup,forget;
 
-    private static final String BASE_URL = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/fitlife_login.php";
+    static final String BASE_URL = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/fitlife_login.php";
 
     private RequestQueue requestQueue;
     SharedPreferences sharedPreferences;
@@ -63,16 +62,10 @@ public class Login extends AppCompatActivity
             startActivity(intent);
         });
 
-        sharedPreferences = getSharedPreferences("LoginCheck", MODE_PRIVATE);
-
-        // ✅ Skip login if already logged in
-        if (sharedPreferences.getBoolean("isLoggedIn", false)) {
-            startActivity(new Intent(Login.this, Dashboard.class));
-            finish();
-            return;
-        }
-
-
+//        SharedPreferences prefs = getSharedPreferences("LoginCheck", MODE_PRIVATE);
+//        prefs.edit()
+//                .putBoolean("isLoggedIn", true)
+//                .apply();
 
 //        SharedPreferences userPrefs = getSharedPreferences("fetch_", MODE_PRIVATE);
 //        SharedPreferences.Editor userEditor = userPrefs.edit();
@@ -80,8 +73,6 @@ public class Login extends AppCompatActivity
 //        userEditor.apply();
 
     }
-
-
 
     private void validateAndLogin() {
         String username = user.getText().toString().trim();
@@ -108,8 +99,14 @@ public class Login extends AppCompatActivity
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     response -> {
                         if (response.contains("success")) {
+                            String usern=user.getText().toString().trim();
                             Toast.makeText(Login.this, "Login successful!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(Login.this, Dashboard.class));
+                            SharedPreferences prefs = getSharedPreferences("fetch_profile", MODE_PRIVATE);
+                            prefs.edit()
+                                    .putString("Username",usern)
+                                    .apply();
+
                             finish();
                         } else {
                             Toast.makeText(Login.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
@@ -125,5 +122,3 @@ public class Login extends AppCompatActivity
         }
     }
 }
-
-

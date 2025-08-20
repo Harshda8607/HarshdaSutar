@@ -1,4 +1,3 @@
-
 package com.example.fitlife_fitcare;
 
 import static android.widget.Toast.LENGTH_LONG;
@@ -6,6 +5,7 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -40,7 +40,7 @@ public class Register extends AppCompatActivity {
 
     private static final String  Mobile_Pattern="\\d{10}";
     private static final String Password_Pattern =
-            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!_-]).{8,}$";
+            "^(?=.[0-9])(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=!_-]).{8,}$";
 
     int no;
     private RequestQueue requestQueue;
@@ -113,31 +113,28 @@ public class Register extends AppCompatActivity {
                 if (errorBuilder.length() > 0) {
                     Toast.makeText(Register.this, "" + errorBuilder.toString(), LENGTH_LONG).show();
                 } else {
-                    registerUser(name, email, phone, password);
+                    registerUser(name, email, phone, password, confirmPassword);
                 }
             }
-//            getSharedPreferences("updatedDetails", MODE_PRIVATE)
-//                    .edit()
-//                    .putString("id", String.valueOf(id))
-//                    .putBoolean("isLoggedIn", true)
-//                    .putString("userRole", name)
-//                    .apply();
+
 
         });
     }
 
-    private void registerUser(String name, String email, String phone, String password) {
+    private void registerUser(String name, String email, String phone, String password,String confirmpass) {
         try {
             String url = BASE_URL +
                     "?Username=" + URLEncoder.encode(name, "UTF-8") +
                     "&Email_ID=" + URLEncoder.encode(email, "UTF-8") +
                     "&Mobile_Number=" + URLEncoder.encode(phone, "UTF-8") +
-                    "&Password=" + URLEncoder.encode(password, "UTF-8");
+                    "&Password=" + URLEncoder.encode(password, "UTF-8")+
+                    "&Confirm_Password="+ URLEncoder.encode(confirmpass, "UTF-8");
 
             Log.d("RegisterURL: " , url);
 
             StringRequest request = new StringRequest(Request.Method.GET, url,
                     response -> {
+                        String usern=name.toString().trim();
                         Log.d("Server Response: " ,response);
                         if (response.contains("Username already exists")) {
                             Toast.makeText(this, "Username already exists. Choose another one.", LENGTH_LONG).show();
@@ -147,6 +144,10 @@ public class Register extends AppCompatActivity {
                             Toast.makeText(this, "Registration successful!", LENGTH_SHORT).show();
                             Intent intent = new Intent(Register.this, Welcome.class);
                             startActivity(intent);
+                            SharedPreferences prefs = getSharedPreferences("fetch_profile", MODE_PRIVATE);
+                            prefs.edit()
+                                    .putString("Username",usern)
+                                    .apply();
                             finish();
                         } else {
                             Toast.makeText(this, "Server Response: " + response, LENGTH_LONG).show();
@@ -186,4 +187,3 @@ public class Register extends AppCompatActivity {
         }
     }
 }
-

@@ -1,11 +1,8 @@
 package com.example.fitlife_fitcare;
 
-import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,35 +13,30 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
+import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.Locale;
-
-
-
+import java.util.Map;
 
 public class height_weight extends AppCompatActivity {
 
     TextView tvWeight, tvHeight;
     SeekBar weightSeekBar, heightSeekBar;
     Switch switchWeightUnit, switchHeightUnit;
-    Button btn;
+    Button btnDone;
     boolean isLbs = true;
     boolean isFeet = true;
-    String url = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/height_insert.php?Height=" + tvHeight + "&Weight=" + tvWeight;
+
+    public static final String BASE_URL = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/height_insert.php";
     private RequestQueue requestQueue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,33 +48,17 @@ public class height_weight extends AppCompatActivity {
         heightSeekBar = findViewById(R.id.heightSeekBar);
         switchWeightUnit = findViewById(R.id.switchWeightUnit);
         switchHeightUnit = findViewById(R.id.switchHeightUnit);
-        btn=findViewById(R.id.btndone_hw);
+        btnDone = findViewById(R.id.btndone_hw);
 
-        requestQueue= Volley.newRequestQueue(this);
+        requestQueue = Volley.newRequestQueue(this);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int heightCm = heightSeekBar.getProgress();
-                int weightLbs = weightSeekBar.getProgress();
-
-                Intent intent= new Intent(height_weight.this,Dashboard.class);
-                startActivity(intent);
-
-                hwinsert(heightCm, weightLbs);
-            }
-        });
-
-
-
-
-        weightSeekBar.setProgress(143);
-        heightSeekBar.setProgress(163);
-
+        // Default progress
+        weightSeekBar.setProgress(60);  // 60kg approx
+        heightSeekBar.setProgress(165); // 165cm approx
         updateWeightText(weightSeekBar.getProgress());
         updateHeightText(heightSeekBar.getProgress());
 
-
+        // Seekbar listeners
         weightSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int value, boolean fromUser) {
@@ -113,36 +89,78 @@ public class height_weight extends AppCompatActivity {
             }
         });
 
+        // Switch listeners
         switchWeightUnit.setOnCheckedChangeListener((buttonView, isChecked) -> {
             isLbs = isChecked;
             switchWeightUnit.setText(isLbs ? "lbs" : "kg");
             updateWeightText(weightSeekBar.getProgress());
         });
 
-
         switchHeightUnit.setOnCheckedChangeListener((buttonView, isChecked) -> {
             isFeet = isChecked;
             switchHeightUnit.setText(isFeet ? "ft" : "cm");
             updateHeightText(heightSeekBar.getProgress());
         });
+
+
+        btnDone.setOnClickListener(v -> {
+            // Send the text exactly as shown in UI
+            String heightStr = tvHeight.getText().toString();
+            String weightStr = tvWeight.getText().toString();
+
+            hwinsert(heightStr, weightStr);  // send to PHP
+
+            // Go to Dashboard
+            startActivity(new Intent(height_weight.this, Dashboard.class));
+        });
+
     }
 
-    private void hwinsert(int height, int weight) {
-        try {
-            String url = "http://training.testproject.info/9_AM_Batch/FitLife_firCare/height_insert.php?Height="
-                    + URLEncoder.encode(String.valueOf(height), "UTF-8")
-                    + "&Weight="
-                    + URLEncoder.encode(String.valueOf(weight), "UTF-8");
+    private void hwinsert(String height, String weight) {
 
-            StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                    response -> Toast.makeText(height_weight.this, "Updated successfully", Toast.LENGTH_SHORT).show(),
-                    error -> Toast.makeText(height_weight.this, "Error occurred while updating", Toast.LENGTH_LONG).show());
+        SharedPreferences prefs = getSharedPreferences("fetch_profile", MODE_PRIVATE);
+        String username = prefs.getString("Username", null);
 
-            requestQueue.add(stringRequest);
-
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+        if (username == null) {
+            Toast.makeText(this, "No username found. Please login again.", Toast.LENGTH_LONG).show();
+            return;
         }
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, BASE_URL,
+                response -> {
+                    try {
+                        JSONObject obj = new JSONObject(response);
+                        String status = obj.optString("status");
+                        String message = obj.optString("message");
+
+                        if ("success".equalsIgnoreCase(status)) {
+                            Toast.makeText(height_weight.this, "Height & Weight saved!", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(height_weight.this, "Error: " + message, Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception e) {
+                        Log.e("JSONError", "Invalid JSON: " + response);
+                        Toast.makeText(height_weight.this, "Invalid server response", Toast.LENGTH_LONG).show();
+                    }
+                },
+                error -> {
+                    String errorMsg = (error.networkResponse != null)
+                            ? "HTTP Error Code: " + error.networkResponse.statusCode
+                            : "Error: " + error.getMessage();
+                    Log.e("VolleyError", errorMsg);
+                    Toast.makeText(height_weight.this, errorMsg, Toast.LENGTH_LONG).show();
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("Username", username);
+                params.put("Height", height);
+                params.put("Weight", weight);
+                return params;
+            }
+        };
+
+        requestQueue.add(stringRequest);
     }
 
     private void updateWeightText(int value) {
@@ -165,3 +183,4 @@ public class height_weight extends AppCompatActivity {
         }
     }
 }
+

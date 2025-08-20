@@ -20,23 +20,24 @@ public class MainActivity extends AppCompatActivity {
 
         logo = findViewById(R.id.img);
 
-        // Start animation
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation1);
         logo.startAnimation(animation);
 
-        // Splash delay and login check
         new Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
-            SharedPreferences sharedPreferences = getSharedPreferences("LoginCheck", MODE_PRIVATE);
-            boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+            SharedPreferences prefs4 = getSharedPreferences("fetch_profile", MODE_PRIVATE);
+            boolean isLoggedIn = prefs4.getBoolean("isLoggedIn", false);
 
-            // Decide next activity
-            Class<?> nextActivity = isLoggedIn ? Dashboard.class : Login.class;
-
-            // Go to selected activity
-            startActivity(new Intent(MainActivity.this, nextActivity));
+            if (isLoggedIn) {
+                Intent intent = new Intent(this, Dashboard.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(this, Login.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
             finish();
+        }, 3000);
 
-
-        }, 3000); // 3 seconds splash
     }
 }

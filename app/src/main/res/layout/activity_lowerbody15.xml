@@ -14,6 +14,8 @@
         android:background="@color/white"
         android:scaleType="centerCrop"
         android:layout_marginTop="-30dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginEnd="-20dp"
         android:padding="50dp"
         android:src="@drawable/alternating_superman"/>
     <ImageView

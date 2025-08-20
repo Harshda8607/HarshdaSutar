@@ -26,7 +26,7 @@
         android:layout_marginStart="55dp"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="430dp"
+        android:layout_height="510dp"
         app:cardCornerRadius="20dp"
         android:layout_below="@id/settings"
         android:layout_marginTop="35dp">
@@ -34,42 +34,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white">
-            <ImageView
-                android:id="@+id/person"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/baseline_person_24"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Profile"
-                android:textSize="22sp"
-                android:textColor="@color/black"
-                android:layout_toEndOf="@id/person"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="18dp"/>
-            <ImageView
-                android:id="@+id/profile_next"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/back_2"
-                android:scaleX="-1"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="25dp"/>
-            <ImageView
-                android:id="@+id/line_1"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:src="@drawable/straight_line"
-                android:layout_marginTop="80dp"/>
+
+
             <ImageView
                 android:id="@+id/img_share"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/share"
-                android:layout_below="@id/line_1"
                 android:layout_marginTop="25dp"
                 android:layout_marginStart="20dp"/>
             <TextView
@@ -79,8 +50,7 @@
                 android:text="Share with friends"
                 android:textSize="22sp"
                 android:textColor="@color/black"
-                android:layout_below="@id/line_1"
-                android:layout_toEndOf="@id/person"
+                android:layout_toEndOf="@id/img_share"
                 android:layout_marginTop="25dp"
                 android:layout_marginStart="18dp"/>
             <ImageView
@@ -89,7 +59,7 @@
                 android:layout_height="30dp"
                 android:src="@drawable/back_2"
                 android:scaleX="-1"
-                android:layout_below="@id/line_1"
+
                 android:layout_marginStart="300dp"
                 android:layout_marginTop="25dp"/>
             <ImageView
@@ -115,7 +85,7 @@
                 android:textSize="22sp"
                 android:textColor="@color/black"
                 android:layout_below="@id/line_2"
-                android:layout_toEndOf="@id/person"
+                android:layout_toEndOf="@id/img_star"
                 android:layout_marginTop="25dp"
                 android:layout_marginStart="18dp"/>
             <ImageView
@@ -150,7 +120,7 @@
                 android:textSize="22sp"
                 android:textColor="@color/black"
                 android:layout_below="@id/line_3"
-                android:layout_toEndOf="@id/person"
+                android:layout_toEndOf="@id/img_feedback"
                 android:layout_marginTop="25dp"
                 android:layout_marginStart="18dp"/>
             <ImageView
@@ -185,7 +155,7 @@
                 android:textSize="22sp"
                 android:textColor="@color/black"
                 android:layout_below="@id/line_4"
-                android:layout_toEndOf="@id/person"
+                android:layout_toEndOf="@id/img_privacy"
                 android:layout_marginTop="25dp"
                 android:layout_marginStart="18dp"/>
             <ImageView
@@ -197,6 +167,43 @@
                 android:layout_below="@id/line_4"
                 android:layout_marginStart="300dp"
                 android:layout_marginTop="25dp"/>
+            <ImageView
+                android:id="@+id/line_5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/img_privacy"
+                android:src="@drawable/straight_line"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/line_5"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/logout" />
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/line_5"
+                android:layout_toEndOf="@id/img_logout"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="18dp"/>
+            <ImageView
+                android:id="@+id/logout_next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back_2"
+                android:scaleX="-1"
+                android:layout_below="@id/line_5"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="25dp"/>
+
 
 
         </RelativeLayout>
@@ -204,3 +211,4 @@
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
+

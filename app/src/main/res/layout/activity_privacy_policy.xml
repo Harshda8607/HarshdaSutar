@@ -30,22 +30,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/scrollprivacy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Privacy Policy"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
-            <TextView
                 android:id="@+id/privacydesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/privacy_po"
                 android:textSize="20sp"
-                android:layout_below="@id/scrollprivacy"
                 android:layout_marginTop="25dp"
                 android:textColor="@color/black"/>
             <TextView
@@ -62,6 +51,7 @@
                 android:id="@+id/interceptiondesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/interception"
                 android:layout_below="@id/Interception"
                 android:layout_marginTop="15dp"
@@ -80,6 +70,8 @@
                 android:id="@+id/transferdesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
+
                 android:text="@string/Transfer"
                 android:layout_below="@id/Transfer"
                 android:layout_marginTop="15dp"
@@ -87,16 +79,19 @@
             <TextView
                 android:id="@+id/Changes"
                 android:layout_width="wrap_content"
+                android:textColor="@color/black"
+
                 android:layout_height="wrap_content"
                 android:text="Changes To this Privacy Policy :"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_below="@id/transferdesc"
-                android:textColor="@color/black"
                 android:layout_marginTop="20dp"/>
             <TextView
                 android:id="@+id/changesdsc"
                 android:layout_width="wrap_content"
+                android:textColor="@color/black"
+
                 android:layout_height="wrap_content"
                 android:text="@string/changes"
                 android:layout_below="@id/Changes"

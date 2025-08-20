@@ -8,6 +8,21 @@
     tools:context=".Finish"
     android:padding="18dp"
     android:background="@drawable/background">
+
+<!--    <pl.droidsonroids.gif.GifImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/white"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginTop="-60dp"-->
+<!--        android:padding="50dp"-->
+<!--        android:src="@drawable/art"/>-->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:src="@drawable/congrats"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/finish"
         android:layout_width="wrap_content"
@@ -27,21 +42,21 @@
         android:id="@+id/radiogroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
         <LinearLayout
             android:id="@+id/finish_l1"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="12dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/option_background"
             android:padding="16dp">
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/look"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/too_easy"/>
             <TextView
                 android:id="@+id/finish_t1"
                 android:layout_width="wrap_content"
@@ -57,16 +72,16 @@
         <LinearLayout
             android:id="@+id/finish_l2"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="12dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/option_background"
             android:padding="16dp">
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/confident"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/a_little_easy"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,16 +96,16 @@
         <LinearLayout
             android:id="@+id/finish_l3"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="12dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/option_background"
             android:padding="16dp">
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:src="@drawable/selflove"/>
+                android:src="@drawable/hard"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,16 +120,16 @@
         <LinearLayout
             android:id="@+id/finish_l4"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="12dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/option_background"
             android:padding="16dp">
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/stress"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/hards"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -129,16 +144,16 @@
         <LinearLayout
             android:id="@+id/finish_l5"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="12dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/option_background"
             android:padding="16dp">
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/stress"/>
+                android:src="@drawable/too_hard"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

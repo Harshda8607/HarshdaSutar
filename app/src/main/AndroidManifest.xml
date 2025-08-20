@@ -8,13 +8,52 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitLife_FitCare"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".chest_ad_5"
+            android:exported="false" />
+        <activity
+            android:name=".chest_ad_4"
+            android:exported="false" />
+        <activity
+            android:name=".chest_ad_3"
+            android:exported="false" />
+        <activity
+            android:name=".chest_ad_2"
+            android:exported="false" />
+        <activity
+            android:name=".stand_12"
+            android:exported="false" />
+        <activity
+            android:name=".stand_11"
+            android:exported="false" />
+        <activity
+            android:name=".stand_10"
+            android:exported="false" />
+        <activity
+            android:name=".stand_9"
+            android:exported="false" />
+        <activity
+            android:name=".stand_8"
+            android:exported="false" />
+        <activity
+            android:name=".stand_7"
+            android:exported="false" />
+        <activity
+            android:name=".stand_6"
+            android:exported="false" />
+        <activity
+            android:name=".stand_5"
+            android:exported="false" />
+        <activity
+            android:name=".stand_4"
+            android:exported="false" />
         <activity
             android:name=".chest_inter_5"
             android:exported="false" />
@@ -533,6 +572,21 @@
             android:name=".Faceyoga"
             android:exported="false" />
         <activity
+            android:name=".Fullbody_18"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_17"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_16"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_15"
+            android:exported="false" />
+        <activity
+            android:name=".Fullbody_14"
+            android:exported="false" />
+        <activity
             android:name=".Fullbody_13"
             android:exported="false" />
         <activity
@@ -739,9 +793,7 @@
         <activity
             android:name=".workout_5"
             android:exported="false" />
-        <activity
-            android:name=".enjoy_4"
-            android:exported="false" />
+
         <activity
             android:name=".goal_2"
             android:exported="false" />
@@ -813,16 +865,64 @@
             android:exported="false" />
         <activity
             android:name=".Privacy_Policy"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Feedback"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Settings"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".My_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".enjoy_4"
+            android:exported="false" />
+        <activity
+            android:name=".Flatstomach_1"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_5"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_6"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_7"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_8"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_9"
+            android:exported="false" />
+        <activity
+            android:name=".Abs_beginner_10"
+            android:exported="false" />
+        <activity
+            android:name=".abs_intermediate"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_begin"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_intermediate"
+            android:exported="false" />
+        <activity
+            android:name=".Thigh_advanced"
+            android:exported="false" />
+        <activity
+            android:name=".arm_intermediate"
+            android:exported="false" />
+        <activity
+            android:name=".arm_advanced"
+            android:exported="false" />
+        <activity
+            android:name=".Arm_advan_1"
             android:exported="false"/>
+
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
